@@ -9,6 +9,7 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+  Implementation 'com.google.code.findbugs:jsr305:3.0.2'
 }
 
 java {
