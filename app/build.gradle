@@ -1,4 +1,5 @@
 plugins {
+    id 'java'
     id 'application'
 }
 
@@ -7,9 +8,7 @@ repositories {
 }
 
 dependencies {
-    // 本地 libs 所有 jar，区分编译/运行时
-    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-    runtimeOnly fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 java {
