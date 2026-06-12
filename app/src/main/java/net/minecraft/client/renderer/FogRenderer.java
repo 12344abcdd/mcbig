@@ -37,7 +37,7 @@ public class FogRenderer {
     private static long biomeChangedTime = -1L;
     private static boolean fogEnabled = true;
 
-    public static Vector4f computeFogColor(Camera p_363451_, float p_364931_, ClientLevel p_363033_, int p_363851_, float p_363957_) {
+    public static Vector4f computeFogColor(Camera p_363451_, float p_364931_, ClientLevel p_363033_, int p_363851_, float p_363957_) {/*
         FogType fogtype = p_363451_.getFluidInCamera();
         Entity entity = p_363451_.getEntity();
         float f;
@@ -193,7 +193,8 @@ public class FogRenderer {
             f2 = f2 * (1.0F - f10) + f2 * f12 * f10;
         }
 
-        return new Vector4f(f, f1, f2, 1.0F);
+        return new Vector4f(f, f1, f2, 1.0F);*/
+        return new Vector4f(1.0F, 1.0F, 1.0F, 1.0F);
     }
 
     public static boolean toggleFog() {
@@ -285,14 +286,6 @@ public class FogRenderer {
 
         @Override
         public void setupFog(FogRenderer.FogData p_234181_, LivingEntity p_234182_, MobEffectInstance p_234183_, float p_234184_, float p_234185_) {
-            float f = p_234183_.isInfiniteDuration() ? 5.0F : Mth.lerp(Math.min(1.0F, (float)p_234183_.getDuration() / 20.0F), p_234184_, 5.0F);
-            if (p_234181_.mode == FogRenderer.FogMode.FOG_SKY) {
-                p_234181_.start = 0.0F;
-                p_234181_.end = f * 0.8F;
-            } else if (p_234181_.mode == FogRenderer.FogMode.FOG_TERRAIN) {
-                p_234181_.start = f * 0.25F;
-                p_234181_.end = f;
-            }
         }
     }
 
@@ -303,14 +296,14 @@ public class FogRenderer {
         }
 
         @Override
-        public void setupFog(FogRenderer.FogData p_234194_, LivingEntity p_234195_, MobEffectInstance p_234196_, float p_234197_, float p_234198_) {
+        public void setupFog(FogRenderer.FogData p_234194_, LivingEntity p_234195_, MobEffectInstance p_234196_, float p_234197_, float p_234198_) {/*
             float f = Mth.lerp(p_234196_.getBlendFactor(p_234195_, p_234198_), p_234197_, 15.0F);
 
             p_234194_.start = switch (p_234194_.mode) {
                 case FOG_SKY -> 0.0F;
                 case FOG_TERRAIN -> f * 0.75F;
             };
-            p_234194_.end = f;
+            p_234194_.end = f;*/
         }
 
         @Override

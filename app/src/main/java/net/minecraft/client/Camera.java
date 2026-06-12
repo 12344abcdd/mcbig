@@ -176,7 +176,7 @@ public class Camera {
     }
 
     public FogType getFluidInCamera() {
-        if (!this.initialized) {
+        if (true) {
             return FogType.NONE;
         } else {
             FluidState fluidstate = this.level.getFluidState(this.blockPosition);

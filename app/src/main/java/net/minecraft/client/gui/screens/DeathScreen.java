@@ -56,7 +56,7 @@ public class DeathScreen extends Screen {
 
     @Override
     public boolean shouldCloseOnEsc() {
-        return false;
+        return true;
     }
 
     private void handleExitToTitleScreen() {

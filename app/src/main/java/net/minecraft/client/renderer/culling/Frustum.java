@@ -68,13 +68,15 @@ public class Frustum {
     }
 
     public boolean isVisible(AABB p_113030_) {
-        int i = this.cubeInFrustum(p_113030_.minX, p_113030_.minY, p_113030_.minZ, p_113030_.maxX, p_113030_.maxY, p_113030_.maxZ);
-        return i == -2 || i == -1;
+        /*int i = this.cubeInFrustum(p_113030_.minX, p_113030_.minY, p_113030_.minZ, p_113030_.maxX, p_113030_.maxY, p_113030_.maxZ);
+        return i == -2 || i == -1;*/
+        return true;
     }
 
     public boolean isVisible(me.alphamode.mcbig.phys.BigAABB p_113030_) {
-        int i = this.cubeInFrustum(p_113030_.minX, p_113030_.minY, p_113030_.minZ, p_113030_.maxX, p_113030_.maxY, p_113030_.maxZ);
-        return i == -2 || i == -1;
+        /*int i = this.cubeInFrustum(p_113030_.minX, p_113030_.minY, p_113030_.minZ, p_113030_.maxX, p_113030_.maxY, p_113030_.maxZ);
+        return i == -2 || i == -1;*/
+        return true;
     }
 
     public int cubeInFrustum(BoundingBox p_366406_) {
