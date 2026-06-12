@@ -10,10 +10,7 @@ import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ToastManager {
     private static final int SLOT_COUNT = 5;
     private static final int ALL_SLOTS_OCCUPIED = -1;
@@ -118,7 +115,6 @@ public class ToastManager {
         return this.minecraft.options.notificationDisplayTime().get();
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ToastInstance<T extends Toast> {
         private static final long SLIDE_ANIMATION_DURATION_MS = 600L;
         private final T toast;

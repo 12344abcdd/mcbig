@@ -3,12 +3,9 @@ package net.minecraft.client.gui.navigation;
 import com.mojang.math.MatrixUtil;
 import javax.annotation.Nullable;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public record ScreenRectangle(ScreenPosition position, int width, int height) {
     private static final ScreenRectangle EMPTY = new ScreenRectangle(0, 0, 0, 0);
 

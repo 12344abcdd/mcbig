@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.entity;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.world.entity.Mob;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class MobRenderer<T extends Mob, S extends LivingEntityRenderState, M extends EntityModel<? super S>> extends LivingEntityRenderer<T, S, M> {
     public MobRenderer(EntityRendererProvider.Context p_174304_, M p_174305_, float p_174306_) {
         super(p_174304_, p_174305_, p_174306_);

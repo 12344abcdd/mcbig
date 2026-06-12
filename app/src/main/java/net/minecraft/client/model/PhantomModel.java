@@ -8,10 +8,7 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.PhantomRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PhantomModel extends EntityModel<PhantomRenderState> {
     private static final String TAIL_BASE = "tail_base";
     private static final String TAIL_TIP = "tail_tip";

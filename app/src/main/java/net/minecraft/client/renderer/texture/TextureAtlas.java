@@ -17,11 +17,8 @@ import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.ReportedException;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class TextureAtlas extends AbstractTexture implements Dumpable, Tickable {
     private static final Logger LOGGER = LogUtils.getLogger();
     @Deprecated

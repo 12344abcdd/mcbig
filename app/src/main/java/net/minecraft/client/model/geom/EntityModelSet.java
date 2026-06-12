@@ -3,10 +3,7 @@ package net.minecraft.client.model.geom;
 import com.google.common.collect.ImmutableMap;
 import java.util.Map;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class EntityModelSet {
     public static final EntityModelSet EMPTY = new EntityModelSet(Map.of());
     private final Map<ModelLayerLocation, LayerDefinition> roots;

@@ -12,10 +12,7 @@ import java.util.Map;
 import java.util.UUID;
 import javax.annotation.Nullable;
 import net.minecraft.server.packs.DownloadQueue;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerPackManager {
     private final PackDownloader downloader;
     final PackLoadFeedback packLoadFeedback;
@@ -325,28 +322,24 @@ public class ServerPackManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum ActivationStatus {
         INACTIVE,
         PENDING,
         ACTIVE;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum PackDownloadStatus {
         REQUESTED,
         PENDING,
         DONE;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum PackPromptStatus {
         PENDING,
         ALLOWED,
         DECLINED;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum RemovalReason {
         DOWNLOAD_FAILED(PackLoadFeedback.FinalResult.DOWNLOAD_FAILED),
         ACTIVATION_FAILED(PackLoadFeedback.FinalResult.ACTIVATION_FAILED),
@@ -363,7 +356,6 @@ public class ServerPackManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ServerPackData {
         final UUID id;
         final URL url;

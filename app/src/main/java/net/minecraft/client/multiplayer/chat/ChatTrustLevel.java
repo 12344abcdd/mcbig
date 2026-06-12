@@ -9,10 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.PlayerChatMessage;
 import net.minecraft.network.chat.Style;
 import net.minecraft.util.StringRepresentable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum ChatTrustLevel implements StringRepresentable {
     SECURE("secure"),
     MODIFIED("modified"),

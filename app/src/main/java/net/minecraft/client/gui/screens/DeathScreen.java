@@ -13,10 +13,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DeathScreen extends Screen {
     private static final ResourceLocation DRAFT_REPORT_SPRITE = ResourceLocation.withDefaultNamespace("icon/draft_report");
     private int delayTicker;
@@ -177,7 +174,6 @@ public class DeathScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class TitleConfirmScreen extends ConfirmScreen {
         public TitleConfirmScreen(BooleanConsumer p_273707_, Component p_273255_, Component p_273747_, Component p_273434_, Component p_273416_) {
             super(p_273707_, p_273255_, p_273747_, p_273434_, p_273416_);

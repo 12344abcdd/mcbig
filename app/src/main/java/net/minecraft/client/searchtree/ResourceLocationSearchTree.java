@@ -5,10 +5,7 @@ import java.util.Locale;
 import java.util.function.Function;
 import java.util.stream.Stream;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface ResourceLocationSearchTree<T> {
     static <T> ResourceLocationSearchTree<T> empty() {
         return new ResourceLocationSearchTree<T>() {

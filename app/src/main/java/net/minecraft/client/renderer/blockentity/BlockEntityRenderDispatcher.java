@@ -24,10 +24,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.phys.HitResult;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockEntityRenderDispatcher implements ResourceManagerReloadListener {
     private Map<BlockEntityType<?>, BlockEntityRenderer<?>> renderers = ImmutableMap.of();
     private final Font font;

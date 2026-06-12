@@ -6,11 +6,8 @@ import java.io.InputStream;
 import java.util.List;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.resources.IoSupplier;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.ArrayUtils;
 
-@OnlyIn(Dist.CLIENT)
 public enum IconSet {
     RELEASE("icons"),
     SNAPSHOT("icons", "snapshot");

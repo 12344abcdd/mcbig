@@ -57,12 +57,9 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.mutable.MutableObject;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class MultiPlayerGameMode {
     private static final Logger LOGGER = LogUtils.getLogger();
     private final Minecraft minecraft;

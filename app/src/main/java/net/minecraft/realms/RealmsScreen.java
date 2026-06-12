@@ -6,10 +6,7 @@ import java.util.stream.Collectors;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class RealmsScreen extends Screen {
     protected static final int TITLE_HEIGHT = 17;
     protected static final int EXPIRATION_NOTIFICATION_DAYS = 7;

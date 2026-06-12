@@ -14,11 +14,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsTermsScreen extends RealmsScreen {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Component TITLE = Component.translatable("mco.terms.title");

@@ -32,13 +32,10 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.WritableBookContent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.mutable.MutableBoolean;
 import org.apache.commons.lang3.mutable.MutableInt;
 
-@OnlyIn(Dist.CLIENT)
 public class BookEditScreen extends Screen {
     private static final int TEXT_WIDTH = 114;
     private static final int TEXT_HEIGHT = 128;
@@ -597,7 +594,6 @@ public class BookEditScreen extends Screen {
         return new Rect2i(i, k, j - i, l - k);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class DisplayCache {
         static final BookEditScreen.DisplayCache EMPTY = new BookEditScreen.DisplayCache(
             "",
@@ -664,7 +660,6 @@ public class BookEditScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class LineInfo {
         final Style style;
         final String contents;
@@ -681,7 +676,6 @@ public class BookEditScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Pos2i {
         public final int x;
         public final int y;

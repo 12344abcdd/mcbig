@@ -1,9 +1,6 @@
 package com.mojang.blaze3d.resource;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface GraphicsResourceAllocator {
     GraphicsResourceAllocator UNPOOLED = new GraphicsResourceAllocator() {
         @Override

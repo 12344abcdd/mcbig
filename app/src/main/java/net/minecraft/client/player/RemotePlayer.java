@@ -7,10 +7,7 @@ import net.minecraft.util.profiling.Profiler;
 import net.minecraft.util.profiling.Zone;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RemotePlayer extends AbstractClientPlayer {
     private Vec3 lerpDeltaMovement = Vec3.ZERO;
     private int lerpDeltaMovementSteps;

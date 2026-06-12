@@ -21,10 +21,7 @@ import net.minecraft.client.multiplayer.resolver.ServerAddress;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class QuickPlay {
     public static final Component ERROR_TITLE = Component.translatable("quickplay.error.title");
     private static final Component INVALID_IDENTIFIER = Component.translatable("quickplay.error.invalid_identifier");

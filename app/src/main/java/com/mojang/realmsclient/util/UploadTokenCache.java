@@ -3,10 +3,7 @@ package com.mojang.realmsclient.util;
 import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class UploadTokenCache {
     private static final Long2ObjectMap<String> TOKEN_CACHE = new Long2ObjectOpenHashMap<>();
 

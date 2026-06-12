@@ -2,10 +2,7 @@ package net.minecraft.client.renderer.entity.state;
 
 import javax.annotation.Nullable;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GuardianRenderState extends LivingEntityRenderState {
     public float spikesAnimation;
     public float tailAnimation;

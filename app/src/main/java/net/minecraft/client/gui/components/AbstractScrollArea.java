@@ -5,10 +5,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractScrollArea extends AbstractWidget {
     public static final int SCROLLBAR_WIDTH = 6;
     private double scrollAmount;

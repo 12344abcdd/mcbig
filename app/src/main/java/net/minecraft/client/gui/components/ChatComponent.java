@@ -24,11 +24,8 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.profiling.Profiler;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.entity.player.ChatVisiblity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ChatComponent {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int MAX_CHAT_HISTORY = 100;
@@ -487,11 +484,9 @@ public class ChatComponent {
         this.refreshTrimmedMessages();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record DelayedMessageDeletion(MessageSignature signature, int deletableAfter) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class State {
         final List<GuiMessage> messages;
         final List<String> history;

@@ -18,10 +18,7 @@ import net.minecraft.realms.RealmsScreen;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.level.GameType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsSlotOptionsScreen extends RealmsScreen {
     private static final int DEFAULT_DIFFICULTY = 2;
     public static final List<Difficulty> DIFFICULTIES = ImmutableList.of(Difficulty.PEACEFUL, Difficulty.EASY, Difficulty.NORMAL, Difficulty.HARD);
@@ -275,7 +272,6 @@ public class RealmsSlotOptionsScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class SettingsSlider extends AbstractSliderButton {
         private final double minValue;
         private final double maxValue;

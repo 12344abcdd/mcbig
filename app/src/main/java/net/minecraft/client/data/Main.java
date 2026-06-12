@@ -14,10 +14,7 @@ import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.obfuscate.DontObfuscate;
 import net.minecraft.server.Bootstrap;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Main {
     @DontObfuscate
     @SuppressForbidden(

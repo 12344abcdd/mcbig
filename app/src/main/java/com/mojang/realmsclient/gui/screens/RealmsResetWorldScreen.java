@@ -33,11 +33,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsResetWorldScreen extends RealmsScreen {
     static final Logger LOGGER = LogUtils.getLogger();
     private static final Component CREATE_REALM_TITLE = Component.translatable("mco.selectServer.create");
@@ -273,7 +270,6 @@ public class RealmsResetWorldScreen extends RealmsScreen {
         this.minecraft.setScreen(new RealmsLongRunningMcoTaskScreen(this.lastScreen, list.toArray(new LongRunningTask[0])));
     }
 
-    @OnlyIn(Dist.CLIENT)
     class FrameButton extends Button {
         private static final ResourceLocation SLOT_FRAME_SPRITE = ResourceLocation.withDefaultNamespace("widget/slot_frame");
         private static final int FRAME_SIZE = 60;

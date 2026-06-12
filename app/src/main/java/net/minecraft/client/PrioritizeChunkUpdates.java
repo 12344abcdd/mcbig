@@ -3,10 +3,7 @@ package net.minecraft.client;
 import java.util.function.IntFunction;
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.OptionEnum;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum PrioritizeChunkUpdates implements OptionEnum {
     NONE(0, "options.prioritizeChunkUpdates.none"),
     PLAYER_AFFECTED(1, "options.prioritizeChunkUpdates.byPlayer"),

@@ -8,10 +8,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.TrialSpawnerBlockEntity;
 import net.minecraft.world.level.block.entity.trialspawner.TrialSpawner;
 import net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerData;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TrialSpawnerRenderer implements BlockEntityRenderer<TrialSpawnerBlockEntity> {
     private final EntityRenderDispatcher entityRenderer;
 

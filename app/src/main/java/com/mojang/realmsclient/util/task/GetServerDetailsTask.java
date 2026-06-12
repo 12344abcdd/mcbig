@@ -26,11 +26,8 @@ import net.minecraft.client.gui.screens.GenericMessageScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.server.DownloadedPackSource;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class GetServerDetailsTask extends LongRunningTask {
     private static final Component APPLYING_PACK_TEXT = Component.translatable("multiplayer.applyingPack");
     private static final Logger LOGGER = LogUtils.getLogger();

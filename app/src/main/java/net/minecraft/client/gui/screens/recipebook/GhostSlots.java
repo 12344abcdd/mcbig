@@ -13,10 +13,7 @@ import net.minecraft.util.context.ContextMap;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.display.SlotDisplay;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GhostSlots {
     private final Reference2ObjectMap<Slot, GhostSlots.GhostSlot> ingredients = new Reference2ObjectArrayMap<>();
     private final SlotSelectTime slotSelectTime;
@@ -75,7 +72,6 @@ public class GhostSlots {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record GhostSlot(List<ItemStack> items, boolean isResultSlot) {
         public ItemStack getItem(int p_361727_) {
             int i = this.items.size();

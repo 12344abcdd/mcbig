@@ -7,10 +7,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Stitcher<T extends Stitcher.Entry> {
     private static final Comparator<Stitcher.Holder<?>> HOLDER_COMPARATOR = Comparator.<Stitcher.Holder<?>, Integer>comparing(p_118201_ -> -p_118201_.height)
         .thenComparing(p_118199_ -> -p_118199_.width)
@@ -111,7 +108,6 @@ public class Stitcher<T extends Stitcher.Entry> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Entry {
         int width();
 
@@ -120,14 +116,12 @@ public class Stitcher<T extends Stitcher.Entry> {
         ResourceLocation name();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Holder<T extends Stitcher.Entry>(T entry, int width, int height) {
         public Holder(T p_250261_, int p_250127_) {
             this(p_250261_, Stitcher.smallestFittingMinTexel(p_250261_.width(), p_250127_), Stitcher.smallestFittingMinTexel(p_250261_.height(), p_250127_));
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Region<T extends Stitcher.Entry> {
         private final int originX;
         private final int originY;
@@ -228,7 +222,6 @@ public class Stitcher<T extends Stitcher.Entry> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface SpriteLoader<T extends Stitcher.Entry> {
         void load(T p_249434_, int p_118230_, int p_118231_);
     }

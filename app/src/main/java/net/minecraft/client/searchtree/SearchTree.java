@@ -4,11 +4,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.function.Function;
 import java.util.stream.Stream;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
 @FunctionalInterface
-@OnlyIn(Dist.CLIENT)
 public interface SearchTree<T> {
     static <T> SearchTree<T> empty() {
         return p_344720_ -> List.of();

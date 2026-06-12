@@ -4,10 +4,7 @@ import com.google.common.collect.Lists;
 import java.util.List;
 import javax.annotation.Nullable;
 import net.minecraft.network.chat.FormattedText;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ComponentCollector {
     private final List<FormattedText> parts = Lists.newArrayList();
 

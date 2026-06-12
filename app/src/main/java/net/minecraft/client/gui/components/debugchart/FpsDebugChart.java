@@ -6,10 +6,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.util.debugchart.SampleStorage;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FpsDebugChart extends AbstractDebugChart {
     private static final int CHART_TOP_FPS = 30;
     private static final double CHART_TOP_VALUE = 33.333333333333336;

@@ -16,10 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class HumanoidModel<T extends HumanoidRenderState> extends EntityModel<T> implements ArmedModel, HeadedModel {
     public static final MeshTransformer BABY_TRANSFORMER = new BabyModelTransform(true, 16.0F, 0.0F, 2.0F, 2.0F, 24.0F, Set.of("head"));
     public static final float OVERLAY_SCALE = 0.25F;
@@ -371,7 +368,6 @@ public class HumanoidModel<T extends HumanoidRenderState> extends EntityModel<T>
         return this.head;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum ArmPose {
         EMPTY(false),
         ITEM(false),

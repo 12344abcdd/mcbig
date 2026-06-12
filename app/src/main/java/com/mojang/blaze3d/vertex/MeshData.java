@@ -4,13 +4,10 @@ import it.unimi.dsi.fastutil.ints.IntConsumer;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.mutable.MutableLong;
 import org.joml.Vector3f;
 import org.lwjgl.system.MemoryUtil;
 
-@OnlyIn(Dist.CLIENT)
 public class MeshData implements AutoCloseable {
     private final ByteBufferBuilder.Result vertexBuffer;
     @Nullable
@@ -82,11 +79,9 @@ public class MeshData implements AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record DrawState(VertexFormat format, int vertexCount, int indexCount, VertexFormat.Mode mode, VertexFormat.IndexType indexType) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record SortState(Vector3f[] centroids, VertexFormat.IndexType indexType) {
         @Nullable
         public ByteBufferBuilder.Result buildSortedIndexBuffer(ByteBufferBuilder p_351024_, VertexSorting p_350537_) {

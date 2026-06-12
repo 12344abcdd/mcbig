@@ -9,10 +9,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.common.custom.GoalDebugPayload;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GoalSelectorDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private static final int MAX_RENDER_DIST = 160;
     private final Minecraft minecraft;
@@ -55,7 +52,6 @@ public class GoalSelectorDebugRenderer implements DebugRenderer.SimpleDebugRende
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record EntityGoalInfo(BlockPos entityPos, List<GoalDebugPayload.DebugGoal> goals) {
     }
 }

@@ -28,11 +28,8 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.util.OptionEnum;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public final class OptionInstance<T> {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final OptionInstance.Enum<Boolean> BOOLEAN_VALUES = new OptionInstance.Enum<>(ImmutableList.of(Boolean.TRUE, Boolean.FALSE), Codec.BOOL);
@@ -165,7 +162,6 @@ public final class OptionInstance<T> {
         return this.values;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record AltEnum<T>(
         List<T> values, List<T> altValues, BooleanSupplier altCondition, OptionInstance.CycleableValueSet.ValueSetter<T> valueSetter, Codec<T> codec
     ) implements OptionInstance.CycleableValueSet<T> {
@@ -180,12 +176,10 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface CaptionBasedToString<T> {
         Component toString(Component p_231581_, T p_231582_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record ClampingLazyMaxIntRange(int minInclusive, IntSupplier maxSupplier, int encodableMaxInclusive)
         implements OptionInstance.IntRangeBase,
         OptionInstance.SliderableOrCyclableValueSet<Integer> {
@@ -222,7 +216,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface CycleableValueSet<T> extends OptionInstance.ValueSet<T> {
         CycleButton.ValueListSupplier<T> valueListSupplier();
 
@@ -245,13 +238,11 @@ public final class OptionInstance<T> {
                     });
         }
 
-        @OnlyIn(Dist.CLIENT)
         public interface ValueSetter<T> {
             void set(OptionInstance<T> p_231623_, T p_231624_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Enum<T>(List<T> values, Codec<T> codec) implements OptionInstance.CycleableValueSet<T> {
         @Override
         public Optional<T> validateValue(T p_231632_) {
@@ -264,7 +255,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record IntRange(int minInclusive, int maxInclusive, boolean applyValueImmediately) implements OptionInstance.IntRangeBase {
         public IntRange(int p_231642_, int p_231643_) {
             this(p_231642_, p_231643_, true);
@@ -280,7 +270,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface IntRangeBase extends OptionInstance.SliderableValueSet<Integer> {
         int minInclusive();
 
@@ -329,7 +318,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record LazyEnum<T>(Supplier<List<T>> values, Function<T, Optional<T>> validateValue, Codec<T> codec)
         implements OptionInstance.CycleableValueSet<T> {
         @Override
@@ -343,7 +331,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class OptionInstanceSliderButton<N> extends AbstractOptionSliderButton {
         private final OptionInstance<N> instance;
         private final OptionInstance.SliderableValueSet<N> values;
@@ -407,7 +394,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface SliderableOrCyclableValueSet<T> extends OptionInstance.CycleableValueSet<T>, OptionInstance.SliderableValueSet<T> {
         boolean createCycleButton();
 
@@ -421,7 +407,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface SliderableValueSet<T> extends OptionInstance.ValueSet<T> {
         double toSliderValue(T p_231732_);
 
@@ -442,13 +427,11 @@ public final class OptionInstance<T> {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface TooltipSupplier<T> {
         @Nullable
         Tooltip apply(T p_259319_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum UnitDouble implements OptionInstance.SliderableValueSet<Double> {
         INSTANCE;
 
@@ -494,7 +477,6 @@ public final class OptionInstance<T> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface ValueSet<T> {
         Function<OptionInstance<T>, AbstractWidget> createButton(
             OptionInstance.TooltipSupplier<T> p_231779_, Options p_231780_, int p_231781_, int p_231782_, int p_231783_, Consumer<T> p_261976_

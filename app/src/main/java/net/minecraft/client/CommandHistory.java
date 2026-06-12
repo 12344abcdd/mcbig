@@ -9,11 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collection;
 import net.minecraft.util.ArrayListDeque;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class CommandHistory {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int MAX_PERSISTED_COMMAND_HISTORY = 50;

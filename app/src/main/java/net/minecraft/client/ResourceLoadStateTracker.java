@@ -9,11 +9,8 @@ import javax.annotation.Nullable;
 import net.minecraft.CrashReport;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.server.packs.PackResources;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ResourceLoadStateTracker {
     private static final Logger LOGGER = LogUtils.getLogger();
     @Nullable
@@ -56,7 +53,6 @@ public class ResourceLoadStateTracker {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class RecoveryInfo {
         private final Throwable error;
 
@@ -74,7 +70,6 @@ public class ResourceLoadStateTracker {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum ReloadReason {
         INITIAL("initial"),
         MANUAL("manual"),
@@ -87,7 +82,6 @@ public class ResourceLoadStateTracker {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ReloadState {
         private final ResourceLoadStateTracker.ReloadReason reloadReason;
         private final List<String> packs;

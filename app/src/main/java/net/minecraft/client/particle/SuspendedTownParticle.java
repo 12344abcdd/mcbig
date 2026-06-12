@@ -2,10 +2,7 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SuspendedTownParticle extends TextureSheetParticle {
     SuspendedTownParticle(ClientLevel p_108104_, double p_108105_, double p_108106_, double p_108107_, double p_108108_, double p_108109_, double p_108110_) {
         super(p_108104_, p_108105_, p_108106_, p_108107_, p_108108_, p_108109_, p_108110_);
@@ -47,7 +44,6 @@ public class SuspendedTownParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class ComposterFillProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -73,7 +69,6 @@ public class SuspendedTownParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class DolphinSpeedProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -100,7 +95,6 @@ public class SuspendedTownParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class EggCrackProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -125,7 +119,6 @@ public class SuspendedTownParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class HappyVillagerProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -150,7 +143,6 @@ public class SuspendedTownParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

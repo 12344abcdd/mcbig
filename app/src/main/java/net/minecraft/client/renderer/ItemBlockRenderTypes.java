@@ -13,10 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemBlockRenderTypes {
     private static final Map<Block, RenderType> TYPE_BY_BLOCK = Util.make(Maps.newHashMap(), p_382527_ -> {
         RenderType rendertype = RenderType.tripwire();

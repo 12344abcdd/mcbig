@@ -11,11 +11,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import net.minecraft.client.renderer.block.model.ItemModelGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ModelDiscovery {
     static final Logger LOGGER = LogUtils.getLogger();
     private final Map<ResourceLocation, UnbakedModel> inputModels;
@@ -63,7 +60,6 @@ public class ModelDiscovery {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ResolverImpl implements ResolvableModel.Resolver {
         private final List<ResourceLocation> stack = new ArrayList<>();
         private final Set<ResourceLocation> resolvedModels = new HashSet<>();

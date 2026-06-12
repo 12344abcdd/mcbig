@@ -8,10 +8,7 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.SlimeRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LavaSlimeModel extends EntityModel<SlimeRenderState> {
     private static final int SEGMENT_COUNT = 8;
     private final ModelPart[] bodyCubes = new ModelPart[8];

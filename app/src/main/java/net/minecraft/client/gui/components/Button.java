@@ -5,10 +5,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Button extends AbstractButton {
     public static final int SMALL_WIDTH = 120;
     public static final int DEFAULT_WIDTH = 150;
@@ -46,7 +43,6 @@ public class Button extends AbstractButton {
         this.defaultButtonNarrationText(p_259196_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final Component message;
         private final Button.OnPress onPress;
@@ -101,12 +97,10 @@ public class Button extends AbstractButton {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface CreateNarration {
         MutableComponent createNarrationMessage(Supplier<MutableComponent> p_253695_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface OnPress {
         void onPress(Button p_93751_);
     }

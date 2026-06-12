@@ -8,12 +8,9 @@ import net.minecraft.client.gui.components.toasts.ToastManager;
 import net.minecraft.client.main.SilentInitException;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.util.tinyfd.TinyFileDialogs;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class GameNarrator {
     public static final Component NO_TITLE = CommonComponents.EMPTY;
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -114,7 +111,6 @@ public class GameNarrator {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class NarratorInitException extends SilentInitException {
         public NarratorInitException(String p_288985_) {
             super(p_288985_);

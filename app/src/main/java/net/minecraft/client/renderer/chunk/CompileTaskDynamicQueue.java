@@ -5,10 +5,7 @@ import java.util.List;
 import java.util.ListIterator;
 import javax.annotation.Nullable;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CompileTaskDynamicQueue {
     private static final int MAX_RECOMPILE_QUOTA = 2;
     private int recompileQuota = 2;

@@ -8,11 +8,8 @@ import java.io.IOException;
 import java.nio.file.Path;
 import javax.annotation.Nullable;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class DynamicTexture extends AbstractTexture implements Dumpable {
     private static final Logger LOGGER = LogUtils.getLogger();
     @Nullable

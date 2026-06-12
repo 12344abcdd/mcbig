@@ -27,11 +27,8 @@ import net.minecraft.util.FormattedCharSink;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringDecomposer;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class Font {
     private static final float EFFECT_DEPTH = 0.01F;
     public static final float SHADOW_DEPTH = 0.03F;
@@ -298,14 +295,12 @@ public class Font {
         return this.splitter;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum DisplayMode {
         NORMAL,
         SEE_THROUGH,
         POLYGON_OFFSET;
     }
 
-    @OnlyIn(Dist.CLIENT)
     class StringRenderOutput implements FormattedCharSink {
         final MultiBufferSource bufferSource;
         private final boolean drawShadow;

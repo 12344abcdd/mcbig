@@ -6,10 +6,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.Util;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GridLayout extends AbstractLayout {
     private final List<LayoutElement> children = new ArrayList<>();
     private final List<GridLayout.CellInhabitant> cellInhabitants = new ArrayList<>();
@@ -155,7 +152,6 @@ public class GridLayout extends AbstractLayout {
         return new GridLayout.RowHelper(p_265327_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class CellInhabitant extends AbstractLayout.AbstractChildWrapper {
         final int row;
         final int column;
@@ -179,7 +175,6 @@ public class GridLayout extends AbstractLayout {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public final class RowHelper {
         private final int columns;
         private int index;

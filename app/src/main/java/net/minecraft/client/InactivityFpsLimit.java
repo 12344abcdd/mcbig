@@ -3,10 +3,7 @@ package net.minecraft.client;
 import com.mojang.serialization.Codec;
 import net.minecraft.util.OptionEnum;
 import net.minecraft.util.StringRepresentable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum InactivityFpsLimit implements OptionEnum, StringRepresentable {
     MINIMIZED(0, "minimized", "options.inactivityFpsLimit.minimized"),
     AFK(1, "afk", "options.inactivityFpsLimit.afk");

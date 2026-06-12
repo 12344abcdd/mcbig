@@ -24,10 +24,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 import net.minecraft.world.level.block.entity.PotDecorations;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DecoratedPotRenderer implements BlockEntityRenderer<DecoratedPotBlockEntity> {
     private static final String NECK = "neck";
     private static final String FRONT = "front";

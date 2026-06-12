@@ -1,9 +1,6 @@
 package net.minecraft.client.model.geom.builders;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CubeDeformation {
     public static final CubeDeformation NONE = new CubeDeformation(0.0F);
     final float growX;

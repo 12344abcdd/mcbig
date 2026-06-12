@@ -6,10 +6,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Stream;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FullTextSearchTree<T> extends IdSearchTree<T> {
     private final SearchTree<T> plainTextSearchTree;
 

@@ -7,10 +7,7 @@ import net.minecraft.client.gui.components.MultiLineLabel;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DisconnectedRealmsScreen extends RealmsScreen {
     private final Component reason;
     private MultiLineLabel message = MultiLineLabel.EMPTY;

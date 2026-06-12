@@ -3,10 +3,7 @@ package net.minecraft.client.resources.sounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.animal.sniffer.Sniffer;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SnifferSoundInstance extends AbstractTickableSoundInstance {
     private static final float VOLUME = 1.0F;
     private static final float PITCH = 1.0F;

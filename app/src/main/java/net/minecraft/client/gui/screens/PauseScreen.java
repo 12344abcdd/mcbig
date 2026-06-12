@@ -24,10 +24,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.ServerLinks;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PauseScreen extends Screen {
     private static final ResourceLocation DRAFT_REPORT_SPRITE = ResourceLocation.withDefaultNamespace("icon/draft_report");
     private static final int COLUMNS = 2;
@@ -174,7 +171,6 @@ public class PauseScreen extends Screen {
         return Button.builder(p_262593_, ConfirmLinkScreen.confirmLink(p_350313_, p_352111_)).width(98).build();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class FeedbackSubScreen extends Screen {
         private static final Component TITLE = Component.translatable("menu.feedback.title");
         public final Screen parent;

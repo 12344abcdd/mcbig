@@ -5,10 +5,7 @@ import com.mojang.blaze3d.vertex.VertexFormat;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CoreShaders {
     private static final List<ShaderProgram> PROGRAMS = new ArrayList<>();
     public static final ShaderProgram BLIT_SCREEN = register("blit_screen", DefaultVertexFormat.BLIT_SCREEN);

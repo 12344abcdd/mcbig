@@ -11,10 +11,7 @@ import net.minecraft.util.context.ContextMap;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.item.crafting.display.SlotDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RecipeToast implements Toast {
     private static final ResourceLocation BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace("toast/recipe");
     private static final long DISPLAY_TIME = 5000L;
@@ -87,7 +84,6 @@ public class RecipeToast implements Toast {
         recipetoast.addItem(itemstack, itemstack1);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Entry(ItemStack categoryItem, ItemStack unlockedItem) {
     }
 }

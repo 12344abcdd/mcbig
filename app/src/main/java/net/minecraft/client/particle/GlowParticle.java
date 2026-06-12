@@ -4,10 +4,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GlowParticle extends TextureSheetParticle {
     static final RandomSource RANDOM = RandomSource.create();
     private final SpriteSet sprites;
@@ -50,7 +47,6 @@ public class GlowParticle extends TextureSheetParticle {
         this.setSpriteFromAge(this.sprites);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class ElectricSparkProvider implements ParticleProvider<SimpleParticleType> {
         private final double SPEED_FACTOR = 0.25;
         private final SpriteSet sprite;
@@ -79,7 +75,6 @@ public class GlowParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class GlowSquidProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -124,7 +119,6 @@ public class GlowParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class ScrapeProvider implements ParticleProvider<SimpleParticleType> {
         private final double SPEED_FACTOR = 0.01;
         private final SpriteSet sprite;
@@ -158,7 +152,6 @@ public class GlowParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class WaxOffProvider implements ParticleProvider<SimpleParticleType> {
         private final double SPEED_FACTOR = 0.01;
         private final SpriteSet sprite;
@@ -187,7 +180,6 @@ public class GlowParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class WaxOnProvider implements ParticleProvider<SimpleParticleType> {
         private final double SPEED_FACTOR = 0.01;
         private final SpriteSet sprite;

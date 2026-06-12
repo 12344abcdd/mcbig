@@ -33,12 +33,9 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceProvider;
 import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ShaderManager extends SimplePreparableReloadListener<ShaderManager.Configs> implements AutoCloseable {
     static final Logger LOGGER = LogUtils.getLogger();
     public static final String SHADER_PATH = "shaders";
@@ -287,7 +284,6 @@ public class ShaderManager extends SimplePreparableReloadListener<ShaderManager.
         this.compilationCache.close();
     }
 
-    @OnlyIn(Dist.CLIENT)
     class CompilationCache implements AutoCloseable {
         private final ShaderManager.Configs configs;
         final Map<ShaderProgram, Optional<CompiledShaderProgram>> programs = new HashMap<>();
@@ -376,14 +372,12 @@ public class ShaderManager extends SimplePreparableReloadListener<ShaderManager.
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class CompilationException extends Exception {
         public CompilationException(String p_366771_) {
             super(p_366771_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Configs(
         Map<ResourceLocation, ShaderProgramConfig> programs,
         Map<ShaderManager.ShaderSourceKey, String> shaderSources,
@@ -392,7 +386,6 @@ public class ShaderManager extends SimplePreparableReloadListener<ShaderManager.
         public static final ShaderManager.Configs EMPTY = new ShaderManager.Configs(Map.of(), Map.of(), Map.of());
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ShaderCompilationKey(ResourceLocation id, CompiledShader.Type type, ShaderDefines defines) {
         @Override
         public String toString() {
@@ -401,7 +394,6 @@ public class ShaderManager extends SimplePreparableReloadListener<ShaderManager.
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ShaderSourceKey(ResourceLocation id, CompiledShader.Type type) {
         @Override
         public String toString() {

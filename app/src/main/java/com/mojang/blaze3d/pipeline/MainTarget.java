@@ -6,10 +6,7 @@ import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
 import java.util.List;
 import java.util.Objects;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MainTarget extends RenderTarget {
     public static final int DEFAULT_WIDTH = 854;
     public static final int DEFAULT_HEIGHT = 480;
@@ -86,7 +83,6 @@ public class MainTarget extends RenderTarget {
         return GlStateManager._getError() != 1285;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum AttachmentState {
         NONE,
         COLOR,
@@ -100,7 +96,6 @@ public class MainTarget extends RenderTarget {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Dimension {
         public final int width;
         public final int height;

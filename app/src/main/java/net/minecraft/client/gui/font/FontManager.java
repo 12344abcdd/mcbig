@@ -45,11 +45,8 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.DependencySorter;
 import net.minecraft.util.profiling.Profiler;
 import net.minecraft.util.profiling.ProfilerFiller;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class FontManager implements PreparableReloadListener, AutoCloseable {
     static final Logger LOGGER = LogUtils.getLogger();
     private static final String FONTS_PATH = "fonts.json";
@@ -270,7 +267,6 @@ public class FontManager implements PreparableReloadListener, AutoCloseable {
         this.missingFontSet.close();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record BuilderId(ResourceLocation fontId, String pack, int index) {
         @Override
         public String toString() {
@@ -278,7 +274,6 @@ public class FontManager implements PreparableReloadListener, AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record BuilderResult(FontManager.BuilderId id, FontOption.Filter filter, Either<CompletableFuture<Optional<GlyphProvider>>, ResourceLocation> result) {
         public Optional<List<GlyphProvider.Conditional>> resolve(Function<ResourceLocation, List<GlyphProvider.Conditional>> p_284942_) {
             return this.result
@@ -306,7 +301,6 @@ public class FontManager implements PreparableReloadListener, AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record FontDefinitionFile(List<GlyphProviderDefinition.Conditional> providers) {
         public static final Codec<FontManager.FontDefinitionFile> CODEC = RecordCodecBuilder.create(
             p_325493_ -> p_325493_.group(
@@ -316,11 +310,9 @@ public class FontManager implements PreparableReloadListener, AutoCloseable {
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Preparation(Map<ResourceLocation, List<GlyphProvider.Conditional>> fontSets, List<GlyphProvider> allProviders) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record UnresolvedBuilderBundle(ResourceLocation fontId, List<FontManager.BuilderResult> builders, Set<ResourceLocation> dependencies)
         implements DependencySorter.Entry<ResourceLocation> {
         public UnresolvedBuilderBundle(ResourceLocation p_284984_) {

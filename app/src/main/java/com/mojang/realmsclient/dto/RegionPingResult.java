@@ -2,10 +2,7 @@ package com.mojang.realmsclient.dto;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.Locale;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RegionPingResult extends ValueObject implements ReflectionBasedSerialization {
     @SerializedName("regionName")
     private final String regionName;

@@ -17,10 +17,7 @@ import net.minecraft.world.level.biome.AmbientAdditionsSettings;
 import net.minecraft.world.level.biome.AmbientMoodSettings;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BiomeAmbientSoundsHandler implements AmbientSoundHandler {
     private static final int LOOP_SOUND_CROSS_FADE_TIME = 40;
     private static final float SKY_MOOD_RECOVERY_RATE = 0.001F;
@@ -113,7 +110,6 @@ public class BiomeAmbientSoundsHandler implements AmbientSoundHandler {
             );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class LoopSoundInstance extends AbstractTickableSoundInstance {
         private int fadeDirection;
         private int fade;

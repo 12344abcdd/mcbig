@@ -8,12 +8,9 @@ import javax.annotation.Nullable;
 import javax.sound.sampled.AudioFormat;
 import net.minecraft.client.sounds.AudioStream;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.openal.AL10;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class Channel {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int QUEUED_BUFFER_COUNT = 4;

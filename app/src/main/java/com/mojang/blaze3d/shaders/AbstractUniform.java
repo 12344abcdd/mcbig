@@ -1,13 +1,10 @@
 package com.mojang.blaze3d.shaders;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 
-@OnlyIn(Dist.CLIENT)
 public class AbstractUniform {
     public void set(float p_85479_) {
     }

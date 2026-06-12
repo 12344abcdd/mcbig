@@ -21,11 +21,8 @@ import net.minecraft.world.entity.vehicle.NewMinecartBehavior;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class EntityRenderer<T extends Entity, S extends EntityRenderState> {
     protected static final float NAMETAG_SCALE = 0.025F;
     public static final int LEASH_RENDER_STEPS = 24;

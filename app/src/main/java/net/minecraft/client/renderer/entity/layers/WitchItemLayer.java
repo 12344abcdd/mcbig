@@ -5,10 +5,7 @@ import com.mojang.math.Axis;
 import net.minecraft.client.model.WitchModel;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.state.WitchRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WitchItemLayer extends CrossedArmsItemLayer<WitchRenderState, WitchModel> {
     public WitchItemLayer(RenderLayerParent<WitchRenderState, WitchModel> p_234926_) {
         super(p_234926_);

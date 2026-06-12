@@ -11,10 +11,7 @@ import net.minecraft.client.multiplayer.chat.report.ReportingContext;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.PlayerChatMessage;
 import net.minecraft.network.chat.SignedMessageLink;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ChatSelectionLogFiller {
     private final ChatLog log;
     private final ChatReportContextBuilder contextBuilder;
@@ -77,7 +74,6 @@ public class ChatSelectionLogFiller {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Output {
         void acceptMessage(int p_239762_, LoggedChatMessage.Player p_251438_);
 

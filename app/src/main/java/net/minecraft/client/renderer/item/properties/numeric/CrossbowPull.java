@@ -6,10 +6,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CrossbowPull implements RangeSelectItemModelProperty {
     public static final MapCodec<CrossbowPull> MAP_CODEC = MapCodec.unit(new CrossbowPull());
 

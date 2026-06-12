@@ -5,10 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.toasts.TutorialToast;
 import net.minecraft.client.player.ClientInput;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MovementTutorialStepInstance implements TutorialStepInstance {
     private static final int MINIMUM_TIME_MOVED = 40;
     private static final int MINIMUM_TIME_LOOKED = 40;

@@ -3,10 +3,7 @@ package net.minecraft.client.resources;
 import com.mojang.authlib.GameProfile;
 import java.util.UUID;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DefaultPlayerSkin {
     private static final PlayerSkin[] DEFAULT_SKINS = new PlayerSkin[]{
         create("textures/entity/player/slim/alex.png", PlayerSkin.Model.SLIM),

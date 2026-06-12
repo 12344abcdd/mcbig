@@ -18,10 +18,7 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.level.block.SkullBlock;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SkullSpecialRenderer implements SpecialModelRenderer<ResolvableProfile> {
     private final SkullBlock.Type skullType;
     private final SkullModelBase model;
@@ -54,7 +51,6 @@ public class SkullSpecialRenderer implements SpecialModelRenderer<ResolvableProf
         SkullBlockRenderer.renderSkull(null, 180.0F, this.animation, p_386490_, p_388080_, p_387930_, this.model, rendertype);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(SkullBlock.Type kind, Optional<ResourceLocation> textureOverride, float animation) implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<SkullSpecialRenderer.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_390096_ -> p_390096_.group(

@@ -16,10 +16,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MobAppearanceParticle extends Particle {
     private final Model model;
     private final RenderType renderType = RenderType.entityTranslucent(ElderGuardianRenderer.GUARDIAN_ELDER_LOCATION);
@@ -56,7 +53,6 @@ public class MobAppearanceParticle extends Particle {
     public void render(VertexConsumer p_107125_, Camera p_107126_, float p_107127_) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         public Particle createParticle(
             SimpleParticleType p_107140_,

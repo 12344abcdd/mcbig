@@ -8,10 +8,7 @@ import net.minecraft.client.renderer.entity.state.SkeletonRenderState;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
 import net.minecraft.world.item.Items;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractSkeletonRenderer<T extends AbstractSkeleton, S extends SkeletonRenderState> extends HumanoidMobRenderer<T, S, SkeletonModel<S>> {
     public AbstractSkeletonRenderer(
         EntityRendererProvider.Context p_365063_, ModelLayerLocation p_364353_, ModelLayerLocation p_361271_, ModelLayerLocation p_360962_

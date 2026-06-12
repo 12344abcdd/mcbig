@@ -6,10 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 import net.minecraft.Util;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class EqualSpacingLayout extends AbstractLayout {
     private final EqualSpacingLayout.Orientation orientation;
     private final List<EqualSpacingLayout.ChildContainer> children = new ArrayList<>();
@@ -95,14 +92,12 @@ public class EqualSpacingLayout extends AbstractLayout {
         return this.addChild(p_295467_, Util.make(this.newChildLayoutSettings(), p_295449_));
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ChildContainer extends AbstractLayout.AbstractChildWrapper {
         protected ChildContainer(LayoutElement p_295358_, LayoutSettings p_295638_) {
             super(p_295358_, p_295638_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Orientation {
         HORIZONTAL,
         VERTICAL;

@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.layers.SaddleLayer;
 import net.minecraft.client.renderer.entity.state.PigRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Pig;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PigRenderer extends AgeableMobRenderer<Pig, PigRenderState, PigModel> {
     private static final ResourceLocation PIG_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/pig/pig.png");
 

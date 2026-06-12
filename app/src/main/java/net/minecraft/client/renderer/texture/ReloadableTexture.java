@@ -6,10 +6,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import java.io.IOException;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class ReloadableTexture extends AbstractTexture {
     private final ResourceLocation resourceId;
 

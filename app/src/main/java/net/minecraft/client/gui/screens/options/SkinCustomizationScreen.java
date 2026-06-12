@@ -8,10 +8,7 @@ import net.minecraft.client.gui.components.CycleButton;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.PlayerModelPart;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SkinCustomizationScreen extends OptionsSubScreen {
     private static final Component TITLE = Component.translatable("options.skinCustomisation.title");
 

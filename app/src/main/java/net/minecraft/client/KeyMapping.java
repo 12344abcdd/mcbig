@@ -11,10 +11,7 @@ import javax.annotation.Nullable;
 import net.minecraft.Util;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class KeyMapping implements Comparable<KeyMapping> {
     private static final Map<String, KeyMapping> ALL = Maps.newHashMap();
     private static final Map<InputConstants.Key, KeyMapping> MAP = Maps.newHashMap();

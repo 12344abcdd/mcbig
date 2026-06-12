@@ -30,11 +30,8 @@ import net.minecraft.world.item.MapItem;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.level.saveddata.maps.MapId;
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemInHandRenderer {
     private static final RenderType MAP_BACKGROUND = RenderType.text(ResourceLocation.withDefaultNamespace("textures/map/map_background.png"));
     private static final RenderType MAP_BACKGROUND_CHECKERBOARD = RenderType.text(
@@ -619,7 +616,6 @@ public class ItemInHandRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     @VisibleForTesting
     static enum HandRenderSelection {
         RENDER_BOTH_HANDS(true, true),

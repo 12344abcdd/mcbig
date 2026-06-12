@@ -13,15 +13,11 @@ import net.minecraft.client.resources.model.EquipmentAssetManager;
 import net.minecraft.client.resources.model.ModelManager;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.entity.Entity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
 @FunctionalInterface
-@OnlyIn(Dist.CLIENT)
 public interface EntityRendererProvider<T extends Entity> {
     EntityRenderer<T, ?> create(EntityRendererProvider.Context p_174010_);
 
-    @OnlyIn(Dist.CLIENT)
     public static class Context {
         private final EntityRenderDispatcher entityRenderDispatcher;
         private final ItemModelResolver itemModelResolver;

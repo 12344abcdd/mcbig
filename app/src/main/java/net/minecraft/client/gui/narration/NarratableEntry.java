@@ -3,10 +3,7 @@ package net.minecraft.client.gui.narration;
 import java.util.Collection;
 import java.util.List;
 import net.minecraft.client.gui.components.TabOrderedElement;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface NarratableEntry extends TabOrderedElement, NarrationSupplier {
     NarratableEntry.NarrationPriority narrationPriority();
 
@@ -18,7 +15,6 @@ public interface NarratableEntry extends TabOrderedElement, NarrationSupplier {
         return List.of(this);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum NarrationPriority {
         NONE,
         HOVERED,

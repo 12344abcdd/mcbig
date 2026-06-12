@@ -5,11 +5,8 @@ import it.unimi.dsi.fastutil.floats.FloatConsumer;
 import java.nio.ByteBuffer;
 import java.util.List;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.BufferUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class ChunkedSampleByteBuf implements FloatConsumer {
     private final List<ByteBuffer> buffers = Lists.newArrayList();
     private final int bufferSize;

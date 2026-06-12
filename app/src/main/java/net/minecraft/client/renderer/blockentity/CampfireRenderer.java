@@ -10,10 +10,7 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.entity.CampfireBlockEntity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CampfireRenderer implements BlockEntityRenderer<CampfireBlockEntity> {
     private static final float SIZE = 0.375F;
     private final ItemRenderer itemRenderer;

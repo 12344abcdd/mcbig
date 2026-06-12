@@ -13,10 +13,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.state.PlayerRenderState;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.HumanoidArm;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerModel extends HumanoidModel<PlayerRenderState> {
     private static final String LEFT_SLEEVE = "left_sleeve";
     private static final String RIGHT_SLEEVE = "right_sleeve";

@@ -14,10 +14,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.ShulkerBoxBlock;
 import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ShulkerBoxRenderer implements BlockEntityRenderer<ShulkerBoxBlockEntity> {
     private final ShulkerBoxRenderer.ShulkerBoxModel model;
 
@@ -57,7 +54,6 @@ public class ShulkerBoxRenderer implements BlockEntityRenderer<ShulkerBoxBlockEn
         p_388735_.popPose();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ShulkerBoxModel extends Model {
         private final ModelPart lid;
 

@@ -7,10 +7,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import java.lang.reflect.Type;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record ItemTransforms(
     ItemTransform thirdPersonLeftHand,
     ItemTransform thirdPersonRightHand,
@@ -46,7 +43,6 @@ public record ItemTransforms(
         };
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class Deserializer implements JsonDeserializer<ItemTransforms> {
         public ItemTransforms deserialize(JsonElement p_111820_, Type p_111821_, JsonDeserializationContext p_111822_) throws JsonParseException {
             JsonObject jsonobject = p_111820_.getAsJsonObject();

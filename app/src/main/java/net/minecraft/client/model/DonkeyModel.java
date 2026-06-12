@@ -9,10 +9,7 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.MeshTransformer;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.DonkeyRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DonkeyModel extends AbstractEquineModel<DonkeyRenderState> {
     public static final float DONKEY_SCALE = 0.87F;
     public static final float MULE_SCALE = 0.92F;

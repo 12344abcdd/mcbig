@@ -6,11 +6,8 @@ import java.lang.invoke.MethodHandles.Lookup;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.system.Pointer;
 
-@OnlyIn(Dist.CLIENT)
 public class DebugMemoryUntracker {
     @Nullable
     private static final MethodHandle UNTRACK = GLX.make(() -> {

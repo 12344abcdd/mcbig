@@ -15,10 +15,7 @@ import net.minecraft.client.multiplayer.chat.report.ReportingContext;
 import net.minecraft.client.multiplayer.chat.report.SkinReport;
 import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SkinReportScreen extends AbstractReportScreen<SkinReport.Builder> {
     private static final int SKIN_WIDTH = 85;
     private static final int FORM_WIDTH = 178;

@@ -6,10 +6,7 @@ import com.mojang.blocklist.BlockListSupplier;
 import java.util.Objects;
 import java.util.ServiceLoader;
 import java.util.function.Predicate;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface AddressCheck {
     boolean isAllowed(ResolvedServerAddress p_171829_);
 

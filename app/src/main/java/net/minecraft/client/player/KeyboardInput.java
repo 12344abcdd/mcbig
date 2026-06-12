@@ -2,10 +2,7 @@ package net.minecraft.client.player;
 
 import net.minecraft.client.Options;
 import net.minecraft.world.entity.player.Input;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class KeyboardInput extends ClientInput {
     private final Options options;
 

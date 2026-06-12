@@ -5,10 +5,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.animal.Bee;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class BeeSoundInstance extends AbstractTickableSoundInstance {
     private static final float VOLUME_MIN = 0.0F;
     private static final float VOLUME_MAX = 1.2F;

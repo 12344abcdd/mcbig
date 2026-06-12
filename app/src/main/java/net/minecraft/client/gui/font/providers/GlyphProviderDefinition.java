@@ -10,10 +10,7 @@ import java.io.IOException;
 import net.minecraft.client.gui.font.FontOption;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface GlyphProviderDefinition {
     MapCodec<GlyphProviderDefinition> MAP_CODEC = GlyphProviderType.CODEC.dispatchMap(GlyphProviderDefinition::type, GlyphProviderType::mapCodec);
 
@@ -21,7 +18,6 @@ public interface GlyphProviderDefinition {
 
     Either<GlyphProviderDefinition.Loader, GlyphProviderDefinition.Reference> unpack();
 
-    @OnlyIn(Dist.CLIENT)
     public static record Conditional(GlyphProviderDefinition definition, FontOption.Filter filter) {
         public static final Codec<GlyphProviderDefinition.Conditional> CODEC = RecordCodecBuilder.create(
             p_337411_ -> p_337411_.group(
@@ -32,12 +28,10 @@ public interface GlyphProviderDefinition {
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Loader {
         GlyphProvider load(ResourceManager p_286639_) throws IOException;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Reference(ResourceLocation id) {
     }
 }

@@ -4,10 +4,7 @@ import net.minecraft.Util;
 import net.minecraft.network.protocol.ping.ClientboundPongResponsePacket;
 import net.minecraft.network.protocol.ping.ServerboundPingRequestPacket;
 import net.minecraft.util.debugchart.LocalSampleLogger;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PingDebugMonitor {
     private final ClientPacketListener connection;
     private final LocalSampleLogger delayTimer;

@@ -17,10 +17,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.decoration.Painting;
 import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.minecraft.world.level.Level;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PaintingRenderer extends EntityRenderer<Painting, PaintingRenderState> {
     public PaintingRenderer(EntityRendererProvider.Context p_174332_) {
         super(p_174332_);

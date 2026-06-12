@@ -4,10 +4,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.toasts.TutorialToast;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class OpenInventoryTutorialStep implements TutorialStepInstance {
     private static final int HINT_DELAY = 600;
     private static final Component TITLE = Component.translatable("tutorial.open_inventory.title");

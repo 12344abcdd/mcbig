@@ -7,11 +7,8 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.world.inventory.tooltip.BundleTooltip;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public interface ClientTooltipComponent {
     static ClientTooltipComponent create(FormattedCharSequence p_169949_) {
         return new ClientTextTooltip(p_169949_);

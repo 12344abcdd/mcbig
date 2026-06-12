@@ -27,11 +27,8 @@ import net.minecraft.util.GsonHelper;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockModelDefinition {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final Gson GSON = new GsonBuilder()
@@ -139,7 +136,6 @@ public class BlockModelDefinition {
         return map;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Deserializer implements JsonDeserializer<BlockModelDefinition> {
         public BlockModelDefinition deserialize(JsonElement p_111559_, Type p_111560_, JsonDeserializationContext p_111561_) throws JsonParseException {
             JsonObject jsonobject = p_111559_.getAsJsonObject();
@@ -176,7 +172,6 @@ public class BlockModelDefinition {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class MissingVariantException extends RuntimeException {
     }
 }

@@ -9,10 +9,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ConfirmLinkScreen extends ConfirmScreen {
     private static final Component COPY_BUTTON_TEXT = Component.translatable("chat.copy");
     private static final Component WARNING_TEXT = Component.translatable("chat.link.warning");

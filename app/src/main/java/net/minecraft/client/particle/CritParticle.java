@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CritParticle extends TextureSheetParticle {
     CritParticle(ClientLevel p_105919_, double p_105920_, double p_105921_, double p_105922_, double p_105923_, double p_105924_, double p_105925_) {
         super(p_105919_, p_105920_, p_105921_, p_105922_, 0.0, 0.0, 0.0);
@@ -45,7 +42,6 @@ public class CritParticle extends TextureSheetParticle {
         return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class DamageIndicatorProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -70,7 +66,6 @@ public class CritParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class MagicProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -96,7 +91,6 @@ public class CritParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

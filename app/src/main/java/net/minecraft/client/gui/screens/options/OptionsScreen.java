@@ -29,10 +29,7 @@ import net.minecraft.network.protocol.game.ServerboundChangeDifficultyPacket;
 import net.minecraft.network.protocol.game.ServerboundLockDifficultyPacket;
 import net.minecraft.server.packs.repository.PackRepository;
 import net.minecraft.world.Difficulty;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class OptionsScreen extends Screen {
     private static final Component TITLE = Component.translatable("options.title");
     private static final Component SKIN_CUSTOMIZATION = Component.translatable("options.skinCustomisation");

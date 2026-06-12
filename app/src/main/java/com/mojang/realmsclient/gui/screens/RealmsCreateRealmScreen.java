@@ -20,10 +20,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsCreateRealmScreen extends RealmsScreen {
     private static final Component CREATE_REALM_TEXT = Component.translatable("mco.selectServer.create");
     private static final Component NAME_LABEL = Component.translatable("mco.configure.world.name");

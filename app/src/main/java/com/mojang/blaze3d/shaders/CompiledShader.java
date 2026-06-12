@@ -6,11 +6,8 @@ import javax.annotation.Nullable;
 import net.minecraft.client.renderer.ShaderManager;
 import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class CompiledShader implements AutoCloseable {
     private static final int NOT_ALLOCATED = -1;
     private final ResourceLocation id;
@@ -53,7 +50,6 @@ public class CompiledShader implements AutoCloseable {
         return this.shaderId;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type {
         VERTEX("vertex", ".vsh", 35633),
         FRAGMENT("fragment", ".fsh", 35632);

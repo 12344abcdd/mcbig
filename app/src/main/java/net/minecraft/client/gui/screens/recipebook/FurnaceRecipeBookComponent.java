@@ -10,10 +10,7 @@ import net.minecraft.world.inventory.AbstractFurnaceMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.crafting.display.FurnaceRecipeDisplay;
 import net.minecraft.world.item.crafting.display.RecipeDisplay;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FurnaceRecipeBookComponent extends RecipeBookComponent<AbstractFurnaceMenu> {
     private static final WidgetSprites FILTER_SPRITES = new WidgetSprites(
         ResourceLocation.withDefaultNamespace("recipe_book/furnace_filter_enabled"),

@@ -23,10 +23,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.packs.resources.ResourceProvider;
 import net.minecraft.tags.TagLoader;
 import net.minecraft.tags.TagNetworkSerialization;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RegistryDataCollector {
     @Nullable
     private RegistryDataCollector.ContentsCollector contentsCollector;
@@ -155,7 +152,6 @@ public class RegistryDataCollector {
         return registryaccess.freeze();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ContentsCollector {
         final Map<ResourceKey<? extends Registry<?>>, List<RegistrySynchronization.PackedRegistryEntry>> elements = new HashMap<>();
 
@@ -164,7 +160,6 @@ public class RegistryDataCollector {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class TagCollector {
         private final Map<ResourceKey<? extends Registry<?>>, TagNetworkSerialization.NetworkPayload> tags = new HashMap<>();
 

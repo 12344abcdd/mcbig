@@ -9,10 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractButton extends AbstractWidget {
     protected static final int TEXT_MARGIN = 2;
     private static final WidgetSprites SPRITES = new WidgetSprites(

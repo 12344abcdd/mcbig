@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.item.properties.conditional;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ExtraCodecs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ConditionalItemModelProperties {
     private static final ExtraCodecs.LateBoundIdMapper<ResourceLocation, MapCodec<? extends ConditionalItemModelProperty>> ID_MAPPER = new ExtraCodecs.LateBoundIdMapper<>();
     public static final MapCodec<ConditionalItemModelProperty> MAP_CODEC = ID_MAPPER.codec(ResourceLocation.CODEC)

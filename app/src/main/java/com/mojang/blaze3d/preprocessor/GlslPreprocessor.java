@@ -10,10 +10,7 @@ import javax.annotation.Nullable;
 import net.minecraft.FileUtil;
 import net.minecraft.client.renderer.ShaderDefines;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class GlslPreprocessor {
     private static final String C_COMMENT = "/\\*(?:[^*]|\\*+[^*/])*\\*+/";
     private static final String LINE_COMMENT = "//[^\\v]*";
@@ -138,7 +135,6 @@ public abstract class GlslPreprocessor {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static final class Context {
         int glslVersion;
         int sourceId;

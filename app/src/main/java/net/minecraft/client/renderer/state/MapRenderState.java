@@ -6,16 +6,12 @@ import javax.annotation.Nullable;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MapRenderState {
     @Nullable
     public ResourceLocation texture;
     public final List<MapRenderState.MapDecorationRenderState> decorations = new ArrayList<>();
 
-    @OnlyIn(Dist.CLIENT)
     public static class MapDecorationRenderState {
         @Nullable
         public TextureAtlasSprite atlasSprite;

@@ -6,13 +6,10 @@ import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.core.Vec3i;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.lwjgl.system.MemoryStack;
 
-@OnlyIn(Dist.CLIENT)
 public interface VertexConsumer {
     VertexConsumer addVertex(float p_350761_, float p_350704_, float p_350711_);
 

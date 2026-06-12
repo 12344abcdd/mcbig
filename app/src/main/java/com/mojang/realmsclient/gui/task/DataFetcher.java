@@ -12,11 +12,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import javax.annotation.Nullable;
 import net.minecraft.util.TimeSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class DataFetcher {
     static final Logger LOGGER = LogUtils.getLogger();
     final Executor executor;
@@ -42,11 +39,9 @@ public class DataFetcher {
         return new DataFetcher.Subscription();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ComputationResult<T>(Either<T, Exception> value, long time) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     class SubscribedTask<T> {
         private final DataFetcher.Task<T> task;
         private final Consumer<T> output;
@@ -84,7 +79,6 @@ public class DataFetcher {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class Subscription {
         private final List<DataFetcher.SubscribedTask<?>> subscriptions = new ArrayList<>();
 
@@ -113,11 +107,9 @@ public class DataFetcher {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record SuccessfulComputationResult<T>(T value, long time) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class Task<T> {
         private final String id;
         private final Callable<T> updater;

@@ -5,10 +5,7 @@ import it.unimi.dsi.fastutil.objects.Reference2ObjectArrayMap;
 import java.util.List;
 import java.util.Map;
 import net.minecraft.Util;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SectionBufferBuilderPack implements AutoCloseable {
     private static final List<RenderType> RENDER_TYPES = RenderType.chunkBufferLayers();
     public static final int TOTAL_BUFFERS_SIZE = RENDER_TYPES.stream().mapToInt(RenderType::bufferSize).sum();

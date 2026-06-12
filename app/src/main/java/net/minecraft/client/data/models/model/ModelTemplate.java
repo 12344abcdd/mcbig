@@ -12,10 +12,7 @@ import java.util.function.Function;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ModelTemplate {
     private final Optional<ResourceLocation> model;
     private final Set<TextureSlot> requiredSlots;

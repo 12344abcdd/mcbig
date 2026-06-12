@@ -23,10 +23,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractSelectionList<E extends AbstractSelectionList.Entry<E>> extends AbstractContainerWidget {
     private static final ResourceLocation MENU_LIST_BACKGROUND = ResourceLocation.withDefaultNamespace("textures/gui/menu_list_background.png");
     private static final ResourceLocation INWORLD_MENU_LIST_BACKGROUND = ResourceLocation.withDefaultNamespace("textures/gui/inworld_menu_list_background.png");
@@ -389,7 +386,6 @@ public abstract class AbstractSelectionList<E extends AbstractSelectionList.Entr
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected abstract static class Entry<E extends AbstractSelectionList.Entry<E>> implements GuiEventListener {
         @Deprecated
         AbstractSelectionList<E> list;
@@ -436,7 +432,6 @@ public abstract class AbstractSelectionList<E extends AbstractSelectionList.Entr
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class TrackedList extends AbstractList<E> {
         private final List<E> delegate = Lists.newArrayList();
 

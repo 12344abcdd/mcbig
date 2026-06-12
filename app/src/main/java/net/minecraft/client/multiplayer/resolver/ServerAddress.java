@@ -3,11 +3,8 @@ package net.minecraft.client.multiplayer.resolver;
 import com.google.common.net.HostAndPort;
 import com.mojang.logging.LogUtils;
 import java.net.IDN;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public final class ServerAddress {
     private static final Logger LOGGER = LogUtils.getLogger();
     private final HostAndPort hostAndPort;

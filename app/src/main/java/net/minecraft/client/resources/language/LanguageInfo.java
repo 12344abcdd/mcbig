@@ -5,10 +5,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.ExtraCodecs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record LanguageInfo(String region, String name, boolean bidirectional) {
     public static final Codec<LanguageInfo> CODEC = RecordCodecBuilder.create(
         p_265767_ -> p_265767_.group(

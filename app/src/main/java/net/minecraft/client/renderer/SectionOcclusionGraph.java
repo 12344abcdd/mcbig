@@ -33,11 +33,8 @@ import net.minecraft.util.VisibleForDebug;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.LevelHeightAccessor;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class SectionOcclusionGraph {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Direction[] DIRECTIONS = Direction.values();
@@ -380,21 +377,18 @@ public class SectionOcclusionGraph {
         return this.currentGraph.get().storage.sectionTree;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record GraphEvents(it.unimi.dsi.fastutil.objects.ObjectSet<ChunkPos> chunksWhichReceivedNeighbors, BlockingQueue<SectionRenderDispatcher.RenderSection> sectionsToPropagateFrom) {
         GraphEvents() {
             this(new it.unimi.dsi.fastutil.objects.ObjectOpenHashSet<>(), new LinkedBlockingQueue<>());
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record GraphState(SectionOcclusionGraph.GraphStorage storage, SectionOcclusionGraph.GraphEvents events) {
         GraphState(ViewArea p_366764_) {
             this(new SectionOcclusionGraph.GraphStorage(p_366764_), new SectionOcclusionGraph.GraphEvents());
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class GraphStorage {
         public final SectionOcclusionGraph.SectionToNodeMap sectionToNodeMap;
         public final Octree sectionTree;
@@ -407,7 +401,6 @@ public class SectionOcclusionGraph {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     @VisibleForDebug
     public static class Node {
         @VisibleForDebug
@@ -460,7 +453,6 @@ public class SectionOcclusionGraph {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class SectionToNodeMap {
         private final SectionOcclusionGraph.Node[] nodes;
 

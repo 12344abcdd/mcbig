@@ -21,10 +21,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TeleportToTeamMenuCategory implements SpectatorMenuCategory, SpectatorMenuItem {
     private static final ResourceLocation TELEPORT_TO_TEAM_SPRITE = ResourceLocation.withDefaultNamespace("spectator/teleport_to_team");
     private static final Component TELEPORT_TEXT = Component.translatable("spectatorMenu.team_teleport");
@@ -73,7 +70,6 @@ public class TeleportToTeamMenuCategory implements SpectatorMenuCategory, Specta
         return !this.items.isEmpty();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class TeamSelectionItem implements SpectatorMenuItem {
         private final PlayerTeam team;
         private final Supplier<PlayerSkin> iconSkin;

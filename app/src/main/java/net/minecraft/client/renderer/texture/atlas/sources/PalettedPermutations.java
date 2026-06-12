@@ -30,11 +30,8 @@ import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceMetadata;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class PalettedPermutations implements SpriteSource {
     static final Logger LOGGER = LogUtils.getLogger();
     public static final MapCodec<PalettedPermutations> CODEC = RecordCodecBuilder.mapCodec(
@@ -138,7 +135,6 @@ public class PalettedPermutations implements SpriteSource {
         return SpriteSources.PALETTED_PERMUTATIONS;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record PalettedSpriteSupplier(LazyLoadedImage baseImage, Supplier<IntUnaryOperator> palette, ResourceLocation permutationLocation)
         implements SpriteSource.SpriteSupplier {
         @Nullable

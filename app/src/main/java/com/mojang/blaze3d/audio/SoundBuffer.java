@@ -4,11 +4,8 @@ import java.nio.ByteBuffer;
 import java.util.OptionalInt;
 import javax.annotation.Nullable;
 import javax.sound.sampled.AudioFormat;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.openal.AL10;
 
-@OnlyIn(Dist.CLIENT)
 public class SoundBuffer {
     @Nullable
     private ByteBuffer data;

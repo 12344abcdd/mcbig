@@ -20,10 +20,7 @@ import net.minecraft.world.level.block.entity.BannerBlockEntity;
 import net.minecraft.world.level.block.entity.BannerPatternLayers;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.RotationSegment;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BannerRenderer implements BlockEntityRenderer<BannerBlockEntity> {
     private static final int MAX_PATTERNS = 16;
     private static final float SIZE = 0.6666667F;

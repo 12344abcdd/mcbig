@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.chunk;
 import java.util.BitSet;
 import java.util.Set;
 import net.minecraft.core.Direction;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VisibilitySet {
     private static final int FACINGS = Direction.values().length;
     private final BitSet data = new BitSet(FACINGS * FACINGS);

@@ -26,10 +26,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.display.RecipeDisplayEntry;
 import net.minecraft.world.item.crafting.display.SlotDisplayContext;
 import net.minecraft.world.level.Level;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SessionSearchTrees {
     private static final SessionSearchTrees.Key RECIPE_COLLECTIONS = new SessionSearchTrees.Key();
     private static final SessionSearchTrees.Key CREATIVE_NAMES = new SessionSearchTrees.Key();
@@ -132,7 +129,6 @@ public class SessionSearchTrees {
         return this.creativeByNameSearch.join();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Key {
     }
 }

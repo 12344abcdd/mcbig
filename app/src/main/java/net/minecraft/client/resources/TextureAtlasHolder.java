@@ -13,10 +13,7 @@ import net.minecraft.server.packs.resources.PreparableReloadListener;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.profiling.Profiler;
 import net.minecraft.util.profiling.Zone;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class TextureAtlasHolder implements PreparableReloadListener, AutoCloseable {
     private final TextureAtlas textureAtlas;
     private final ResourceLocation atlasInfoLocation;

@@ -9,11 +9,8 @@ import com.mojang.realmsclient.gui.screens.RealmsDownloadLatestWorldScreen;
 import com.mojang.realmsclient.gui.screens.RealmsGenericErrorScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class DownloadTask extends LongRunningTask {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Component TITLE = Component.translatable("mco.download.preparing");

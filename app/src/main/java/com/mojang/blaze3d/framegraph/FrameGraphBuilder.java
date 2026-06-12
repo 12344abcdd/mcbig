@@ -12,10 +12,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FrameGraphBuilder {
     private final List<FrameGraphBuilder.InternalVirtualResource<?>> internalResources = new ArrayList<>();
     private final List<FrameGraphBuilder.ExternalResource<?>> externalResources = new ArrayList<>();
@@ -160,7 +157,6 @@ public class FrameGraphBuilder {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ExternalResource<T> extends FrameGraphBuilder.VirtualResource<T> {
         private final T resource;
 
@@ -175,7 +171,6 @@ public class FrameGraphBuilder {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Handle<T> implements ResourceHandle<T> {
         final FrameGraphBuilder.VirtualResource<T> holder;
         private final int version;
@@ -213,7 +208,6 @@ public class FrameGraphBuilder {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Inspector {
         FrameGraphBuilder.Inspector NONE = new FrameGraphBuilder.Inspector() {
         };
@@ -231,7 +225,6 @@ public class FrameGraphBuilder {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class InternalVirtualResource<T> extends FrameGraphBuilder.VirtualResource<T> {
         final int id;
         private final ResourceDescriptor<T> descriptor;
@@ -267,7 +260,6 @@ public class FrameGraphBuilder {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class Pass implements FramePass {
         final int id;
         final String name;
@@ -348,7 +340,6 @@ public class FrameGraphBuilder {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     abstract static class VirtualResource<T> {
         public final String name;
         public FrameGraphBuilder.Handle<T> handle;

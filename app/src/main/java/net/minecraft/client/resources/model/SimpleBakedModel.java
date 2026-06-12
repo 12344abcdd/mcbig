@@ -16,10 +16,7 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SimpleBakedModel implements BakedModel {
     public static final String PARTICLE_TEXTURE_REFERENCE = "particle";
     private final List<BakedQuad> unculledFaces;
@@ -123,7 +120,6 @@ public class SimpleBakedModel implements BakedModel {
         return this.transforms;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final ImmutableList.Builder<BakedQuad> unculledFaces = ImmutableList.builder();
         private final EnumMap<Direction, ImmutableList.Builder<BakedQuad>> culledFaces = Maps.newEnumMap(Direction.class);

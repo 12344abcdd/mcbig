@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TrialSpawnerDetectionParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
     private static final int BASE_LIFETIME = 8;
@@ -66,7 +63,6 @@ public class TrialSpawnerDetectionParticle extends TextureSheetParticle {
         return this.quadSize * Mth.clamp(((float)this.age + p_312246_) / (float)this.lifetime * 32.0F, 0.0F, 1.0F);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 

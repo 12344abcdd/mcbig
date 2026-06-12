@@ -7,10 +7,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.PlayerFaceRenderer;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientActivePlayersTooltip implements ClientTooltipComponent {
     private static final int SKIN_SIZE = 10;
     private static final int PADDING = 2;
@@ -49,7 +46,6 @@ public class ClientActivePlayersTooltip implements ClientTooltipComponent {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record ActivePlayersTooltip(List<ProfileResult> profiles) implements TooltipComponent {
     }
 }

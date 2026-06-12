@@ -2,10 +2,7 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WhiteSmokeParticle extends BaseAshSmokeParticle {
     private static final int COLOR_RGB24 = 12235202;
 
@@ -26,7 +23,6 @@ public class WhiteSmokeParticle extends BaseAshSmokeParticle {
         this.bCol = 0.7607843F;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 

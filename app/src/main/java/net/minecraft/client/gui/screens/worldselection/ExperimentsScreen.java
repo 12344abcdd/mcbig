@@ -30,10 +30,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackRepository;
 import net.minecraft.server.packs.repository.PackSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ExperimentsScreen extends Screen {
     private static final Component TITLE = Component.translatable("selectWorld.experiments");
     private static final Component INFO = Component.translatable("selectWorld.experiments.info").withStyle(ChatFormatting.RED);
@@ -125,7 +122,6 @@ public class ExperimentsScreen extends Screen {
         this.output.accept(this.packRepository);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class ScrollArea extends AbstractContainerWidget {
         private final List<AbstractWidget> children = new ArrayList<>();
         private final Layout layout;

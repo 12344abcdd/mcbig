@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.entity;
 import net.minecraft.client.renderer.entity.state.TippableArrowRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.projectile.Arrow;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TippableArrowRenderer extends ArrowRenderer<Arrow, TippableArrowRenderState> {
     public static final ResourceLocation NORMAL_ARROW_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/projectiles/arrow.png");
     public static final ResourceLocation TIPPED_ARROW_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/projectiles/tipped_arrow.png");

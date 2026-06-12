@@ -15,10 +15,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.ServerLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerLinksScreen extends Screen {
     private static final int LINK_BUTTON_WIDTH = 310;
     private static final int DEFAULT_ITEM_HEIGHT = 25;
@@ -59,7 +56,6 @@ public class ServerLinksScreen extends Screen {
         this.minecraft.setScreen(this.lastScreen);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class LinkList extends ContainerObjectSelectionList<ServerLinksScreen.LinkListEntry> {
         public LinkList(Minecraft p_350783_, int p_350730_, ServerLinksScreen p_350695_) {
             super(p_350783_, p_350730_, p_350695_.layout.getContentHeight(), p_350695_.layout.getHeaderHeight(), 25);
@@ -79,7 +75,6 @@ public class ServerLinksScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class LinkListEntry extends ContainerObjectSelectionList.Entry<ServerLinksScreen.LinkListEntry> {
         final AbstractWidget button;
 

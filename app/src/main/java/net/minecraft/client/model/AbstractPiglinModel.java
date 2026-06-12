@@ -9,10 +9,7 @@ import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class AbstractPiglinModel<S extends HumanoidRenderState> extends HumanoidModel<S> {
     private static final String LEFT_SLEEVE = "left_sleeve";
     private static final String RIGHT_SLEEVE = "right_sleeve";

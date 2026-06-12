@@ -2,10 +2,7 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CampfireSmokeParticle extends TextureSheetParticle {
     CampfireSmokeParticle(
         ClientLevel p_105856_, double p_105857_, double p_105858_, double p_105859_, double p_105860_, double p_105861_, double p_105862_, boolean p_105863_
@@ -48,7 +45,6 @@ public class CampfireSmokeParticle extends TextureSheetParticle {
         return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class CosyProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 
@@ -75,7 +71,6 @@ public class CampfireSmokeParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class SignalProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 

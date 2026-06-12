@@ -15,12 +15,9 @@ import net.minecraft.server.packs.metadata.MetadataSectionType;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceMetadata;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
 @FunctionalInterface
-@OnlyIn(Dist.CLIENT)
 public interface SpriteResourceLoader {
     Logger LOGGER = LogUtils.getLogger();
 

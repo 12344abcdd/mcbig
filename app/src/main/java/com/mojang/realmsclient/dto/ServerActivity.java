@@ -3,10 +3,7 @@ package com.mojang.realmsclient.dto;
 import com.google.gson.JsonObject;
 import com.mojang.realmsclient.util.JsonUtils;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerActivity extends ValueObject {
     @Nullable
     public String profileUuid;

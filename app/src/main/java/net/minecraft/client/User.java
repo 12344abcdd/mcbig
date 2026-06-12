@@ -9,10 +9,7 @@ import java.util.UUID;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class User {
     private final String name;
     private final UUID uuid;
@@ -58,7 +55,6 @@ public class User {
         return this.type;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type {
         LEGACY("legacy"),
         MOJANG("mojang"),

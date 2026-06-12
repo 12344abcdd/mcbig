@@ -7,10 +7,7 @@ import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.SampledFloat;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Sound implements Weighted<Sound> {
     public static final FileToIdConverter SOUND_LISTER = new FileToIdConverter("sounds", ".ogg");
     private final ResourceLocation location;
@@ -95,7 +92,6 @@ public class Sound implements Weighted<Sound> {
         return "Sound[" + this.location + "]";
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type {
         FILE("file"),
         SOUND_EVENT("event");

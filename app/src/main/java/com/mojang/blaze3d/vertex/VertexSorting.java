@@ -2,11 +2,8 @@ package com.mojang.blaze3d.vertex;
 
 import com.google.common.primitives.Floats;
 import it.unimi.dsi.fastutil.ints.IntArrays;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public interface VertexSorting {
     VertexSorting DISTANCE_TO_ORIGIN = byDistance(0.0F, 0.0F, 0.0F);
     VertexSorting ORTHOGRAPHIC_Z = byDistance(p_277433_ -> -p_277433_.z());
@@ -35,7 +32,6 @@ public interface VertexSorting {
 
     int[] sort(Vector3f[] p_277527_);
 
-    @OnlyIn(Dist.CLIENT)
     public interface DistanceFunction {
         float apply(Vector3f p_277761_);
     }

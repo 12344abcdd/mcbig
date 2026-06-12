@@ -2,13 +2,10 @@ package com.mojang.blaze3d.systems;
 
 import java.util.Optional;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.opengl.ARBTimerQuery;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL32C;
 
-@OnlyIn(Dist.CLIENT)
 public class TimerQuery {
     private int nextQueryName;
 
@@ -38,7 +35,6 @@ public class TimerQuery {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class FrameProfile {
         private static final long NO_RESULT = 0L;
         private static final long CANCELLED_RESULT = -1L;
@@ -81,7 +77,6 @@ public class TimerQuery {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class TimerQueryLazyLoader {
         static final Optional<TimerQuery> INSTANCE = Optional.ofNullable(instantiate());
 

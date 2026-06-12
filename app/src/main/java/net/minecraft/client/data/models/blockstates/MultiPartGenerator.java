@@ -10,10 +10,7 @@ import java.util.function.Supplier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MultiPartGenerator implements BlockStateGenerator {
     private final Block block;
     private final List<MultiPartGenerator.Entry> parts = Lists.newArrayList();
@@ -63,7 +60,6 @@ public class MultiPartGenerator implements BlockStateGenerator {
         return jsonobject;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ConditionalEntry extends MultiPartGenerator.Entry {
         private final Condition condition;
 
@@ -83,7 +79,6 @@ public class MultiPartGenerator implements BlockStateGenerator {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Entry implements Supplier<JsonElement> {
         private final List<Variant> variants;
 

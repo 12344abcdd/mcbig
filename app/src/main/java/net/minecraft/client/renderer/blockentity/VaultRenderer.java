@@ -13,10 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.vault.VaultBlockEntity;
 import net.minecraft.world.level.block.entity.vault.VaultClientData;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VaultRenderer implements BlockEntityRenderer<VaultBlockEntity> {
     private final ItemModelResolver itemModelResolver;
     private final RandomSource random = RandomSource.create();

@@ -233,13 +233,10 @@ import net.minecraft.world.level.validation.DirectoryValidator;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.io.FileUtils;
 import org.lwjgl.util.tinyfd.TinyFileDialogs;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class Minecraft extends ReentrantBlockableEventLoop<Runnable> implements WindowEventHandler {
     static Minecraft instance;
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -2777,7 +2774,6 @@ public class Minecraft extends ReentrantBlockableEventLoop<Runnable> implements 
         return System.getProperty("minecraft.launcher.brand");
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum ChatStatus {
         ENABLED(CommonComponents.EMPTY) {
             @Override
@@ -2820,7 +2816,6 @@ public class Minecraft extends ReentrantBlockableEventLoop<Runnable> implements 
         public abstract boolean isChatAllowed(boolean p_168035_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record GameLoadCookie(RealmsClient realmsClient, GameConfig.QuickPlayData quickPlayData) {
     }
 }

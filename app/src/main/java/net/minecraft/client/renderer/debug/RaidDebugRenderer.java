@@ -7,10 +7,7 @@ import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.BlockPos;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RaidDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private static final int MAX_RENDER_DIST = 160;
     private static final float TEXT_SCALE = 0.04F;

@@ -23,11 +23,8 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsPendingInvitesScreen extends RealmsScreen {
     static final ResourceLocation ACCEPT_HIGHLIGHTED_SPRITE = ResourceLocation.withDefaultNamespace("pending_invite/accept_highlighted");
     static final ResourceLocation ACCEPT_SPRITE = ResourceLocation.withDefaultNamespace("pending_invite/accept");
@@ -138,7 +135,6 @@ public class RealmsPendingInvitesScreen extends RealmsScreen {
         this.rejectButton.visible = realmspendinginvitesscreen$entry != null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     class Entry extends ObjectSelectionList.Entry<RealmsPendingInvitesScreen.Entry> {
         private static final int TEXT_LEFT = 38;
         final PendingInvite pendingInvite;
@@ -193,7 +189,6 @@ public class RealmsPendingInvitesScreen extends RealmsScreen {
             return Component.translatable("narrator.select", component);
         }
 
-        @OnlyIn(Dist.CLIENT)
         class AcceptRowButton extends RowButton {
             AcceptRowButton() {
                 super(15, 15, 215, 5);
@@ -220,7 +215,6 @@ public class RealmsPendingInvitesScreen extends RealmsScreen {
             }
         }
 
-        @OnlyIn(Dist.CLIENT)
         class RejectRowButton extends RowButton {
             RejectRowButton() {
                 super(15, 15, 235, 5);
@@ -248,7 +242,6 @@ public class RealmsPendingInvitesScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class PendingInvitationSelectionList extends ObjectSelectionList<RealmsPendingInvitesScreen.Entry> {
         public PendingInvitationSelectionList() {
             super(Minecraft.getInstance(), RealmsPendingInvitesScreen.this.width, RealmsPendingInvitesScreen.this.height - 72, 32, 36);

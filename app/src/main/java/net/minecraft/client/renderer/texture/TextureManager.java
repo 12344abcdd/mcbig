@@ -23,11 +23,8 @@ import net.minecraft.ReportedException;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.PreparableReloadListener;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class TextureManager implements PreparableReloadListener, Tickable, AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final ResourceLocation INTENTIONAL_MISSING_TEXTURE = ResourceLocation.withDefaultNamespace("");
@@ -197,7 +194,6 @@ public class TextureManager implements PreparableReloadListener, Tickable, AutoC
         }, p_389430_));
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record PendingReload(ReloadableTexture texture, CompletableFuture<TextureContents> newContents) {
     }
 }

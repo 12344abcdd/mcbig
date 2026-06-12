@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.layers.LlamaDecorLayer;
 import net.minecraft.client.renderer.entity.state.LlamaRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.horse.Llama;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LlamaRenderer extends AgeableMobRenderer<Llama, LlamaRenderState, LlamaModel> {
     private static final ResourceLocation CREAMY = ResourceLocation.withDefaultNamespace("textures/entity/llama/creamy.png");
     private static final ResourceLocation WHITE = ResourceLocation.withDefaultNamespace("textures/entity/llama/white.png");

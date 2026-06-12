@@ -28,10 +28,7 @@ import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.trim.ArmorTrim;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class EquipmentLayerRenderer {
     private static final int NO_LAYER_COLOR = 0;
     private final EquipmentAssetManager equipmentAssets;
@@ -102,11 +99,9 @@ public class EquipmentLayerRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record LayerTextureKey(EquipmentClientInfo.LayerType layerType, EquipmentClientInfo.Layer layer) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record TrimSpriteKey(ArmorTrim trim, EquipmentClientInfo.LayerType layerType, ResourceKey<EquipmentAsset> equipmentAssetId) {
         private static String getColorPaletteSuffix(Holder<TrimMaterial> p_387117_, ResourceKey<EquipmentAsset> p_386860_) {
             String s = p_387117_.value().overrideArmorAssets().get(p_386860_);

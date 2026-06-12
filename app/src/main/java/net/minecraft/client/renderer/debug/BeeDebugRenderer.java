@@ -25,10 +25,7 @@ import net.minecraft.network.protocol.common.custom.HiveDebugPayload;
 import net.minecraft.network.protocol.game.DebugEntityNameGenerator;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BeeDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private static final boolean SHOW_GOAL_FOR_ALL_BEES = true;
     private static final boolean SHOW_NAME_FOR_ALL_BEES = true;
@@ -322,7 +319,6 @@ public class BeeDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
         DebugRenderer.getTargetedEntity(this.minecraft.getCameraEntity(), 8).ifPresent(p_113059_ -> this.lastLookedAtUuid = p_113059_.getUUID());
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record HiveDebugInfo(HiveDebugPayload.HiveInfo info, long lastSeen) {
     }
 }

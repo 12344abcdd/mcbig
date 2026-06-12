@@ -3,10 +3,7 @@ package net.minecraft.client.gui;
 import javax.annotation.Nullable;
 import net.minecraft.client.gui.components.events.ContainerEventHandler;
 import net.minecraft.client.gui.components.events.GuiEventListener;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface ComponentPath {
     static ComponentPath leaf(GuiEventListener p_265344_) {
         return new ComponentPath.Leaf(p_265344_);
@@ -31,7 +28,6 @@ public interface ComponentPath {
 
     void applyFocus(boolean p_265077_);
 
-    @OnlyIn(Dist.CLIENT)
     public static record Leaf(GuiEventListener component) implements ComponentPath {
         @Override
         public void applyFocus(boolean p_265248_) {
@@ -39,7 +35,6 @@ public interface ComponentPath {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Path(ContainerEventHandler component, ComponentPath childPath) implements ComponentPath {
         @Override
         public void applyFocus(boolean p_265230_) {

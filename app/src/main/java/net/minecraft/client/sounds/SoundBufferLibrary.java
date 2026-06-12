@@ -13,10 +13,7 @@ import net.minecraft.Util;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceProvider;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SoundBufferLibrary {
     private final ResourceProvider resourceManager;
     private final Map<ResourceLocation, CompletableFuture<SoundBuffer>> cache = Maps.newHashMap();

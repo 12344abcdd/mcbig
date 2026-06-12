@@ -20,8 +20,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import javax.annotation.Nullable;
 import net.minecraft.Util;
 import net.minecraft.client.User;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.config.RequestConfig;
@@ -33,7 +31,6 @@ import org.apache.http.util.Args;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class FileUpload {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int MAX_RETRIES = 5;
@@ -190,7 +187,6 @@ public class FileUpload {
         return this.uploadTask.isDone() || this.uploadTask.isCancelled();
     }
 
-    @OnlyIn(Dist.CLIENT)
     class CustomInputStreamEntity extends InputStreamEntity {
         private final long length;
         private final InputStream content;

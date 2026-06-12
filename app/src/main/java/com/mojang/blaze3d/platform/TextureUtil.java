@@ -14,12 +14,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.IntUnaryOperator;
 import javax.annotation.Nullable;
 import net.minecraft.SharedConstants;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.system.MemoryUtil;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 @DontObfuscate
 public class TextureUtil {
     private static final Logger LOGGER = LogUtils.getLogger();

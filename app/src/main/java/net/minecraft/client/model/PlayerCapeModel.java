@@ -8,11 +8,8 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.PlayerRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Quaternionf;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerCapeModel<T extends PlayerRenderState> extends HumanoidModel<T> {
     private static final String CAPE = "cape";
     private final ModelPart cape = this.body.getChild("cape");

@@ -11,11 +11,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ShapeRenderer;
 import net.minecraft.network.protocol.common.custom.RedstoneWireOrientationsDebugPayload;
 import net.minecraft.world.level.redstone.Orientation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class RedstoneWireOrientationsRenderer implements DebugRenderer.SimpleDebugRenderer {
     public static final int TIMEOUT = 200;
     private final Minecraft minecraft;

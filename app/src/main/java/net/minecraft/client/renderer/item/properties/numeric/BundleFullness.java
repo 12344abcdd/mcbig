@@ -6,10 +6,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.BundleItem;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record BundleFullness() implements RangeSelectItemModelProperty {
     public static final MapCodec<BundleFullness> MAP_CODEC = MapCodec.unit(new BundleFullness());
 

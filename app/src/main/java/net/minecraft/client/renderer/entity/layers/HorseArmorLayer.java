@@ -11,10 +11,7 @@ import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.Equippable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class HorseArmorLayer extends RenderLayer<HorseRenderState, HorseModel> {
     private final HorseModel adultModel;
     private final HorseModel babyModel;

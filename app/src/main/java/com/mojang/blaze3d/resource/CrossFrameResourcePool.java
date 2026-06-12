@@ -5,10 +5,7 @@ import java.util.ArrayDeque;
 import java.util.Collection;
 import java.util.Deque;
 import java.util.Iterator;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CrossFrameResourcePool implements GraphicsResourceAllocator, AutoCloseable {
     private final int framesToKeepResource;
     private final Deque<CrossFrameResourcePool.ResourceEntry<?>> pool = new ArrayDeque<>();
@@ -64,7 +61,6 @@ public class CrossFrameResourcePool implements GraphicsResourceAllocator, AutoCl
         return this.pool;
     }
 
-    @OnlyIn(Dist.CLIENT)
     @VisibleForTesting
     protected static final class ResourceEntry<T> implements AutoCloseable {
         final ResourceDescriptor<T> descriptor;

@@ -6,12 +6,9 @@ import java.nio.channels.FileChannel;
 import java.util.concurrent.Executor;
 import net.minecraft.util.eventlog.JsonEventLog;
 import net.minecraft.util.thread.ConsecutiveExecutor;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class TelemetryEventLog implements AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private final JsonEventLog<TelemetryEventInstance> log;

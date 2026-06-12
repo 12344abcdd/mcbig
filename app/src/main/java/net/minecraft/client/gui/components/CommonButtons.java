@@ -2,10 +2,7 @@ package net.minecraft.client.gui.components;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CommonButtons {
     public static SpriteIconButton language(int p_296187_, Button.OnPress p_296343_, boolean p_295488_) {
         return SpriteIconButton.builder(Component.translatable("options.language"), p_296343_, p_295488_)

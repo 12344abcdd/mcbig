@@ -8,10 +8,7 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.AABB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WaterDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
 

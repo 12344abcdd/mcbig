@@ -14,11 +14,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.User;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsAvailability {
     private static final Logger LOGGER = LogUtils.getLogger();
     @Nullable
@@ -64,7 +61,6 @@ public class RealmsAvailability {
             );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Result(RealmsAvailability.Type type, @Nullable RealmsServiceException exception) {
         public Result(RealmsAvailability.Type p_294456_) {
             this(p_294456_, null);
@@ -88,7 +84,6 @@ public class RealmsAvailability {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type {
         SUCCESS,
         INCOMPATIBLE_CLIENT,

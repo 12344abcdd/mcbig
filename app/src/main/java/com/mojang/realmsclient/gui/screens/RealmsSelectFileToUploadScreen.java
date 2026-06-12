@@ -19,11 +19,8 @@ import net.minecraft.realms.RealmsLabel;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.world.level.storage.LevelStorageSource;
 import net.minecraft.world.level.storage.LevelSummary;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsSelectFileToUploadScreen extends RealmsScreen {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final Component TITLE = Component.translatable("mco.upload.select.world.title");
@@ -130,7 +127,6 @@ public class RealmsSelectFileToUploadScreen extends RealmsScreen {
         return DATE_FORMAT.format(new Date(p_89539_.getLastPlayed()));
     }
 
-    @OnlyIn(Dist.CLIENT)
     class Entry extends ObjectSelectionList.Entry<RealmsSelectFileToUploadScreen.Entry> {
         private final LevelSummary levelSummary;
         private final String name;
@@ -190,7 +186,6 @@ public class RealmsSelectFileToUploadScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class WorldSelectionList extends ObjectSelectionList<RealmsSelectFileToUploadScreen.Entry> {
         public WorldSelectionList() {
             super(

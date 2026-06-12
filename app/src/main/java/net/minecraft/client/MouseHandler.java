@@ -16,13 +16,10 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.util.Mth;
 import net.minecraft.util.SmoothDouble;
 import net.minecraft.world.entity.player.Inventory;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector2i;
 import org.lwjgl.glfw.GLFWDropCallback;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class MouseHandler {
     private static final Logger LOGGER = LogUtils.getLogger();
     private final Minecraft minecraft;

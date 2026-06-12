@@ -6,10 +6,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class SpriteIconButton extends Button {
     protected final ResourceLocation sprite;
     protected final int spriteWidth;
@@ -35,7 +32,6 @@ public abstract class SpriteIconButton extends Button {
         return new SpriteIconButton.Builder(p_294639_, p_295155_, p_295622_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final Component message;
         private final Button.OnPress onPress;
@@ -93,7 +89,6 @@ public abstract class SpriteIconButton extends Button {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class CenteredIcon extends SpriteIconButton {
         protected CenteredIcon(
             int p_295914_,
@@ -121,7 +116,6 @@ public abstract class SpriteIconButton extends Button {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class TextAndIcon extends SpriteIconButton {
         protected TextAndIcon(
             int p_296442_,

@@ -9,10 +9,7 @@ import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.state.IronGolemRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Crackiness;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class IronGolemCrackinessLayer extends RenderLayer<IronGolemRenderState, IronGolemModel> {
     private static final Map<Crackiness.Level, ResourceLocation> resourceLocations = ImmutableMap.of(
         Crackiness.Level.LOW,

@@ -4,10 +4,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerCloudParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
 
@@ -62,7 +59,6 @@ public class PlayerCloudParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 
@@ -84,7 +80,6 @@ public class PlayerCloudParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class SneezeProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 

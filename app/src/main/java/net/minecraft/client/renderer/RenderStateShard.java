@@ -15,12 +15,9 @@ import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.TriState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fStack;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class RenderStateShard {
     public static final double MAX_ENCHANTMENT_GLINT_SPEED_MILLIS = 8.0;
     protected final String name;
@@ -441,7 +438,6 @@ public abstract class RenderStateShard {
         RenderSystem.setTextureMatrix(matrix4f);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class BooleanStateShard extends RenderStateShard {
         private final boolean enabled;
 
@@ -456,14 +452,12 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class ColorLogicStateShard extends RenderStateShard {
         public ColorLogicStateShard(String p_286784_, Runnable p_286884_, Runnable p_286375_) {
             super(p_286784_, p_286884_, p_286375_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class CullStateShard extends RenderStateShard.BooleanStateShard {
         public CullStateShard(boolean p_110238_) {
             super("cull", () -> {
@@ -478,7 +472,6 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class DepthTestStateShard extends RenderStateShard {
         private final String functionName;
 
@@ -503,7 +496,6 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class EmptyTextureStateShard extends RenderStateShard {
         public EmptyTextureStateShard(Runnable p_173117_, Runnable p_173118_) {
             super("texture", p_173117_, p_173118_);
@@ -520,14 +512,12 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class LayeringStateShard extends RenderStateShard {
         public LayeringStateShard(String p_110267_, Runnable p_110268_, Runnable p_110269_) {
             super(p_110267_, p_110268_, p_110269_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class LightmapStateShard extends RenderStateShard.BooleanStateShard {
         public LightmapStateShard(boolean p_110271_) {
             super("lightmap", () -> {
@@ -542,7 +532,6 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class LineStateShard extends RenderStateShard {
         private final OptionalDouble width;
 
@@ -569,7 +558,6 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class MultiTextureStateShard extends RenderStateShard.EmptyTextureStateShard {
         private final Optional<ResourceLocation> cutoutTexture;
 
@@ -596,7 +584,6 @@ public abstract class RenderStateShard {
             return new RenderStateShard.MultiTextureStateShard.Builder();
         }
 
-        @OnlyIn(Dist.CLIENT)
         public static final class Builder {
             private final ImmutableList.Builder<RenderStateShard.MultiTextureStateShard.Entry> builder = new ImmutableList.Builder<>();
 
@@ -610,12 +597,10 @@ public abstract class RenderStateShard {
             }
         }
 
-        @OnlyIn(Dist.CLIENT)
         static record Entry(ResourceLocation id, boolean blur, boolean mipmap) {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static final class OffsetTexturingStateShard extends RenderStateShard.TexturingStateShard {
         public OffsetTexturingStateShard(float p_110290_, float p_110291_) {
             super(
@@ -626,14 +611,12 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class OutputStateShard extends RenderStateShard {
         public OutputStateShard(String p_110300_, Runnable p_110301_, Runnable p_110302_) {
             super(p_110300_, p_110301_, p_110302_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class OverlayStateShard extends RenderStateShard.BooleanStateShard {
         public OverlayStateShard(boolean p_110304_) {
             super("overlay", () -> {
@@ -648,7 +631,6 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class ShaderStateShard extends RenderStateShard {
         private final Optional<ShaderProgram> shader;
 
@@ -670,7 +652,6 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class TextureStateShard extends RenderStateShard.EmptyTextureStateShard {
         private final Optional<ResourceLocation> texture;
         private final TriState blur;
@@ -700,21 +681,18 @@ public abstract class RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class TexturingStateShard extends RenderStateShard {
         public TexturingStateShard(String p_110349_, Runnable p_110350_, Runnable p_110351_) {
             super(p_110349_, p_110350_, p_110351_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class TransparencyStateShard extends RenderStateShard {
         public TransparencyStateShard(String p_110353_, Runnable p_110354_, Runnable p_110355_) {
             super(p_110353_, p_110354_, p_110355_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class WriteMaskStateShard extends RenderStateShard {
         private final boolean writeColor;
         private final boolean writeDepth;

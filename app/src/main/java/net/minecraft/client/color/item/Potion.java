@@ -11,10 +11,7 @@ import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.PotionContents;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record Potion(int defaultColor) implements ItemTintSource {
     public static final MapCodec<Potion> MAP_CODEC = RecordCodecBuilder.mapCodec(
         p_386980_ -> p_386980_.group(ExtraCodecs.RGB_COLOR_CODEC.fieldOf("default").forGetter(Potion::defaultColor)).apply(p_386980_, Potion::new)

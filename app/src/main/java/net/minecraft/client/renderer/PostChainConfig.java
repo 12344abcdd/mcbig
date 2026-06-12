@@ -14,10 +14,7 @@ import java.util.Set;
 import java.util.function.Function;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ExtraCodecs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarget> internalTargets, List<PostChainConfig.Pass> passes) {
     public static final Codec<PostChainConfig> CODEC = RecordCodecBuilder.create(
         p_360471_ -> p_360471_.group(
@@ -29,7 +26,6 @@ public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarg
                 .apply(p_360471_, PostChainConfig::new)
     );
 
-    @OnlyIn(Dist.CLIENT)
     public static record FixedSizedTarget(int width, int height) implements PostChainConfig.InternalTarget {
         public static final Codec<PostChainConfig.FixedSizedTarget> CODEC = RecordCodecBuilder.create(
             p_363468_ -> p_363468_.group(
@@ -40,12 +36,10 @@ public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarg
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record FullScreenTarget() implements PostChainConfig.InternalTarget {
         public static final Codec<PostChainConfig.FullScreenTarget> CODEC = Codec.unit(PostChainConfig.FullScreenTarget::new);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public sealed interface Input permits PostChainConfig.TextureInput, PostChainConfig.TargetInput {
         Codec<PostChainConfig.Input> CODEC = Codec.xor(PostChainConfig.TextureInput.CODEC, PostChainConfig.TargetInput.CODEC)
             .xmap(p_360605_ -> p_360605_.map(Function.identity(), Function.identity()), p_363760_ -> {
@@ -63,7 +57,6 @@ public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarg
         Set<ResourceLocation> referencedTargets();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public sealed interface InternalTarget permits PostChainConfig.FullScreenTarget, PostChainConfig.FixedSizedTarget {
         Codec<PostChainConfig.InternalTarget> CODEC = Codec.either(PostChainConfig.FixedSizedTarget.CODEC, PostChainConfig.FullScreenTarget.CODEC)
             .xmap(p_360396_ -> p_360396_.map(Function.identity(), Function.identity()), p_370297_ -> {
@@ -77,7 +70,6 @@ public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarg
             });
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Pass(
         ResourceLocation programId, List<PostChainConfig.Input> inputs, ResourceLocation outputTarget, List<PostChainConfig.Uniform> uniforms
     ) {
@@ -107,7 +99,6 @@ public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarg
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record TargetInput(String samplerName, ResourceLocation targetId, boolean useDepthBuffer, boolean bilinear) implements PostChainConfig.Input {
         public static final Codec<PostChainConfig.TargetInput> CODEC = RecordCodecBuilder.create(
             p_363892_ -> p_363892_.group(
@@ -125,7 +116,6 @@ public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarg
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record TextureInput(String samplerName, ResourceLocation location, int width, int height, boolean bilinear) implements PostChainConfig.Input {
         public static final Codec<PostChainConfig.TextureInput> CODEC = RecordCodecBuilder.create(
             p_362332_ -> p_362332_.group(
@@ -144,7 +134,6 @@ public record PostChainConfig(Map<ResourceLocation, PostChainConfig.InternalTarg
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Uniform(String name, List<Float> values) {
         public static final Codec<PostChainConfig.Uniform> CODEC = RecordCodecBuilder.create(
             p_364040_ -> p_364040_.group(

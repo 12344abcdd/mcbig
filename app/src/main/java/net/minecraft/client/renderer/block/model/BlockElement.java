@@ -15,11 +15,8 @@ import javax.annotation.Nullable;
 import net.minecraft.core.Direction;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockElement {
     private static final boolean DEFAULT_RESCALE = false;
     private static final float MIN_EXTENT = -16.0F;
@@ -71,7 +68,6 @@ public class BlockElement {
         };
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class Deserializer implements JsonDeserializer<BlockElement> {
         private static final boolean DEFAULT_SHADE = true;
         private static final int DEFAULT_LIGHT_EMISSION = 0;

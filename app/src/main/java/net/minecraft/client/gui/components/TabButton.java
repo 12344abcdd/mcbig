@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TabButton extends AbstractWidget {
     private static final WidgetSprites SPRITES = new WidgetSprites(
         ResourceLocation.withDefaultNamespace("widget/tab_selected"),

@@ -18,11 +18,8 @@ import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientItemInfoLoader {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final FileToIdConverter LISTER = FileToIdConverter.json("items");
@@ -81,11 +78,9 @@ public class ClientItemInfoLoader {
             );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record LoadedClientInfos(Map<ResourceLocation, ClientItem> contents) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record PendingLoad(ResourceLocation id, @Nullable ClientItem clientItemInfo) {
     }
 }

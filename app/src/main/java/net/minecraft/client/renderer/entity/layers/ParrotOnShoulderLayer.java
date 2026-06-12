@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.entity.state.ParrotRenderState;
 import net.minecraft.client.renderer.entity.state.PlayerRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.entity.animal.Parrot;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ParrotOnShoulderLayer extends RenderLayer<PlayerRenderState, PlayerModel> {
     private final ParrotModel model;
     private final ParrotRenderState parrotState = new ParrotRenderState();

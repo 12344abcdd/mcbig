@@ -9,10 +9,7 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.FrogRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FrogModel extends EntityModel<FrogRenderState> {
     private static final float MAX_WALK_ANIMATION_SPEED = 1.5F;
     private static final float MAX_SWIM_ANIMATION_SPEED = 1.0F;

@@ -9,10 +9,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record Damage(boolean normalize) implements RangeSelectItemModelProperty {
     public static final MapCodec<Damage> MAP_CODEC = RecordCodecBuilder.mapCodec(
         p_387730_ -> p_387730_.group(Codec.BOOL.optionalFieldOf("normalize", Boolean.valueOf(true)).forGetter(Damage::normalize)).apply(p_387730_, Damage::new)

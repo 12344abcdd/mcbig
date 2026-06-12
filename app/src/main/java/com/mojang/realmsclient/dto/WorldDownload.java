@@ -4,11 +4,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mojang.logging.LogUtils;
 import com.mojang.realmsclient.util.JsonUtils;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class WorldDownload extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     public String downloadLink;

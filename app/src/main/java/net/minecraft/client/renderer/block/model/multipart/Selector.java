@@ -18,10 +18,7 @@ import net.minecraft.util.GsonHelper;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Selector {
     private final Condition condition;
     private final MultiVariant variant;
@@ -39,7 +36,6 @@ public class Selector {
         return this.condition.getPredicate(p_112022_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Deserializer implements JsonDeserializer<Selector> {
         public Selector deserialize(JsonElement p_112030_, Type p_112031_, JsonDeserializationContext p_112032_) throws JsonParseException {
             JsonObject jsonobject = p_112030_.getAsJsonObject();

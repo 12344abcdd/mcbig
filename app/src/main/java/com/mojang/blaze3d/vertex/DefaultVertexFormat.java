@@ -1,9 +1,6 @@
 package com.mojang.blaze3d.vertex;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DefaultVertexFormat {
     public static final VertexFormat BLIT_SCREEN = VertexFormat.builder().add("Position", VertexFormatElement.POSITION).build();
     public static final VertexFormat BLOCK = VertexFormat.builder()

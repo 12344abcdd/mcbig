@@ -9,10 +9,7 @@ import net.minecraft.client.gui.narration.NarrationSupplier;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Tooltip implements NarrationSupplier {
     private static final int MAX_WIDTH = 170;
     private final Component message;

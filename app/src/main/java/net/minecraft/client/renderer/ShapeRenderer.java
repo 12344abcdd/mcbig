@@ -6,12 +6,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class ShapeRenderer {
     public static void renderShape(
         PoseStack p_361053_, VertexConsumer p_364779_, VoxelShape p_362125_, double p_360355_, double p_363490_, double p_360995_, int p_380036_

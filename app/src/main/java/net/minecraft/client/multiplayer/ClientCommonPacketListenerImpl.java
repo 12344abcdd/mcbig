@@ -62,11 +62,8 @@ import net.minecraft.network.protocol.cookie.ServerboundCookieResponsePacket;
 import net.minecraft.realms.DisconnectedRealmsScreen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.ServerLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class ClientCommonPacketListenerImpl implements ClientCommonPacketListener {
     private static final Component GENERIC_DISCONNECT_MESSAGE = Component.translatable("disconnect.lost");
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -332,11 +329,9 @@ public abstract class ClientCommonPacketListenerImpl implements ClientCommonPack
             );
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record DeferredPacket(Packet<? extends ServerboundPacketListener> packet, BooleanSupplier sendCondition, long expirationTime) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     class PackConfirmScreen extends ConfirmScreen {
         private final List<ClientCommonPacketListenerImpl.PackConfirmScreen.PendingRequest> requests;
         @Nullable
@@ -406,7 +401,6 @@ public abstract class ClientCommonPacketListenerImpl implements ClientCommonPack
             return ClientCommonPacketListenerImpl.this.new PackConfirmScreen(p_314946_, this.parentScreen, list, p_314916_, p_314991_);
         }
 
-        @OnlyIn(Dist.CLIENT)
         static record PendingRequest(UUID id, URL url, String hash) {
         }
     }

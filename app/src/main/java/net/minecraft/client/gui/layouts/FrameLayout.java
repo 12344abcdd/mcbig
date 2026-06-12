@@ -6,10 +6,7 @@ import java.util.function.Consumer;
 import net.minecraft.Util;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FrameLayout extends AbstractLayout {
     private final List<FrameLayout.ChildContainer> children = new ArrayList<>();
     private int minWidth;
@@ -111,7 +108,6 @@ public class FrameLayout extends AbstractLayout {
         p_265614_.accept(p_265164_ + i);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ChildContainer extends AbstractLayout.AbstractChildWrapper {
         protected ChildContainer(LayoutElement p_265667_, LayoutSettings p_265430_) {
             super(p_265667_, p_265430_);

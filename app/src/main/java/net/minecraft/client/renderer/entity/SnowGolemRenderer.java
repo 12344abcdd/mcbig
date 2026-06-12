@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.layers.SnowGolemHeadLayer;
 import net.minecraft.client.renderer.entity.state.SnowGolemRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.SnowGolem;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SnowGolemRenderer extends MobRenderer<SnowGolem, SnowGolemRenderState, SnowGolemModel> {
     private static final ResourceLocation SNOW_GOLEM_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/snow_golem.png");
 

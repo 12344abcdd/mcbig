@@ -14,10 +14,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsParentalConsentScreen extends RealmsScreen {
     private static final Component MESSAGE = Component.translatable("mco.account.privacy.information");
     private static final int SPACING = 15;

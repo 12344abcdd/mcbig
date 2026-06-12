@@ -28,10 +28,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WeatherEffectRenderer {
     private static final int RAIN_RADIUS = 10;
     private static final int RAIN_DIAMETER = 21;
@@ -240,7 +237,6 @@ public class WeatherEffectRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ColumnInstance(int x, int z, int bottomY, int topY, float uOffset, float vOffset, int lightCoords) {
     }
 }

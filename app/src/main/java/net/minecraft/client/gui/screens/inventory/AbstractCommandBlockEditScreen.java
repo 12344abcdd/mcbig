@@ -12,10 +12,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.level.BaseCommandBlock;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractCommandBlockEditScreen extends Screen {
     private static final Component SET_COMMAND_LABEL = Component.translatable("advMode.setCommand");
     private static final Component COMMAND_LABEL = Component.translatable("advMode.command");

@@ -16,10 +16,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsWorldSlotButton extends Button {
     private static final ResourceLocation SLOT_FRAME_SPRITE = ResourceLocation.withDefaultNamespace("widget/slot_frame");
     private static final ResourceLocation CHECKMARK_SPRITE = ResourceLocation.withDefaultNamespace("icon/checkmark");
@@ -136,14 +133,12 @@ public class RealmsWorldSlotButton extends Button {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Action {
         NOTHING,
         SWITCH_SLOT,
         JOIN;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class State {
         final boolean isCurrentlyActiveSlot;
         final String slotName;

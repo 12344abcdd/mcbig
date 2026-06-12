@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.ScalableParticleOptionsBase;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DustParticleBase<T extends ScalableParticleOptionsBase> extends TextureSheetParticle {
     private final SpriteSet sprites;
 

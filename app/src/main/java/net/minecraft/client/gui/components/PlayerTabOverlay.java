@@ -34,10 +34,7 @@ import net.minecraft.world.scores.ReadOnlyScoreInfo;
 import net.minecraft.world.scores.ScoreHolder;
 import net.minecraft.world.scores.Scoreboard;
 import net.minecraft.world.scores.criteria.ObjectiveCriteria;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerTabOverlay {
     private static final ResourceLocation PING_UNKNOWN_SPRITE = ResourceLocation.withDefaultNamespace("icon/ping_unknown");
     private static final ResourceLocation PING_1_SPRITE = ResourceLocation.withDefaultNamespace("icon/ping_1");
@@ -336,7 +333,6 @@ public class PlayerTabOverlay {
         this.footer = null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class HealthState {
         private static final long DISPLAY_UPDATE_DELAY = 20L;
         private static final long DECREASE_BLINK_DURATION = 20L;
@@ -373,7 +369,6 @@ public class PlayerTabOverlay {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ScoreDisplayEntry(Component name, int score, @Nullable Component formattedScore, int scoreWidth) {
     }
 }

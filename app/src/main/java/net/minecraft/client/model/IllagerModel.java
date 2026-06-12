@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.entity.state.IllagerRenderState;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.monster.AbstractIllager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class IllagerModel<S extends IllagerRenderState> extends EntityModel<S> implements ArmedModel, HeadedModel {
     private final ModelPart head;
     private final ModelPart hat;

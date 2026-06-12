@@ -2,10 +2,7 @@ package net.minecraft.client.player;
 
 import net.minecraft.world.entity.player.Input;
 import net.minecraft.world.phys.Vec2;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientInput {
     public Input keyPresses = Input.EMPTY;
     public float leftImpulse;

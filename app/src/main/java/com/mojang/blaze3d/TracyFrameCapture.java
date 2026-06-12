@@ -9,10 +9,7 @@ import com.mojang.blaze3d.pipeline.TextureTarget;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.jtracy.TracyClient;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TracyFrameCapture implements AutoCloseable {
     private static final int MAX_WIDTH = 320;
     private static final int MAX_HEIGHT = 180;

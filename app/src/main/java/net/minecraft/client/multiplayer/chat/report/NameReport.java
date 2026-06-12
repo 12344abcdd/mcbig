@@ -9,11 +9,8 @@ import java.util.UUID;
 import javax.annotation.Nullable;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.reporting.NameReportScreen;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class NameReport extends Report {
     private final String reportedName;
 
@@ -38,7 +35,6 @@ public class NameReport extends Report {
         return new NameReportScreen(p_299843_, p_299844_, this);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder extends Report.Builder<NameReport> {
         public Builder(NameReport p_299841_, AbuseReportLimits p_299879_) {
             super(p_299841_, p_299879_);

@@ -9,10 +9,7 @@ import net.minecraft.client.renderer.entity.state.FoxRenderState;
 import net.minecraft.client.renderer.entity.state.HoldingEntityRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Fox;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FoxRenderer extends AgeableMobRenderer<Fox, FoxRenderState, FoxModel> {
     private static final ResourceLocation RED_FOX_TEXTURE = ResourceLocation.withDefaultNamespace("textures/entity/fox/fox.png");
     private static final ResourceLocation RED_FOX_SLEEP_TEXTURE = ResourceLocation.withDefaultNamespace("textures/entity/fox/fox_sleep.png");

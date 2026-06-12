@@ -16,12 +16,9 @@ import net.minecraft.world.level.lighting.LayerLightSectionStorage;
 import net.minecraft.world.level.lighting.LevelLightEngine;
 import net.minecraft.world.phys.shapes.BitSetDiscreteVoxelShape;
 import net.minecraft.world.phys.shapes.DiscreteVoxelShape;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Vector4f;
 
-@OnlyIn(Dist.CLIENT)
 public class LightSectionDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private static final Duration REFRESH_INTERVAL = Duration.ofMillis(500L);
     private static final int RADIUS = 10;
@@ -140,7 +137,6 @@ public class LightSectionDebugRenderer implements DebugRenderer.SimpleDebugRende
         p_282888_.addVertex(matrix4f, f3, f4, f5).setColor(p_283667_.x(), p_283667_.y(), p_283667_.z(), 1.0F);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static final class SectionData {
         final DiscreteVoxelShape lightAndBlocksShape;
         final DiscreteVoxelShape lightShape;

@@ -1,10 +1,7 @@
 package net.minecraft.client.gui.navigation;
 
 import it.unimi.dsi.fastutil.ints.IntComparator;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum ScreenDirection {
     UP,
     DOWN,

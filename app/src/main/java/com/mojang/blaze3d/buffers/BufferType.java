@@ -1,9 +1,6 @@
 package com.mojang.blaze3d.buffers;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum BufferType {
     VERTICES(34962),
     INDICES(34963),

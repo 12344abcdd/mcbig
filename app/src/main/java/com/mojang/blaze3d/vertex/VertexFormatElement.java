@@ -5,10 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record VertexFormatElement(int id, int index, VertexFormatElement.Type type, VertexFormatElement.Usage usage, int count) {
     public static final int MAX_COUNT = 32;
     private static final VertexFormatElement[] BY_ID = new VertexFormatElement[32];
@@ -78,7 +75,6 @@ public record VertexFormatElement(int id, int index, VertexFormatElement.Type ty
         return ELEMENTS.stream().filter(p_350573_ -> p_350573_ != null && (p_350349_ & p_350573_.mask()) != 0);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type {
         FLOAT(4, "Float", 5126),
         UBYTE(1, "Unsigned Byte", 5121),
@@ -112,7 +108,6 @@ public record VertexFormatElement(int id, int index, VertexFormatElement.Type ty
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Usage {
         POSITION(
             "Position",
@@ -160,7 +155,6 @@ public record VertexFormatElement(int id, int index, VertexFormatElement.Type ty
         }
 
         @FunctionalInterface
-        @OnlyIn(Dist.CLIENT)
         interface SetupState {
             void setupBufferState(int p_167053_, int p_167054_, int p_167055_, long p_167056_, int p_167057_);
         }

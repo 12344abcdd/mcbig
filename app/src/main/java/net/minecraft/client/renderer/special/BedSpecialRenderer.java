@@ -12,10 +12,7 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BedSpecialRenderer implements NoDataSpecialModelRenderer {
     private final BedRenderer bedRenderer;
     private final Material material;
@@ -30,7 +27,6 @@ public class BedSpecialRenderer implements NoDataSpecialModelRenderer {
         this.bedRenderer.renderInHand(p_387960_, p_386542_, p_386921_, p_387639_, this.material);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(ResourceLocation texture) implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<BedSpecialRenderer.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_388012_ -> p_388012_.group(ResourceLocation.CODEC.fieldOf("texture").forGetter(BedSpecialRenderer.Unbaked::texture))

@@ -5,10 +5,7 @@ import com.mojang.serialization.DataResult;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ChatLog {
     private final LoggedChatEvent[] buffer;
     private int nextId;

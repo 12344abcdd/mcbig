@@ -19,10 +19,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LocalTime implements SelectItemModelProperty<String> {
     public static final String ROOT_LOCALE = "";
     private static final long UPDATE_INTERVAL_MS = TimeUnit.SECONDS.toMillis(1L);
@@ -93,7 +90,6 @@ public class LocalTime implements SelectItemModelProperty<String> {
         return TYPE;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Data(String format, String localeId, Optional<TimeZone> timeZone) {
     }
 }

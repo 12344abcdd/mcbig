@@ -7,10 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import net.minecraft.client.Minecraft;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsServerList implements Iterable<RealmsServer> {
     private final Minecraft minecraft;
     private final Set<RealmsServer> removedServers = new HashSet<>();

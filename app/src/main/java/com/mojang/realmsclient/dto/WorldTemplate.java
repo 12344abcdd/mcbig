@@ -4,11 +4,8 @@ import com.google.gson.JsonObject;
 import com.mojang.logging.LogUtils;
 import com.mojang.realmsclient.util.JsonUtils;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class WorldTemplate extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     public String id = "";
@@ -44,7 +41,6 @@ public class WorldTemplate extends ValueObject {
         return worldtemplate;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum WorldTemplateType {
         WORLD_TEMPLATE,
         MINIGAME,

@@ -17,11 +17,8 @@ import java.util.List;
 import java.util.Map;
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class PostPass {
     private final String name;
     private final CompiledShaderProgram shader;
@@ -111,7 +108,6 @@ public class PostPass {
         return this.shader;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Input {
         void addToPass(FramePass p_362294_, Map<ResourceLocation, ResourceHandle<RenderTarget>> p_362030_);
 
@@ -121,7 +117,6 @@ public class PostPass {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record TargetInput(String samplerName, ResourceLocation targetId, boolean depthBuffer, boolean bilinear) implements PostPass.Input {
         private ResourceHandle<RenderTarget> getHandle(Map<ResourceLocation, ResourceHandle<RenderTarget>> p_364534_) {
             ResourceHandle<RenderTarget> resourcehandle = p_364534_.get(this.targetId);
@@ -154,7 +149,6 @@ public class PostPass {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record TextureInput(String samplerName, AbstractTexture texture, int width, int height) implements PostPass.Input {
         @Override
         public void addToPass(FramePass p_361843_, Map<ResourceLocation, ResourceHandle<RenderTarget>> p_362022_) {

@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.texture;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class OverlayTexture implements AutoCloseable {
     private static final int SIZE = 16;
     public static final int NO_WHITE_U = 0;

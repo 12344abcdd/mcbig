@@ -10,10 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TutorialToast implements Toast {
     private static final ResourceLocation BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace("toast/tutorial");
     public static final int PROGRESS_BAR_WIDTH = 154;
@@ -113,7 +110,6 @@ public class TutorialToast implements Toast {
         this.progress = p_94963_;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Icons {
         MOVEMENT_KEYS(ResourceLocation.withDefaultNamespace("toast/movement_keys")),
         MOUSE(ResourceLocation.withDefaultNamespace("toast/mouse")),

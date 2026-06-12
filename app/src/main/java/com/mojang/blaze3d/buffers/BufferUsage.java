@@ -1,9 +1,6 @@
 package com.mojang.blaze3d.buffers;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum BufferUsage {
     DYNAMIC_WRITE(35048, false, true),
     STATIC_WRITE(35044, false, true),

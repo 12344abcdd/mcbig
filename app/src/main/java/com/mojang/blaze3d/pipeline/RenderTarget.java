@@ -11,10 +11,7 @@ import java.util.Objects;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.CompiledShaderProgram;
 import net.minecraft.client.renderer.CoreShaders;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class RenderTarget {
     private static final int RED_CHANNEL = 0;
     private static final int GREEN_CHANNEL = 1;

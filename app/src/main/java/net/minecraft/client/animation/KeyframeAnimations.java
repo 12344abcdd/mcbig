@@ -6,11 +6,8 @@ import java.util.Map.Entry;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class KeyframeAnimations {
     public static void animate(Model p_361776_, AnimationDefinition p_232321_, long p_232322_, float p_232323_, Vector3f p_253861_) {
         float f = getElapsedSeconds(p_232321_, p_232322_);

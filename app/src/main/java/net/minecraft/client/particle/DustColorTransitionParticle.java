@@ -4,11 +4,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.DustColorTransitionOptions;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class DustColorTransitionParticle extends DustParticleBase<DustColorTransitionOptions> {
     private final Vector3f fromColor;
     private final Vector3f toColor;
@@ -50,7 +47,6 @@ public class DustColorTransitionParticle extends DustParticleBase<DustColorTrans
         super.render(p_172063_, p_172064_, p_172065_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<DustColorTransitionOptions> {
         private final SpriteSet sprites;
 

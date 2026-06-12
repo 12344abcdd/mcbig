@@ -3,11 +3,8 @@ package net.minecraft.client.gui.screens.inventory.tooltip;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.util.FormattedCharSequence;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientTextTooltip implements ClientTooltipComponent {
     private final FormattedCharSequence text;
 

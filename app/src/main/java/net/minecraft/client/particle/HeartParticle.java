@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class HeartParticle extends TextureSheetParticle {
     HeartParticle(ClientLevel p_106847_, double p_106848_, double p_106849_, double p_106850_) {
         super(p_106847_, p_106848_, p_106849_, p_106850_, 0.0, 0.0, 0.0);
@@ -31,7 +28,6 @@ public class HeartParticle extends TextureSheetParticle {
         return this.quadSize * Mth.clamp(((float)this.age + p_106860_) / (float)this.lifetime * 32.0F, 0.0F, 1.0F);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class AngryVillagerProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -56,7 +52,6 @@ public class HeartParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

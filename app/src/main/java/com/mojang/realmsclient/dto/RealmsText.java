@@ -8,10 +8,7 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsText {
     private static final String TRANSLATION_KEY = "translationKey";
     private static final String ARGS = "args";

@@ -8,10 +8,7 @@ import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockStatePredictionHandler implements AutoCloseable {
     private final it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap<BlockPos, BlockStatePredictionHandler.ServerVerifiedState> serverVerifiedStates = new it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap<>();
     private int currentSequenceNr;
@@ -72,7 +69,6 @@ public class BlockStatePredictionHandler implements AutoCloseable {
         return this.isPredicting;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ServerVerifiedState {
         final Vec3 playerPos;
         int sequence;

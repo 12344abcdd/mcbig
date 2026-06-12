@@ -12,10 +12,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TelemetryEventType {
     static final Map<String, TelemetryEventType> REGISTRY = new Object2ObjectLinkedOpenHashMap<>();
     public static final Codec<TelemetryEventType> CODEC = Codec.STRING
@@ -154,7 +151,6 @@ public class TelemetryEventType {
         return List.copyOf(REGISTRY.values());
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final String id;
         private final String exportKey;

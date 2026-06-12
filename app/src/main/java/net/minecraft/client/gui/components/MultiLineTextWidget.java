@@ -6,10 +6,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.SingleKeyCache;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MultiLineTextWidget extends AbstractStringWidget {
     private OptionalInt maxWidth = OptionalInt.empty();
     private OptionalInt maxRows = OptionalInt.empty();
@@ -78,7 +75,6 @@ public class MultiLineTextWidget extends AbstractStringWidget {
         return new MultiLineTextWidget.CacheKey(this.getMessage(), this.maxWidth.orElse(Integer.MAX_VALUE), this.maxRows);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record CacheKey(Component message, int maxWidth, OptionalInt maxRows) {
     }
 }

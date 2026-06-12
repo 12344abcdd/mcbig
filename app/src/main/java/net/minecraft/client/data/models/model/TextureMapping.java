@@ -10,10 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TextureMapping {
     private final Map<TextureSlot, ResourceLocation> slots = Maps.newHashMap();
     private final Set<TextureSlot> forcedSlots = Sets.newHashSet();

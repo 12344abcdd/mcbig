@@ -17,10 +17,7 @@ import net.minecraft.client.resources.model.ResolvableModel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RangeSelectItemModel implements ItemModel {
     private static final int LINEAR_SEARCH_THRESHOLD = 16;
     private final RangeSelectItemModelProperty property;
@@ -79,7 +76,6 @@ public class RangeSelectItemModel implements ItemModel {
         itemmodel.update(p_387732_, p_386891_, p_388786_, p_387570_, p_388512_, p_388280_, p_388577_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Entry(float threshold, ItemModel.Unbaked model) {
         public static final Codec<RangeSelectItemModel.Entry> CODEC = RecordCodecBuilder.create(
             p_388203_ -> p_388203_.group(
@@ -91,7 +87,6 @@ public class RangeSelectItemModel implements ItemModel {
         public static final Comparator<RangeSelectItemModel.Entry> BY_THRESHOLD = Comparator.comparingDouble(RangeSelectItemModel.Entry::threshold);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(
         RangeSelectItemModelProperty property, float scale, List<RangeSelectItemModel.Entry> entries, Optional<ItemModel.Unbaked> fallback
     ) implements ItemModel.Unbaked {

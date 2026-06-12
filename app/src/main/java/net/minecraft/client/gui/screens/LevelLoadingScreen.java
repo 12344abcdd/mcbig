@@ -12,10 +12,7 @@ import net.minecraft.server.level.progress.StoringChunkProgressListener;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.chunk.status.ChunkStatus;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LevelLoadingScreen extends Screen {
     private static final long NARRATION_DELAY_MS = 2000L;
     private final StoringChunkProgressListener progressListener;

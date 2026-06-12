@@ -14,10 +14,7 @@ import net.minecraft.network.chat.FormattedText;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.repository.PackCompatibility;
 import net.minecraft.util.FormattedCharSequence;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TransferableSelectionList extends ObjectSelectionList<TransferableSelectionList.PackEntry> {
     static final ResourceLocation SELECT_HIGHLIGHTED_SPRITE = ResourceLocation.withDefaultNamespace("transferable_list/select_highlighted");
     static final ResourceLocation SELECT_SPRITE = ResourceLocation.withDefaultNamespace("transferable_list/select");
@@ -97,7 +94,6 @@ public class TransferableSelectionList extends ObjectSelectionList<TransferableS
         return super.keyPressed(p_265499_, p_265510_, p_265548_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class PackEntry extends ObjectSelectionList.Entry<TransferableSelectionList.PackEntry> {
         private static final int MAX_DESCRIPTION_WIDTH_PIXELS = 157;
         private static final int MAX_NAME_WIDTH_PIXELS = 157;

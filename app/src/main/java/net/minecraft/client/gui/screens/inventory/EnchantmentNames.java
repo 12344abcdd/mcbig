@@ -7,10 +7,7 @@ import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class EnchantmentNames {
     private static final ResourceLocation ALT_FONT = ResourceLocation.withDefaultNamespace("alt");
     private static final Style ROOT_STYLE = Style.EMPTY.withFont(ALT_FONT);

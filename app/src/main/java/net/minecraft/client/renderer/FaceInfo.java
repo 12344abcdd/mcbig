@@ -2,10 +2,7 @@ package net.minecraft.client.renderer;
 
 import net.minecraft.Util;
 import net.minecraft.core.Direction;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum FaceInfo {
     DOWN(
         new FaceInfo.VertexInfo(FaceInfo.Constants.MIN_X, FaceInfo.Constants.MIN_Y, FaceInfo.Constants.MAX_Z),
@@ -66,7 +63,6 @@ public enum FaceInfo {
         return this.infos[p_108983_];
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class Constants {
         public static final int MAX_Z = Direction.SOUTH.get3DDataValue();
         public static final int MAX_Y = Direction.UP.get3DDataValue();
@@ -76,7 +72,6 @@ public enum FaceInfo {
         public static final int MIN_X = Direction.WEST.get3DDataValue();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class VertexInfo {
         public final int xFace;
         public final int yFace;

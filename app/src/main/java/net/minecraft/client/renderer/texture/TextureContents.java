@@ -9,10 +9,7 @@ import net.minecraft.client.resources.metadata.texture.TextureMetadataSection;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record TextureContents(NativeImage image, @Nullable TextureMetadataSection metadata) implements Closeable {
     public static TextureContents load(ResourceManager p_389659_, ResourceLocation p_389563_) throws IOException {
         Resource resource = p_389659_.getResourceOrThrow(p_389563_);

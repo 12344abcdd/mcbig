@@ -15,10 +15,7 @@ import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsNotificationsScreen extends RealmsScreen {
     private static final ResourceLocation UNSEEN_NOTIFICATION_SPRITE = ResourceLocation.withDefaultNamespace("icon/unseen_notification");
     private static final ResourceLocation NEWS_SPRITE = ResourceLocation.withDefaultNamespace("icon/news");
@@ -176,7 +173,6 @@ public class RealmsNotificationsScreen extends RealmsScreen {
         });
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface DataFetcherConfiguration {
         DataFetcher.Subscription initDataFetcher(RealmsDataFetcher p_275608_);
 

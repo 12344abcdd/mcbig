@@ -4,10 +4,7 @@ import javax.annotation.Nullable;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MinecartRenderState extends EntityRenderState {
     public float xRot;
     public float yRot;

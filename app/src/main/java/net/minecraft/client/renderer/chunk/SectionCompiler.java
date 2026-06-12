@@ -27,10 +27,7 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SectionCompiler {
     private final BlockRenderDispatcher blockRenderer;
     private final BlockEntityRenderDispatcher blockEntityRenderer;
@@ -122,7 +119,6 @@ public class SectionCompiler {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class Results {
         public final List<BlockEntity> globalBlockEntities = new ArrayList<>();
         public final List<BlockEntity> blockEntities = new ArrayList<>();

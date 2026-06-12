@@ -60,11 +60,8 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ParticleEngine implements PreparableReloadListener {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final FileToIdConverter PARTICLE_LISTER = FileToIdConverter.json("particles");
@@ -237,7 +234,6 @@ public class ParticleEngine implements PreparableReloadListener {
     public CompletableFuture<Void> reload(
         PreparableReloadListener.PreparationBarrier p_107305_, ResourceManager p_107306_, Executor p_107309_, Executor p_107310_
     ) {
-        @OnlyIn(Dist.CLIENT)
         record ParticleDefinition(ResourceLocation id, Optional<List<ResourceLocation>> sprites) {
         }
 
@@ -579,7 +575,6 @@ public class ParticleEngine implements PreparableReloadListener {
         this.trackedParticleCounts.clear();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class MutableSpriteSet implements SpriteSet {
         private List<TextureAtlasSprite> sprites;
 
@@ -599,7 +594,6 @@ public class ParticleEngine implements PreparableReloadListener {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     interface SpriteParticleRegistration<T extends ParticleOptions> {
         ParticleProvider<T> create(SpriteSet p_107420_);
     }

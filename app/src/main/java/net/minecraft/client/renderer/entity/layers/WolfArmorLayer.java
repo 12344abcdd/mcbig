@@ -18,10 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Crackiness;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.Equippable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WolfArmorLayer extends RenderLayer<WolfRenderState, WolfModel> {
     private final WolfModel adultModel;
     private final WolfModel babyModel;

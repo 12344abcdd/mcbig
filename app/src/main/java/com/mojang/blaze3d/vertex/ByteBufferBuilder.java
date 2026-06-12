@@ -5,13 +5,10 @@ import com.mojang.jtracy.TracyClient;
 import com.mojang.logging.LogUtils;
 import java.nio.ByteBuffer;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.system.MemoryUtil;
 import org.lwjgl.system.MemoryUtil.MemoryAllocator;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ByteBufferBuilder implements AutoCloseable {
     private static final MemoryPool MEMORY_POOL = TracyClient.createMemoryPool("ByteBufferBuilder");
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -129,7 +126,6 @@ public class ByteBufferBuilder implements AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class Result implements AutoCloseable {
         private final int offset;
         private final int capacity;

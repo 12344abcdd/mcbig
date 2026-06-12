@@ -2,10 +2,7 @@ package net.minecraft.client.data.models.blockstates;
 
 import com.google.gson.JsonPrimitive;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VariantProperties {
     public static final VariantProperty<VariantProperties.Rotation> X_ROT = new VariantProperty<>("x", p_387011_ -> new JsonPrimitive(p_387011_.value));
     public static final VariantProperty<VariantProperties.Rotation> Y_ROT = new VariantProperty<>("y", p_387473_ -> new JsonPrimitive(p_387473_.value));
@@ -13,7 +10,6 @@ public class VariantProperties {
     public static final VariantProperty<Boolean> UV_LOCK = new VariantProperty<>("uvlock", JsonPrimitive::new);
     public static final VariantProperty<Integer> WEIGHT = new VariantProperty<>("weight", JsonPrimitive::new);
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Rotation {
         R0(0),
         R90(90),

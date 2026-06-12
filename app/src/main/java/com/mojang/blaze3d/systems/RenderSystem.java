@@ -33,8 +33,6 @@ import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.util.TimeSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fStack;
 import org.joml.Vector3f;
@@ -43,7 +41,6 @@ import org.lwjgl.glfw.GLFWErrorCallbackI;
 import org.lwjgl.system.MemoryUtil;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 @DontObfuscate
 public class RenderSystem {
     static final Logger LOGGER = LogUtils.getLogger();
@@ -741,7 +738,6 @@ public class RenderSystem {
         return projectionType;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class AutoStorageIndexBuffer {
         private final int vertexStride;
         private final int indexStride;
@@ -813,7 +809,6 @@ public class RenderSystem {
             return this.type;
         }
 
-        @OnlyIn(Dist.CLIENT)
         interface IndexGenerator {
             void accept(it.unimi.dsi.fastutil.ints.IntConsumer p_157488_, int p_157489_);
         }

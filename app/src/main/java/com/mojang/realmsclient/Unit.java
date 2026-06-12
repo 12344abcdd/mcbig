@@ -1,10 +1,7 @@
 package com.mojang.realmsclient;
 
 import java.util.Locale;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum Unit {
     B,
     KB,

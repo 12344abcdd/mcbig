@@ -13,10 +13,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.lighting.LevelLightEngine;
 import net.minecraft.world.level.material.FluidState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FallingBlockRenderState extends EntityRenderState implements BlockAndTintGetter {
     public BlockPos startBlockPos = BlockPos.ZERO;
     public BlockPos blockPos = BlockPos.ZERO;

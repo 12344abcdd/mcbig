@@ -7,10 +7,7 @@ import java.util.Date;
 import java.util.UUID;
 import java.util.function.Function;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class JsonUtils {
     public static <T> T getRequired(String p_275573_, JsonObject p_275650_, Function<JsonObject, T> p_275655_) {
         JsonElement jsonelement = p_275650_.get(p_275573_);

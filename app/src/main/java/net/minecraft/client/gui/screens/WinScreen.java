@@ -23,12 +23,9 @@ import net.minecraft.sounds.Musics;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class WinScreen extends Screen {
     private static final ResourceLocation VIGNETTE_LOCATION = ResourceLocation.withDefaultNamespace("textures/misc/credits_vignette.png");
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -296,7 +293,6 @@ public class WinScreen extends Screen {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     interface CreditsReader {
         void read(Reader p_232822_) throws IOException;
     }

@@ -5,11 +5,8 @@ import com.google.gson.JsonParser;
 import com.mojang.logging.LogUtils;
 import com.mojang.realmsclient.util.JsonUtils;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsNews extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     @Nullable

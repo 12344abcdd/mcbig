@@ -5,10 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public final class Selector {
     private static final Selector EMPTY = new Selector(ImmutableList.of());
     private static final Comparator<Property.Value<?>> COMPARE_BY_NAME = Comparator.comparing(p_387747_ -> p_387747_.property().getName());

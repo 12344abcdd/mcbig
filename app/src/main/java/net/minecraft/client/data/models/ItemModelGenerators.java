@@ -47,10 +47,7 @@ import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
 import net.minecraft.world.item.equipment.trim.TrimMaterials;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemModelGenerators {
     private static final ItemTintSource BLANK_LAYER = ItemModelUtils.constantTint(-1);
     private static final String SLOT_HELMET = "helmet";
@@ -860,7 +857,6 @@ public class ItemModelGenerators {
         this.declareCustomModelItem(Items.LEAD);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record TrimMaterialData(String name, ResourceKey<TrimMaterial> materialKey, Map<ResourceKey<EquipmentAsset>, String> overrideArmorMaterials) {
         public String textureName(ResourceKey<EquipmentAsset> p_387088_) {
             return this.overrideArmorMaterials.getOrDefault(p_387088_, this.name);

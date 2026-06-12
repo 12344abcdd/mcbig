@@ -16,10 +16,7 @@ import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.item.crafting.display.ShapedCraftingRecipeDisplay;
 import net.minecraft.world.item.crafting.display.ShapelessCraftingRecipeDisplay;
 import net.minecraft.world.item.crafting.display.SlotDisplay;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CraftingRecipeBookComponent extends RecipeBookComponent<AbstractCraftingMenu> {
     private static final WidgetSprites FILTER_BUTTON_SPRITES = new WidgetSprites(
         ResourceLocation.withDefaultNamespace("recipe_book/filter_enabled"),

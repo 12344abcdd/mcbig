@@ -6,10 +6,7 @@ import net.minecraft.client.sounds.WeighedSoundEvents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface SoundInstance {
     ResourceLocation getLocation();
 
@@ -50,7 +47,6 @@ public interface SoundInstance {
         return RandomSource.create();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Attenuation {
         NONE,
         LINEAR;

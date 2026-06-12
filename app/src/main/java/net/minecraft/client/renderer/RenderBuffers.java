@@ -5,10 +5,7 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap;
 import java.util.SequencedMap;
 import net.minecraft.Util;
 import net.minecraft.client.resources.model.ModelBakery;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RenderBuffers {
     private final SectionBufferBuilderPack fixedBufferPack = new SectionBufferBuilderPack();
     private final SectionBufferBuilderPool sectionBufferPool;

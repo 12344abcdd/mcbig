@@ -9,10 +9,7 @@ import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ServerboundTeleportToEntityPacket;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerMenuItem implements SpectatorMenuItem {
     private final GameProfile profile;
     private final Supplier<PlayerSkin> skin;

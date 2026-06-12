@@ -1,10 +1,7 @@
 package net.minecraft.client.tutorial;
 
 import java.util.function.Function;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum TutorialSteps {
     MOVEMENT("movement", MovementTutorialStepInstance::new),
     FIND_TREE("find_tree", FindTreeTutorialStepInstance::new),

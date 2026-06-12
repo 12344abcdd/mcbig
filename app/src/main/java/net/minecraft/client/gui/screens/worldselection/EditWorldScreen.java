@@ -31,12 +31,9 @@ import net.minecraft.util.StringUtil;
 import net.minecraft.world.level.storage.LevelResource;
 import net.minecraft.world.level.storage.LevelStorageSource;
 import net.minecraft.world.level.storage.LevelSummary;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class EditWorldScreen extends Screen {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Component NAME_LABEL = Component.translatable("selectWorld.enterName").withStyle(ChatFormatting.GRAY);

@@ -5,11 +5,8 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.font.GlyphRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Style;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class BakedGlyph {
     public static final float Z_FIGHTER = 0.001F;
     private final GlyphRenderTypes renderTypes;
@@ -143,7 +140,6 @@ public class BakedGlyph {
         return this.renderTypes.select(p_181388_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Effect(float x0, float y0, float x1, float y1, float depth, int color, int shadowColor, float shadowOffset) {
         public Effect(float p_95247_, float p_95248_, float p_95249_, float p_95250_, float p_95251_, int p_379708_) {
             this(p_95247_, p_95248_, p_95249_, p_95250_, p_95251_, p_379708_, 0, 0.0F);
@@ -154,7 +150,6 @@ public class BakedGlyph {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record GlyphInstance(float x, float y, int color, int shadowColor, BakedGlyph glyph, Style style, float boldOffset, float shadowOffset) {
         boolean hasShadow() {
             return this.shadowColor() != 0;

@@ -10,10 +10,7 @@ import net.minecraft.client.resources.model.ResolvableModel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CompositeModel implements ItemModel {
     private final List<ItemModel> models;
 
@@ -38,7 +35,6 @@ public class CompositeModel implements ItemModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(List<ItemModel.Unbaked> models) implements ItemModel.Unbaked {
         public static final MapCodec<CompositeModel.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_388702_ -> p_388702_.group(ItemModels.CODEC.listOf().fieldOf("models").forGetter(CompositeModel.Unbaked::models))

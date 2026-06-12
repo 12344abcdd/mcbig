@@ -14,10 +14,7 @@ import net.minecraft.util.profiling.metrics.MetricSampler;
 import net.minecraft.util.profiling.metrics.MetricsSamplerProvider;
 import net.minecraft.util.profiling.metrics.profiling.ProfilerSamplerAdapter;
 import net.minecraft.util.profiling.metrics.profiling.ServerMetricsSamplersProvider;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientMetricsSamplersProvider implements MetricsSamplerProvider {
     private final LevelRenderer levelRenderer;
     private final Set<MetricSampler> samplers = new ObjectOpenHashSet<>();

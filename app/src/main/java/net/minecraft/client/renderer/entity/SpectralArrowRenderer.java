@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.entity;
 import net.minecraft.client.renderer.entity.state.ArrowRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.projectile.SpectralArrow;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpectralArrowRenderer extends ArrowRenderer<SpectralArrow, ArrowRenderState> {
     public static final ResourceLocation SPECTRAL_ARROW_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/projectiles/spectral_arrow.png");
 

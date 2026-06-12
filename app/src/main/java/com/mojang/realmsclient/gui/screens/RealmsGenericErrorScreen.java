@@ -10,10 +10,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsGenericErrorScreen extends RealmsScreen {
     private final Screen nextScreen;
     private final RealmsGenericErrorScreen.ErrorMessage lines;
@@ -75,7 +72,6 @@ public class RealmsGenericErrorScreen extends RealmsScreen {
         this.line2Split.renderCentered(p_283497_, this.width / 2, 100, 9, -2142128);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ErrorMessage(Component title, Component detail) {
     }
 }

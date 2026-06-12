@@ -7,10 +7,7 @@ import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.animal.Parrot;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerRenderState extends HumanoidRenderState {
     public PlayerSkin skin = DefaultPlayerSkin.getDefaultSkin();
     public float capeFlap;

@@ -13,10 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpecialModelWrapper<T> implements ItemModel {
     private final SpecialModelRenderer<T> specialRenderer;
     private final BakedModel baseModel;
@@ -44,7 +41,6 @@ public class SpecialModelWrapper<T> implements ItemModel {
         itemstackrenderstate$layerrenderstate.setupSpecialModel(this.specialRenderer, this.specialRenderer.extractArgument(p_387781_), this.baseModel);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(ResourceLocation base, SpecialModelRenderer.Unbaked specialModel) implements ItemModel.Unbaked {
         public static final MapCodec<SpecialModelWrapper.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_386693_ -> p_386693_.group(

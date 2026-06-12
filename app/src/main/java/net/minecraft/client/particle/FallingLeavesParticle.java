@@ -2,10 +2,7 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FallingLeavesParticle extends TextureSheetParticle {
     private static final float ACCELERATION_SCALE = 0.0025F;
     private static final int INITIAL_LIFETIME = 300;
@@ -101,7 +98,6 @@ public class FallingLeavesParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class CherryProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 
@@ -123,7 +119,6 @@ public class FallingLeavesParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class PaleOakProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 

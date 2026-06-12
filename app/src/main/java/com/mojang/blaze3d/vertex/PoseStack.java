@@ -6,14 +6,11 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import net.minecraft.Util;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class PoseStack {
     private final Deque<PoseStack.Pose> poseStack = Util.make(Queues.newArrayDeque(), p_85848_ -> {
         Matrix4f matrix4f = new Matrix4f();
@@ -94,7 +91,6 @@ public class PoseStack {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class Pose {
         final Matrix4f pose;
         final Matrix3f normal;

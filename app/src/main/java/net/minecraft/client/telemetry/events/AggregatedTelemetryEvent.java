@@ -4,10 +4,7 @@ import java.time.Duration;
 import java.time.Instant;
 import javax.annotation.Nullable;
 import net.minecraft.client.telemetry.TelemetryEventSender;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AggregatedTelemetryEvent {
     private static final int SAMPLE_INTERVAL_MS = 60000;
     private static final int SAMPLES_PER_EVENT = 10;

@@ -2,10 +2,7 @@ package net.minecraft.client.renderer.entity.state;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.AnimationState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FrogRenderState extends LivingEntityRenderState {
     private static final ResourceLocation DEFAULT_TEXTURE = ResourceLocation.withDefaultNamespace("textures/entity/frog/temperate_frog.png");
     public boolean isSwimming;

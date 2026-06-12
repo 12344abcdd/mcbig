@@ -7,10 +7,7 @@ import java.util.Map.Entry;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.BlockPos;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GameTestDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private static final float PADDING = 0.02F;
     private final Map<BlockPos, GameTestDebugRenderer.Marker> markers = Maps.newHashMap();
@@ -41,7 +38,6 @@ public class GameTestDebugRenderer implements DebugRenderer.SimpleDebugRenderer 
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Marker {
         public int color;
         public String text;

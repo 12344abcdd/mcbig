@@ -6,10 +6,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class NeedleDirectionHelper {
     private final boolean wobble;
 
@@ -88,7 +85,6 @@ public abstract class NeedleDirectionHelper {
         };
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Wobbler {
         float rotation();
 

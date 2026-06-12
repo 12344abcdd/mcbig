@@ -5,10 +5,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.MultiLineLabel;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DatapackLoadFailureScreen extends Screen {
     private MultiLineLabel message = MultiLineLabel.EMPTY;
     private final Runnable cancelCallback;

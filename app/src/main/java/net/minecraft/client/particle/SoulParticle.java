@@ -2,10 +2,7 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SoulParticle extends RisingParticle {
     private final SpriteSet sprites;
     protected boolean isGlowing;
@@ -35,7 +32,6 @@ public class SoulParticle extends RisingParticle {
         this.setSpriteFromAge(this.sprites);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class EmissiveProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -60,7 +56,6 @@ public class SoulParticle extends RisingParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

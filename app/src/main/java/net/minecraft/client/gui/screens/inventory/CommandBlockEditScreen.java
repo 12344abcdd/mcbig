@@ -7,10 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ServerboundSetCommandBlockPacket;
 import net.minecraft.world.level.BaseCommandBlock;
 import net.minecraft.world.level.block.entity.CommandBlockEntity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CommandBlockEditScreen extends AbstractCommandBlockEditScreen {
     private final CommandBlockEntity autoCommandBlock;
     private CycleButton<CommandBlockEntity.Mode> modeButton;

@@ -2,10 +2,7 @@ package net.minecraft.client.model;
 
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.entity.state.ZombifiedPiglinRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ZombifiedPiglinModel extends AbstractPiglinModel<ZombifiedPiglinRenderState> {
     public ZombifiedPiglinModel(ModelPart p_362330_) {
         super(p_362330_);

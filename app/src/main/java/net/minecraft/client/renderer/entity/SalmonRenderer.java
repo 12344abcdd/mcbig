@@ -9,10 +9,7 @@ import net.minecraft.client.renderer.entity.state.SalmonRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.animal.Salmon;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SalmonRenderer extends MobRenderer<Salmon, SalmonRenderState, SalmonModel> {
     private static final ResourceLocation SALMON_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/fish/salmon.png");
     private final SalmonModel smallSalmonModel;

@@ -16,11 +16,8 @@ import net.minecraft.client.gui.navigation.ScreenAxis;
 import net.minecraft.client.gui.navigation.ScreenDirection;
 import net.minecraft.client.gui.navigation.ScreenPosition;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector2i;
 
-@OnlyIn(Dist.CLIENT)
 public interface ContainerEventHandler extends GuiEventListener {
     List<? extends GuiEventListener> children();
 

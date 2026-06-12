@@ -6,11 +6,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class HangingSignEditScreen extends AbstractSignEditScreen {
     public static final float MAGIC_BACKGROUND_SCALE = 4.5F;
     private static final Vector3f TEXT_SCALE = new Vector3f(1.0F, 1.0F, 1.0F);

@@ -14,10 +14,7 @@ import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LivingEntityEmissiveLayer<S extends LivingEntityRenderState, M extends EntityModel<S>> extends RenderLayer<S, M> {
     private final ResourceLocation texture;
     private final LivingEntityEmissiveLayer.AlphaFunction<S> alphaFunction;
@@ -68,12 +65,10 @@ public class LivingEntityEmissiveLayer<S extends LivingEntityRenderState, M exte
         this.getParentModel().allParts().forEach(p_379339_ -> p_379339_.skipDraw = false);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface AlphaFunction<S extends LivingEntityRenderState> {
         float apply(S p_380400_, float p_379324_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface DrawSelector<S extends LivingEntityRenderState, M extends EntityModel<S>> {
         List<ModelPart> getPartsToDraw(M p_380233_, S p_379592_);
     }

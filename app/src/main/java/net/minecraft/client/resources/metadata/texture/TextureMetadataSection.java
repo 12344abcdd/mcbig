@@ -4,10 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import net.minecraft.server.packs.metadata.MetadataSectionType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record TextureMetadataSection(boolean blur, boolean clamp) {
     public static final boolean DEFAULT_BLUR = false;
     public static final boolean DEFAULT_CLAMP = false;

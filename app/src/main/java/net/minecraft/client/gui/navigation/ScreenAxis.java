@@ -1,9 +1,6 @@
 package net.minecraft.client.gui.navigation;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum ScreenAxis {
     HORIZONTAL,
     VERTICAL;

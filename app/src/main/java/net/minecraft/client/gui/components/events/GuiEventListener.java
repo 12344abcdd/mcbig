@@ -6,10 +6,7 @@ import net.minecraft.client.gui.components.TabOrderedElement;
 import net.minecraft.client.gui.navigation.FocusNavigationEvent;
 import net.minecraft.client.gui.navigation.ScreenDirection;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface GuiEventListener extends TabOrderedElement {
     long DOUBLE_CLICK_THRESHOLD_MS = 250L;
 

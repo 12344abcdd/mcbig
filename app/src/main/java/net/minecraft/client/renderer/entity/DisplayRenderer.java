@@ -24,12 +24,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.world.entity.Display;
 import net.minecraft.world.phys.AABB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class DisplayRenderer<T extends Display, S, ST extends DisplayEntityRenderState> extends EntityRenderer<T, ST> {
     private final EntityRenderDispatcher entityRenderDispatcher;
 
@@ -122,7 +119,6 @@ public abstract class DisplayRenderer<T extends Display, S, ST extends DisplayEn
         p_361329_.entityXRot = entityXRot(p_362672_, p_365301_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class BlockDisplayRenderer
         extends DisplayRenderer<Display.BlockDisplay, Display.BlockDisplay.BlockRenderState, BlockDisplayEntityRenderState> {
         private final BlockRenderDispatcher blockRenderer;
@@ -146,7 +142,6 @@ public abstract class DisplayRenderer<T extends Display, S, ST extends DisplayEn
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class ItemDisplayRenderer extends DisplayRenderer<Display.ItemDisplay, Display.ItemDisplay.ItemRenderState, ItemDisplayEntityRenderState> {
         private final ItemModelResolver itemModelResolver;
 
@@ -180,7 +175,6 @@ public abstract class DisplayRenderer<T extends Display, S, ST extends DisplayEn
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class TextDisplayRenderer extends DisplayRenderer<Display.TextDisplay, Display.TextDisplay.TextRenderState, TextDisplayEntityRenderState> {
         private final Font font;
 

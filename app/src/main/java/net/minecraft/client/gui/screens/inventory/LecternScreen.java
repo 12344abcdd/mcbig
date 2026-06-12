@@ -9,10 +9,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerListener;
 import net.minecraft.world.inventory.LecternMenu;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LecternScreen extends BookViewScreen implements MenuAccess<LecternMenu> {
     private final LecternMenu menu;
     private final ContainerListener listener = new ContainerListener() {

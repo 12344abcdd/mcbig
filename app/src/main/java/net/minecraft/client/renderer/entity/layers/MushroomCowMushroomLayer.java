@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.entity.state.MushroomCowRenderState;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MushroomCowMushroomLayer extends RenderLayer<MushroomCowRenderState, CowModel> {
     private final BlockRenderDispatcher blockRenderer;
 

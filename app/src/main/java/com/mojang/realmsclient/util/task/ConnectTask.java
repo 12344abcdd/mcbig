@@ -7,10 +7,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.multiplayer.resolver.ServerAddress;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsConnect;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ConnectTask extends LongRunningTask {
     private static final Component TITLE = Component.translatable("mco.connect.connecting");
     private final RealmsConnect realmsConnect;

@@ -3,10 +3,7 @@ package net.minecraft.client.resources.sounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.animal.Bee;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BeeFlyingSoundInstance extends BeeSoundInstance {
     public BeeFlyingSoundInstance(Bee p_119615_) {
         super(p_119615_, SoundEvents.BEE_LOOP, SoundSource.NEUTRAL);

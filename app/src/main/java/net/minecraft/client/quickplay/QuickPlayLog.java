@@ -20,11 +20,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.GameType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class QuickPlayLog {
     private static final QuickPlayLog INACTIVE = new QuickPlayLog("") {
         @Override
@@ -85,7 +82,6 @@ public class QuickPlayLog {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record QuickPlayEntry(QuickPlayLog.QuickPlayWorld quickPlayWorld, Instant lastPlayedTime, GameType gamemode) {
         public static final Codec<QuickPlayLog.QuickPlayEntry> CODEC = RecordCodecBuilder.create(
             p_279196_ -> p_279196_.group(
@@ -97,7 +93,6 @@ public class QuickPlayLog {
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record QuickPlayWorld(QuickPlayLog.Type type, String id, String name) {
         public static final MapCodec<QuickPlayLog.QuickPlayWorld> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_301666_ -> p_301666_.group(
@@ -109,7 +104,6 @@ public class QuickPlayLog {
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type implements StringRepresentable {
         SINGLEPLAYER("singleplayer"),
         MULTIPLAYER("multiplayer"),

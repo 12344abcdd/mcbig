@@ -5,10 +5,7 @@ import net.minecraft.client.renderer.entity.state.PiglinRenderState;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.monster.piglin.PiglinArmPose;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PiglinModel extends AbstractPiglinModel<PiglinRenderState> {
     public PiglinModel(ModelPart p_170810_) {
         super(p_170810_);

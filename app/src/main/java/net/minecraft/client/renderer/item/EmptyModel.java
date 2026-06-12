@@ -7,10 +7,7 @@ import net.minecraft.client.resources.model.ResolvableModel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class EmptyModel implements ItemModel {
     public static final ItemModel INSTANCE = new EmptyModel();
 
@@ -26,7 +23,6 @@ public class EmptyModel implements ItemModel {
     ) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked() implements ItemModel.Unbaked {
         public static final MapCodec<EmptyModel.Unbaked> MAP_CODEC = MapCodec.unit(EmptyModel.Unbaked::new);
 

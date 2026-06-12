@@ -24,10 +24,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TabNavigationBar extends AbstractContainerEventHandler implements Renderable, NarratableEntry {
     private static final int NO_TAB = -1;
     private static final int MAX_WIDTH = 400;
@@ -222,7 +219,6 @@ public class TabNavigationBar extends AbstractContainerEventHandler implements R
         return i != -1 ? this.tabButtons.get(i) : null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final int width;
         private final TabManager tabManager;

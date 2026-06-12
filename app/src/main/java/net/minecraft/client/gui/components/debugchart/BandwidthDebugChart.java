@@ -6,10 +6,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.util.Mth;
 import net.minecraft.util.debugchart.SampleStorage;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BandwidthDebugChart extends AbstractDebugChart {
     private static final int MIN_COLOR = -16711681;
     private static final int MID_COLOR = -6250241;

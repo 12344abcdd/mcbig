@@ -5,10 +5,7 @@ import com.mojang.jtracy.MemoryPool;
 import com.mojang.jtracy.TracyClient;
 import java.nio.ByteBuffer;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GpuBuffer implements AutoCloseable {
     private static final MemoryPool MEMORY_POOl = TracyClient.createMemoryPool("GPU Buffers");
     private final BufferType type;
@@ -128,7 +125,6 @@ public class GpuBuffer implements AutoCloseable {
         GlStateManager._glBindBuffer(this.type.id, this.handle);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class ReadView implements AutoCloseable {
         private final int target;
         private final ByteBuffer data;

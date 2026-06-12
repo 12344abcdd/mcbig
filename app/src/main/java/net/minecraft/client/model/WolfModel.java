@@ -10,10 +10,7 @@ import net.minecraft.client.model.geom.builders.MeshTransformer;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.WolfRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WolfModel extends EntityModel<WolfRenderState> {
     public static final MeshTransformer BABY_TRANSFORMER = new BabyModelTransform(Set.of("head"));
     private static final String REAL_HEAD = "real_head";

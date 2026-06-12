@@ -5,10 +5,7 @@ import net.minecraft.client.renderer.block.model.ItemTransform;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.block.model.TextureSlots;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface UnbakedModel extends ResolvableModel {
     boolean DEFAULT_AMBIENT_OCCLUSION = true;
     UnbakedModel.GuiLight DEFAULT_GUI_LIGHT = UnbakedModel.GuiLight.SIDE;
@@ -112,7 +109,6 @@ public interface UnbakedModel extends ResolvableModel {
         return new ItemTransforms(itemtransform, itemtransform1, itemtransform2, itemtransform3, itemtransform4, itemtransform5, itemtransform6, itemtransform7);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum GuiLight {
         FRONT("front"),
         SIDE("side");

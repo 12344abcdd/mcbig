@@ -14,10 +14,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SupportBlockRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
     private double lastUpdateTime = Double.MIN_VALUE;

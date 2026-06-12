@@ -9,11 +9,8 @@ import java.util.Base64;
 import java.util.Locale;
 import java.util.Optional;
 import net.minecraft.server.packs.resources.IoSupplier;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFWNativeCocoa;
 
-@OnlyIn(Dist.CLIENT)
 public class MacosUtil {
     public static final boolean IS_MACOS = System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("mac");
     private static final int NS_RESIZABLE_WINDOW_MASK = 8;

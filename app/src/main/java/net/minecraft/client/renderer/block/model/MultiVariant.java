@@ -14,10 +14,7 @@ import net.minecraft.client.resources.model.ResolvableModel;
 import net.minecraft.client.resources.model.WeightedBakedModel;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record MultiVariant(List<Variant> variants) implements UnbakedBlockStateModel {
     public MultiVariant(List<Variant> variants) {
         if (variants.isEmpty()) {
@@ -54,7 +51,6 @@ public record MultiVariant(List<Variant> variants) implements UnbakedBlockStateM
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Deserializer implements JsonDeserializer<MultiVariant> {
         public MultiVariant deserialize(JsonElement p_111867_, Type p_111868_, JsonDeserializationContext p_111869_) throws JsonParseException {
             List<Variant> list = Lists.newArrayList();

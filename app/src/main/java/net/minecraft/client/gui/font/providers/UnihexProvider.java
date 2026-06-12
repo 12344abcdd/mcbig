@@ -30,12 +30,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.FastBufferedInputStream;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.system.MemoryUtil;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class UnihexProvider implements GlyphProvider {
     static final Logger LOGGER = LogUtils.getLogger();
     private static final int GLYPH_HEIGHT = 16;
@@ -165,7 +162,6 @@ public class UnihexProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ByteContents(byte[] contents) implements UnihexProvider.LineData {
         @Override
         public int line(int p_285203_) {
@@ -192,7 +188,6 @@ public class UnihexProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Definition implements GlyphProviderDefinition {
         public static final MapCodec<UnihexProvider.Definition> CODEC = RecordCodecBuilder.mapCodec(
             p_286579_ -> p_286579_.group(
@@ -273,7 +268,6 @@ public class UnihexProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Dimensions(int left, int right) {
         public static final MapCodec<UnihexProvider.Dimensions> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_285497_ -> p_285497_.group(
@@ -301,7 +295,6 @@ public class UnihexProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Glyph(UnihexProvider.LineData contents, int left, int right) implements GlyphInfo {
         public int width() {
             return this.right - this.left + 1;
@@ -356,7 +349,6 @@ public class UnihexProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record IntContents(int[] contents, int bitWidth) implements UnihexProvider.LineData {
         private static final int SIZE_24 = 24;
 
@@ -408,7 +400,6 @@ public class UnihexProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface LineData {
         int line(int p_285166_);
 
@@ -441,7 +432,6 @@ public class UnihexProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record OverrideRange(int from, int to, UnihexProvider.Dimensions dimensions) {
         private static final Codec<UnihexProvider.OverrideRange> RAW_CODEC = RecordCodecBuilder.create(
             p_285088_ -> p_285088_.group(
@@ -459,12 +449,10 @@ public class UnihexProvider implements GlyphProvider {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface ReaderOutput {
         void accept(int p_285139_, UnihexProvider.LineData p_284982_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ShortContents(short[] contents) implements UnihexProvider.LineData {
         @Override
         public int line(int p_285158_) {

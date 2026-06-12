@@ -8,10 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TerrainParticle extends TextureSheetParticle {
     private final BlockPos pos;
     private final float uo;
@@ -101,7 +98,6 @@ public class TerrainParticle extends TextureSheetParticle {
             : null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class CrumblingProvider implements ParticleProvider<BlockParticleOption> {
         @Nullable
         public Particle createParticle(
@@ -124,7 +120,6 @@ public class TerrainParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class DustPillarProvider implements ParticleProvider<BlockParticleOption> {
         @Nullable
         public Particle createParticle(
@@ -149,7 +144,6 @@ public class TerrainParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<BlockParticleOption> {
         @Nullable
         public Particle createParticle(

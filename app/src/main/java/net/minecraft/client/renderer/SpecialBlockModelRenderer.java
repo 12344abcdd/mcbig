@@ -7,10 +7,7 @@ import net.minecraft.client.renderer.special.SpecialModelRenderer;
 import net.minecraft.client.renderer.special.SpecialModelRenderers;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpecialBlockModelRenderer {
     public static final SpecialBlockModelRenderer EMPTY = new SpecialBlockModelRenderer(Map.of());
     private final Map<Block, SpecialModelRenderer<?>> renderers;

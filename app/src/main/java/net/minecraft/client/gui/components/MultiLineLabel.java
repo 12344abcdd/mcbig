@@ -8,10 +8,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface MultiLineLabel {
     MultiLineLabel EMPTY = new MultiLineLabel() {
         @Override
@@ -144,7 +141,6 @@ public interface MultiLineLabel {
 
     int getWidth();
 
-    @OnlyIn(Dist.CLIENT)
     public static record TextAndWidth(FormattedCharSequence text, int width) {
     }
 }

@@ -5,10 +5,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TexturedModel {
     public static final TexturedModel.Provider CUBE = createDefault(TextureMapping::cube, ModelTemplates.CUBE_ALL);
     public static final TexturedModel.Provider CUBE_INNER_FACES = createDefault(TextureMapping::cube, ModelTemplates.CUBE_ALL_INNER_FACES);
@@ -74,7 +71,6 @@ public class TexturedModel {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface Provider {
         TexturedModel get(Block p_386689_);
 

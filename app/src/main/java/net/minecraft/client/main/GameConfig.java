@@ -9,10 +9,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.User;
 import net.minecraft.client.resources.IndexedAssetSource;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GameConfig {
     public final GameConfig.UserData user;
     public final DisplayData display;
@@ -34,7 +31,6 @@ public class GameConfig {
         this.quickPlay = p_279425_;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class FolderData {
         public final File gameDirectory;
         public final File resourcePackDirectory;
@@ -54,7 +50,6 @@ public class GameConfig {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class GameData {
         public final boolean demo;
         public final String launchVersion;
@@ -73,14 +68,12 @@ public class GameConfig {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record QuickPlayData(@Nullable String path, @Nullable String singleplayer, @Nullable String multiplayer, @Nullable String realms) {
         public boolean isEnabled() {
             return !StringUtil.isBlank(this.singleplayer) || !StringUtil.isBlank(this.multiplayer) || !StringUtil.isBlank(this.realms);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class UserData {
         public final User user;
         public final PropertyMap userProperties;

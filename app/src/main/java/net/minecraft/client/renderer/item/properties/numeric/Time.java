@@ -9,10 +9,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Time extends NeedleDirectionHelper implements RangeSelectItemModelProperty {
     public static final MapCodec<Time> MAP_CODEC = RecordCodecBuilder.mapCodec(
         p_390087_ -> p_390087_.group(
@@ -47,7 +44,6 @@ public class Time extends NeedleDirectionHelper implements RangeSelectItemModelP
         return MAP_CODEC;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum TimeSource implements StringRepresentable {
         RANDOM("random") {
             @Override

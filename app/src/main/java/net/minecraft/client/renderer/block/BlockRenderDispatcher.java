@@ -21,10 +21,7 @@ import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockRenderDispatcher implements ResourceManagerReloadListener {
     private final BlockModelShaper blockModelShaper;
     private final ModelBlockRenderer modelRenderer;

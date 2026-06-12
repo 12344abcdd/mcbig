@@ -21,10 +21,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.flat.FlatLayerInfo;
 import net.minecraft.world.level.levelgen.flat.FlatLevelGeneratorSettings;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CreateFlatWorldScreen extends Screen {
     private static final Component TITLE = Component.translatable("createWorld.customize.flat.title");
     static final ResourceLocation SLOT_SPRITE = ResourceLocation.withDefaultNamespace("container/slot");
@@ -126,7 +123,6 @@ public class CreateFlatWorldScreen extends Screen {
         this.minecraft.setScreen(this.parent);
     }
 
-    @OnlyIn(Dist.CLIENT)
     class DetailsList extends ObjectSelectionList<CreateFlatWorldScreen.DetailsList.Entry> {
         private static final Component LAYER_MATERIAL_TITLE = Component.translatable("createWorld.customize.flat.tile").withStyle(ChatFormatting.UNDERLINE);
         private static final Component HEIGHT_TITLE = Component.translatable("createWorld.customize.flat.height").withStyle(ChatFormatting.UNDERLINE);
@@ -170,7 +166,6 @@ public class CreateFlatWorldScreen extends Screen {
             );
         }
 
-        @OnlyIn(Dist.CLIENT)
         class Entry extends ObjectSelectionList.Entry<CreateFlatWorldScreen.DetailsList.Entry> {
             @Override
             public void render(

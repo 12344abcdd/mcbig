@@ -8,10 +8,7 @@ import net.minecraft.client.renderer.entity.state.PandaRenderState;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PandaHoldsItemLayer extends RenderLayer<PandaRenderState, PandaModel> {
     public PandaHoldsItemLayer(RenderLayerParent<PandaRenderState, PandaModel> p_234862_) {
         super(p_234862_);

@@ -10,11 +10,8 @@ import net.minecraft.client.renderer.entity.state.BoatRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.vehicle.AbstractBoat;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Quaternionf;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractBoatRenderer extends EntityRenderer<AbstractBoat, BoatRenderState> {
     public AbstractBoatRenderer(EntityRendererProvider.Context p_376164_) {
         super(p_376164_);

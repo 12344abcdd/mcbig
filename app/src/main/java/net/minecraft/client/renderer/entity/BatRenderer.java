@@ -5,10 +5,7 @@ import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.state.BatRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ambient.Bat;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BatRenderer extends MobRenderer<Bat, BatRenderState, BatModel> {
     private static final ResourceLocation BAT_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/bat.png");
 

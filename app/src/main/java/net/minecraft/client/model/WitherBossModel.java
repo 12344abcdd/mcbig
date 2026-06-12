@@ -9,10 +9,7 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.WitherRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WitherBossModel extends EntityModel<WitherRenderState> {
     private static final String RIBCAGE = "ribcage";
     private static final String CENTER_HEAD = "center_head";

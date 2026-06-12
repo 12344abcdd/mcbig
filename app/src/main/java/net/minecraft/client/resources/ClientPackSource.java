@@ -24,10 +24,7 @@ import net.minecraft.server.packs.repository.KnownPack;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.level.validation.DirectoryValidator;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientPackSource extends BuiltInPackSource {
     private static final PackMetadataSection VERSION_METADATA_SECTION = new PackMetadataSection(
         Component.translatable("resourcePack.vanilla.description"),

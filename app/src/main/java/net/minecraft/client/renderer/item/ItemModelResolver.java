@@ -15,10 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractSkullBlock;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemModelResolver {
     private final Function<ResourceLocation, ItemModel> modelGetter;
     private final Function<ResourceLocation, ClientItem.Properties> clientProperties;

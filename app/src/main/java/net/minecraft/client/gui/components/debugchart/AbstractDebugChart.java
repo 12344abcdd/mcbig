@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.util.debugchart.SampleStorage;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractDebugChart {
     protected static final int COLOR_GREY = 14737632;
     protected static final int CHART_HEIGHT = 60;

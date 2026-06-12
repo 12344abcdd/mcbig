@@ -16,12 +16,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.VisibleForTesting;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class CompiledShaderProgram implements AutoCloseable {
     private static final AbstractUniform DUMMY_UNIFORM = new AbstractUniform();
     private static final int NO_SAMPLER_TEXTURE = -1;

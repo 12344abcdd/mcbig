@@ -19,10 +19,7 @@ import net.minecraft.client.multiplayer.chat.report.ReportType;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ReportReasonSelectionScreen extends Screen {
     private static final Component REASON_TITLE = Component.translatable("gui.abuseReport.reason.title");
     private static final Component REASON_DESCRIPTION = Component.translatable("gui.abuseReport.reason.description");
@@ -141,7 +138,6 @@ public class ReportReasonSelectionScreen extends Screen {
         this.minecraft.setScreen(this.lastScreen);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class ReasonSelectionList extends ObjectSelectionList<ReportReasonSelectionScreen.ReasonSelectionList.Entry> {
         public ReasonSelectionList(Minecraft p_239715_) {
             super(
@@ -174,7 +170,6 @@ public class ReportReasonSelectionScreen extends Screen {
             ReportReasonSelectionScreen.this.currentlySelectedReason = p_240601_ != null ? p_240601_.getReason() : null;
         }
 
-        @OnlyIn(Dist.CLIENT)
         public class Entry extends ObjectSelectionList.Entry<ReportReasonSelectionScreen.ReasonSelectionList.Entry> {
             final ReportReason reason;
 

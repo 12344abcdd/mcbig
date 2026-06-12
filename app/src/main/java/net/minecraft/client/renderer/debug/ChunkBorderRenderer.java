@@ -8,11 +8,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.util.ARGB;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.ChunkPos;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class ChunkBorderRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
     private static final int CELL_BORDER = ARGB.color(255, 0, 155, 155);

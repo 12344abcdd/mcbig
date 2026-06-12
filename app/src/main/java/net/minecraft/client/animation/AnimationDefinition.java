@@ -4,12 +4,8 @@ import com.google.common.collect.Maps;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record AnimationDefinition(float lengthInSeconds, boolean looping, Map<String, List<AnimationChannel>> boneAnimations) {
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final float length;
         private final Map<String, List<AnimationChannel>> animationByBone = Maps.newHashMap();

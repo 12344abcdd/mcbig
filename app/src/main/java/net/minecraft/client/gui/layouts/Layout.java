@@ -2,10 +2,7 @@ package net.minecraft.client.gui.layouts;
 
 import java.util.function.Consumer;
 import net.minecraft.client.gui.components.AbstractWidget;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface Layout extends LayoutElement {
     void visitChildren(Consumer<LayoutElement> p_270255_);
 

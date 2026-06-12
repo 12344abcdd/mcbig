@@ -15,10 +15,7 @@ import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackCompatibility;
 import net.minecraft.server.packs.repository.PackRepository;
 import net.minecraft.server.packs.repository.PackSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PackSelectionModel {
     private final PackRepository repository;
     final List<Pack> selected;
@@ -63,7 +60,6 @@ public class PackSelectionModel {
         this.unselected.removeAll(this.selected);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Entry {
         ResourceLocation getIconTexture();
 
@@ -108,7 +104,6 @@ public class PackSelectionModel {
         boolean canMoveDown();
     }
 
-    @OnlyIn(Dist.CLIENT)
     abstract class EntryBase implements PackSelectionModel.Entry {
         private final Pack pack;
 
@@ -208,7 +203,6 @@ public class PackSelectionModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class SelectedPackEntry extends PackSelectionModel.EntryBase {
         public SelectedPackEntry(Pack p_99954_) {
             super(p_99954_);
@@ -239,7 +233,6 @@ public class PackSelectionModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class UnselectedPackEntry extends PackSelectionModel.EntryBase {
         public UnselectedPackEntry(Pack p_99963_) {
             super(p_99963_);

@@ -11,11 +11,8 @@ import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.NbtUtils;
 import net.minecraft.nbt.Tag;
 import net.minecraft.util.datafix.DataFixTypes;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class HotbarManager {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final int NUM_HOTBAR_GROUPS = 9;

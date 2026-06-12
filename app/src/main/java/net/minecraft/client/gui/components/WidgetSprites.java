@@ -1,10 +1,7 @@
 package net.minecraft.client.gui.components;
 
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record WidgetSprites(ResourceLocation enabled, ResourceLocation disabled, ResourceLocation enabledFocused, ResourceLocation disabledFocused) {
     public WidgetSprites(ResourceLocation p_295225_, ResourceLocation p_294772_) {
         this(p_295225_, p_295225_, p_294772_, p_294772_);

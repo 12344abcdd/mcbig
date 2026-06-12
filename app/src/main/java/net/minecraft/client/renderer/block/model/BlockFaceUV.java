@@ -9,10 +9,7 @@ import com.google.gson.JsonParseException;
 import java.lang.reflect.Type;
 import javax.annotation.Nullable;
 import net.minecraft.util.GsonHelper;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockFaceUV {
     public float[] uvs;
     public final int rotation;
@@ -54,7 +51,6 @@ public class BlockFaceUV {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class Deserializer implements JsonDeserializer<BlockFaceUV> {
         private static final int DEFAULT_ROTATION = 0;
 

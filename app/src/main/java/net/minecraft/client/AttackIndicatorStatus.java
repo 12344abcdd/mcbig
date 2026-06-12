@@ -3,10 +3,7 @@ package net.minecraft.client;
 import java.util.function.IntFunction;
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.OptionEnum;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum AttackIndicatorStatus implements OptionEnum {
     OFF(0, "options.off"),
     CROSSHAIR(1, "options.attack.crosshair"),

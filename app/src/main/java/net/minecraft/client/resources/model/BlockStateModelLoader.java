@@ -28,11 +28,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockStateModelLoader {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final FileToIdConverter BLOCKSTATE_LISTER = FileToIdConverter.json("blockstates");
@@ -133,15 +130,12 @@ public class BlockStateModelLoader {
         return new BlockStateModelLoader.LoadedModels(map);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record LoadedBlockModelDefinition(String source, BlockModelDefinition contents) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record LoadedModel(BlockState state, UnbakedBlockStateModel model) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record LoadedModels(Map<ModelResourceLocation, BlockStateModelLoader.LoadedModel> models) {
         public Stream<ResolvableModel> forResolving() {
             return this.models.values().stream().map(BlockStateModelLoader.LoadedModel::model);

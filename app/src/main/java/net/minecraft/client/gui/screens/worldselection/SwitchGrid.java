@@ -18,10 +18,7 @@ import net.minecraft.client.gui.layouts.Layout;
 import net.minecraft.client.gui.layouts.SpacerElement;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 class SwitchGrid {
     private static final int DEFAULT_SWITCH_BUTTON_WIDTH = 44;
     private final List<SwitchGrid.LabeledSwitch> switches;
@@ -44,7 +41,6 @@ class SwitchGrid {
         return new SwitchGrid.Builder(p_268344_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         final int width;
         private final List<SwitchGrid.SwitchBuilder> switchBuilders = new ArrayList<>();
@@ -100,11 +96,9 @@ class SwitchGrid {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record InfoUnderneathSettings(int maxInfoRows, boolean alwaysMaxHeight) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record LabeledSwitch(CycleButton<Boolean> button, BooleanSupplier stateSupplier, @Nullable BooleanSupplier isActiveCondition) {
         public void refreshState() {
             this.button.setValue(this.stateSupplier.getAsBoolean());
@@ -114,7 +108,6 @@ class SwitchGrid {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class SwitchBuilder {
         private final Component label;
         private final BooleanSupplier stateSupplier;

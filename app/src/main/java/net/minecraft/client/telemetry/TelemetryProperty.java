@@ -17,10 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.StringRepresentable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record TelemetryProperty<T>(String id, String exportKey, Codec<T> codec, TelemetryProperty.Exporter<T> exporter) {
     private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ISO_OFFSET_DATE_TIME.withZone(ZoneId.from(ZoneOffset.UTC));
     public static final TelemetryProperty<String> USER_ID = string("user_id", "userId");
@@ -137,12 +134,10 @@ public record TelemetryProperty<T>(String id, String exportKey, Codec<T> codec, 
         return "TelemetryProperty[" + this.id + "]";
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Exporter<T> {
         void apply(TelemetryPropertyContainer p_261934_, String p_261962_, T p_262012_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum GameMode implements StringRepresentable {
         SURVIVAL("survival", 0),
         CREATIVE("creative", 1),
@@ -169,7 +164,6 @@ public record TelemetryProperty<T>(String id, String exportKey, Codec<T> codec, 
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum ServerType implements StringRepresentable {
         REALM("realm"),
         LOCAL("local"),

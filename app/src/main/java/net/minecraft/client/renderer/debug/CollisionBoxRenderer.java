@@ -11,10 +11,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CollisionBoxRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
     private double lastUpdateTime = Double.MIN_VALUE;

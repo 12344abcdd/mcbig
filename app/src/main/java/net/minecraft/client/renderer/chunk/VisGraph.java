@@ -8,10 +8,7 @@ import java.util.Set;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VisGraph {
     private static final int SIZE_IN_BITS = 4;
     private static final int LEN = 16;

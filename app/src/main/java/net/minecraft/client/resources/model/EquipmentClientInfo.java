@@ -14,10 +14,7 @@ import java.util.Map.Entry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.StringRepresentable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record EquipmentClientInfo(Map<EquipmentClientInfo.LayerType, List<EquipmentClientInfo.Layer>> layers) {
     private static final Codec<List<EquipmentClientInfo.Layer>> LAYER_LIST_CODEC = ExtraCodecs.nonEmptyList(EquipmentClientInfo.Layer.CODEC.listOf());
     public static final Codec<EquipmentClientInfo> CODEC = RecordCodecBuilder.create(
@@ -37,7 +34,6 @@ public record EquipmentClientInfo(Map<EquipmentClientInfo.LayerType, List<Equipm
         return this.layers.getOrDefault(p_387923_, List.of());
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final Map<EquipmentClientInfo.LayerType, List<EquipmentClientInfo.Layer>> layersByType = new EnumMap<>(EquipmentClientInfo.LayerType.class);
 
@@ -70,7 +66,6 @@ public record EquipmentClientInfo(Map<EquipmentClientInfo.LayerType, List<Equipm
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Dyeable(Optional<Integer> colorWhenUndyed) {
         public static final Codec<EquipmentClientInfo.Dyeable> CODEC = RecordCodecBuilder.create(
             p_387846_ -> p_387846_.group(
@@ -80,7 +75,6 @@ public record EquipmentClientInfo(Map<EquipmentClientInfo.LayerType, List<Equipm
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Layer(ResourceLocation textureId, Optional<EquipmentClientInfo.Dyeable> dyeable, boolean usePlayerTexture) {
         public static final Codec<EquipmentClientInfo.Layer> CODEC = RecordCodecBuilder.create(
             p_388785_ -> p_388785_.group(
@@ -112,7 +106,6 @@ public record EquipmentClientInfo(Map<EquipmentClientInfo.LayerType, List<Equipm
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum LayerType implements StringRepresentable {
         HUMANOID("humanoid"),
         HUMANOID_LEGGINGS("humanoid_leggings"),

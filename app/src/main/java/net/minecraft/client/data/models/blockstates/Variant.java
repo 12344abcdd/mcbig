@@ -7,10 +7,7 @@ import com.google.gson.JsonObject;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Variant implements Supplier<JsonElement> {
     private final Map<VariantProperty<?>, VariantProperty<?>.Value> values = Maps.newLinkedHashMap();
 

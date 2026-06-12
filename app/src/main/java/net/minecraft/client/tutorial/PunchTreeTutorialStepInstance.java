@@ -11,10 +11,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PunchTreeTutorialStepInstance implements TutorialStepInstance {
     private static final int HINT_DELAY = 600;
     private static final Component TITLE = Component.translatable("tutorial.punch_tree.title");

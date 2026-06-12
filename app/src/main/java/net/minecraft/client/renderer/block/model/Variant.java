@@ -12,10 +12,7 @@ import net.minecraft.client.resources.model.BlockModelRotation;
 import net.minecraft.client.resources.model.ModelState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record Variant(ResourceLocation modelLocation, Transformation rotation, boolean uvLock, int weight) implements ModelState {
     @Override
     public Transformation getRotation() {
@@ -27,7 +24,6 @@ public record Variant(ResourceLocation modelLocation, Transformation rotation, b
         return this.uvLock;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Deserializer implements JsonDeserializer<Variant> {
         @VisibleForTesting
         static final boolean DEFAULT_UVLOCK = false;

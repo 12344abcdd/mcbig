@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class AtlasSet implements AutoCloseable {
     private final Map<ResourceLocation, AtlasSet.AtlasEntry> atlases;
 
@@ -54,7 +51,6 @@ public class AtlasSet implements AutoCloseable {
             );
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record AtlasEntry(TextureAtlas atlas, ResourceLocation atlasInfoLocation) implements AutoCloseable {
         @Override
         public void close() {
@@ -62,7 +58,6 @@ public class AtlasSet implements AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class StitchResult {
         private final TextureAtlas atlas;
         private final SpriteLoader.Preparations preparations;

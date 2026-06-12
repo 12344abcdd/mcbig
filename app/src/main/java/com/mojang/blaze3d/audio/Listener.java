@@ -1,11 +1,8 @@
 package com.mojang.blaze3d.audio;
 
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.openal.AL10;
 
-@OnlyIn(Dist.CLIENT)
 public class Listener {
     private float gain = 1.0F;
     private ListenerTransform transform = ListenerTransform.INITIAL;

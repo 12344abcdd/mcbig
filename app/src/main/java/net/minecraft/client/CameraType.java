@@ -1,9 +1,6 @@
 package net.minecraft.client;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum CameraType {
     FIRST_PERSON(true, false),
     THIRD_PERSON_BACK(false, false),

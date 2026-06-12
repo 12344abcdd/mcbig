@@ -22,11 +22,8 @@ import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class FontSet implements AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final RandomSource RANDOM = RandomSource.create();
@@ -191,7 +188,6 @@ public class FontSet implements AutoCloseable {
         return this.whiteGlyph;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record GlyphInfoFilter(GlyphInfo glyphInfo, GlyphInfo glyphInfoNotFishy) {
         static final FontSet.GlyphInfoFilter MISSING = new FontSet.GlyphInfoFilter(SpecialGlyphs.MISSING, SpecialGlyphs.MISSING);
 

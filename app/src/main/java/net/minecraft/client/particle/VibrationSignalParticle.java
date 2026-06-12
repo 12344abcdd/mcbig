@@ -8,11 +8,8 @@ import net.minecraft.core.particles.VibrationParticleOption;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.gameevent.PositionSource;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Quaternionf;
 
-@OnlyIn(Dist.CLIENT)
 public class VibrationSignalParticle extends TextureSheetParticle {
     private final PositionSource target;
     private float rot;
@@ -87,7 +84,6 @@ public class VibrationSignalParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<VibrationParticleOption> {
         private final SpriteSet sprite;
 

@@ -94,10 +94,7 @@ import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.minecraft.world.level.block.state.properties.StructureMode;
 import net.minecraft.world.level.block.state.properties.Tilt;
 import net.minecraft.world.level.block.state.properties.WallSide;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockModelGenerators {
     final Consumer<BlockStateGenerator> blockStateOutput;
     final ItemModelOutput itemModelOutput;
@@ -5541,7 +5538,6 @@ public class BlockModelGenerators {
             );
     }
 
-    @OnlyIn(Dist.CLIENT)
     class BlockFamilyProvider {
         private final TextureMapping mapping;
         private final Map<ModelTemplate, ResourceLocation> models = Maps.newHashMap();
@@ -5734,16 +5730,13 @@ public class BlockModelGenerators {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     interface BlockStateGeneratorSupplier {
         BlockStateGenerator create(Block p_388739_, ResourceLocation p_388592_, TextureMapping p_386936_, BiConsumer<ResourceLocation, ModelInstance> p_387799_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record BookSlotModelCacheKey(ModelTemplate template, String modelSuffix) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum PlantType {
         TINTED(ModelTemplates.TINTED_CROSS, ModelTemplates.TINTED_FLOWER_POT_CROSS, false),
         NOT_TINTED(ModelTemplates.CROSS, ModelTemplates.FLOWER_POT_CROSS, false),
@@ -5783,7 +5776,6 @@ public class BlockModelGenerators {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class WoodProvider {
         private final TextureMapping logMapping;
 

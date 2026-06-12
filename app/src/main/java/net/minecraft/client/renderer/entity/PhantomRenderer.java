@@ -8,10 +8,7 @@ import net.minecraft.client.renderer.entity.layers.PhantomEyesLayer;
 import net.minecraft.client.renderer.entity.state.PhantomRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Phantom;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PhantomRenderer extends MobRenderer<Phantom, PhantomRenderState, PhantomModel> {
     private static final ResourceLocation PHANTOM_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/phantom.png");
 

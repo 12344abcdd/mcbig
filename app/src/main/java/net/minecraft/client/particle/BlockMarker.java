@@ -4,10 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockMarker extends TextureSheetParticle {
     BlockMarker(ClientLevel p_194267_, double p_194268_, double p_194269_, double p_194270_, BlockState p_194271_) {
         super(p_194267_, p_194268_, p_194269_, p_194270_);
@@ -27,7 +24,6 @@ public class BlockMarker extends TextureSheetParticle {
         return 0.5F;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<BlockParticleOption> {
         public Particle createParticle(
             BlockParticleOption p_194277_,

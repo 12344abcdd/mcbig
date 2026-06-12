@@ -11,11 +11,8 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.AnimationState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class Model {
     private static final Vector3f ANIMATION_VECTOR_CACHE = new Vector3f();
     protected final ModelPart root;
@@ -82,7 +79,6 @@ public abstract class Model {
         KeyframeAnimations.animate(this, p_362055_, 0L, 1.0F, ANIMATION_VECTOR_CACHE);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Simple extends Model {
         public Simple(ModelPart p_364140_, Function<ResourceLocation, RenderType> p_364753_) {
             super(p_364140_, p_364753_);

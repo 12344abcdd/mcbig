@@ -24,10 +24,7 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DebugRenderer {
     public final PathfindingRenderer pathfindingRenderer = new PathfindingRenderer();
     public final DebugRenderer.SimpleDebugRenderer waterDebugRenderer;
@@ -366,7 +363,6 @@ public class DebugRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface SimpleDebugRenderer {
         void render(PoseStack p_113507_, MultiBufferSource p_113508_, double p_113509_, double p_113510_, double p_113511_);
 

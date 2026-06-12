@@ -6,10 +6,7 @@ import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.MultiLineLabel;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BackupConfirmScreen extends Screen {
     private static final Component SKIP_AND_JOIN = Component.translatable("selectWorld.backupJoinSkipButton");
     public static final Component BACKUP_AND_JOIN = Component.translatable("selectWorld.backupJoinConfirmButton");
@@ -84,7 +81,6 @@ public class BackupConfirmScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Listener {
         void proceed(boolean p_95566_, boolean p_95567_);
     }

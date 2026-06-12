@@ -20,10 +20,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.chunk.LevelChunk;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ChunkDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     final Minecraft minecraft;
     private double lastUpdateTime = Double.MIN_VALUE;
@@ -82,7 +79,6 @@ public class ChunkDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     final class ChunkData {
         final Map<ChunkPos, String> clientData;
         final CompletableFuture<Map<ChunkPos, String>> serverData;

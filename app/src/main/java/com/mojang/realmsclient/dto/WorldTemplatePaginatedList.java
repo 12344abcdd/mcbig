@@ -9,11 +9,8 @@ import com.mojang.realmsclient.util.JsonUtils;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class WorldTemplatePaginatedList extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     public List<WorldTemplate> templates;

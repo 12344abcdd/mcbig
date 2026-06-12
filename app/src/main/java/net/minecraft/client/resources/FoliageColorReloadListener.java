@@ -6,10 +6,7 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.level.FoliageColor;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FoliageColorReloadListener extends SimplePreparableReloadListener<int[]> {
     private static final ResourceLocation LOCATION = ResourceLocation.withDefaultNamespace("textures/colormap/foliage.png");
 

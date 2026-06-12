@@ -5,10 +5,7 @@ import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.state.CamelRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.camel.Camel;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CamelRenderer extends AgeableMobRenderer<Camel, CamelRenderState, CamelModel> {
     private static final ResourceLocation CAMEL_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/camel/camel.png");
 

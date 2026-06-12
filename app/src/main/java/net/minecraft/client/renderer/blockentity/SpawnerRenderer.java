@@ -9,10 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.BaseSpawner;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.SpawnerBlockEntity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpawnerRenderer implements BlockEntityRenderer<SpawnerBlockEntity> {
     private final EntityRenderDispatcher entityRenderer;
 

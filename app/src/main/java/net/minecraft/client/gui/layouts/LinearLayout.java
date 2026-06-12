@@ -2,10 +2,7 @@ package net.minecraft.client.gui.layouts;
 
 import java.util.function.Consumer;
 import net.minecraft.Util;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LinearLayout implements Layout {
     private final GridLayout wrapped;
     private final LinearLayout.Orientation orientation;
@@ -93,7 +90,6 @@ public class LinearLayout implements Layout {
         return new LinearLayout(LinearLayout.Orientation.HORIZONTAL);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Orientation {
         HORIZONTAL,
         VERTICAL;

@@ -71,12 +71,9 @@ import net.minecraft.util.datafix.DataFixTypes;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.player.ChatVisiblity;
 import net.minecraft.world.entity.player.PlayerModelPart;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class Options {
     static final Logger LOGGER = LogUtils.getLogger();
     static final Gson GSON = new Gson();
@@ -1627,7 +1624,6 @@ public class Options {
         return p_341691_ == 0.0 ? genericValueLabel(p_341700_, CommonComponents.OPTION_OFF) : percentValueLabel(p_341700_, p_341691_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface FieldAccess extends Options.OptionAccess {
         int process(String p_168523_, int p_168524_);
 
@@ -1640,7 +1636,6 @@ public class Options {
         <T> T process(String p_168525_, T p_168526_, Function<String, T> p_168527_, Function<T, String> p_168528_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface OptionAccess {
         <T> void process(String p_326392_, OptionInstance<T> p_326326_);
     }

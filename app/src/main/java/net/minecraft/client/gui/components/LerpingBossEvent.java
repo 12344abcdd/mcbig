@@ -5,10 +5,7 @@ import net.minecraft.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LerpingBossEvent extends BossEvent {
     private static final long LERP_MILLISECONDS = 100L;
     protected float targetPercent;

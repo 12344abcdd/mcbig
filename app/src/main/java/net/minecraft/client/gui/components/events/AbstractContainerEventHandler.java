@@ -1,10 +1,7 @@
 package net.minecraft.client.gui.components.events;
 
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractContainerEventHandler implements ContainerEventHandler {
     @Nullable
     private GuiEventListener focused;

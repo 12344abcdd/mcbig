@@ -3,10 +3,7 @@ package net.minecraft.client.data.models.blockstates;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import java.util.function.Function;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VariantProperty<T> {
     final String key;
     final Function<T, JsonElement> serializer;
@@ -25,7 +22,6 @@ public class VariantProperty<T> {
         return this.key;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class Value {
         private final T value;
 

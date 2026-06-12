@@ -1,9 +1,6 @@
 package net.minecraft.client.renderer;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RunningTrimmedMean {
     private final long[] values;
     private int count;

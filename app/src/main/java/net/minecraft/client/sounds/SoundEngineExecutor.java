@@ -2,10 +2,7 @@ package net.minecraft.client.sounds;
 
 import java.util.concurrent.locks.LockSupport;
 import net.minecraft.util.thread.BlockableEventLoop;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SoundEngineExecutor extends BlockableEventLoop<Runnable> {
     private Thread thread = this.createThread();
     private volatile boolean shutdown;

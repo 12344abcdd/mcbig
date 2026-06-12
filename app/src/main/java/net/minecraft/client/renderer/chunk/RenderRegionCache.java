@@ -7,10 +7,7 @@ import net.minecraft.core.SectionPos;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.chunk.LevelChunk;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RenderRegionCache {
     private final it.unimi.dsi.fastutil.objects.Object2ObjectMap<ChunkPos, RenderRegionCache.ChunkInfo> chunkInfoCache = new it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap<>();
 
@@ -48,7 +45,6 @@ public class RenderRegionCache {
             );
     }
 
-    @OnlyIn(Dist.CLIENT)
     static final class ChunkInfo {
         private final LevelChunk chunk;
         @Nullable

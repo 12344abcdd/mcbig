@@ -9,10 +9,7 @@ import java.util.List;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.SubStringSource;
 import net.minecraft.util.FormattedCharSequence;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FormattedBidiReorder {
     public static FormattedCharSequence reorder(FormattedText p_118932_, boolean p_118933_) {
         SubStringSource substringsource = SubStringSource.create(p_118932_, UCharacter::getMirror, FormattedBidiReorder::shape);

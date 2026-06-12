@@ -5,10 +5,7 @@ import com.mojang.blaze3d.font.SheetGlyphInfo;
 import com.mojang.blaze3d.platform.NativeImage;
 import java.util.function.Function;
 import java.util.function.Supplier;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum SpecialGlyphs implements GlyphInfo {
     WHITE(() -> generate(5, 8, (p_232613_, p_232614_) -> -1)),
     MISSING(() -> {
@@ -75,7 +72,6 @@ public enum SpecialGlyphs implements GlyphInfo {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     interface PixelProvider {
         int getColor(int p_232635_, int p_232636_);
     }

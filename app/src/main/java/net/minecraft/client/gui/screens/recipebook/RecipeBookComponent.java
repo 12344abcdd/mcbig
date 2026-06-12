@@ -47,10 +47,7 @@ import net.minecraft.world.item.crafting.RecipeBookCategory;
 import net.minecraft.world.item.crafting.display.RecipeDisplay;
 import net.minecraft.world.item.crafting.display.RecipeDisplayId;
 import net.minecraft.world.item.crafting.display.SlotDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class RecipeBookComponent<T extends RecipeBookMenu> implements Renderable, GuiEventListener, NarratableEntry {
     public static final WidgetSprites RECIPE_BUTTON_SPRITES = new WidgetSprites(
         ResourceLocation.withDefaultNamespace("recipe_book/button"), ResourceLocation.withDefaultNamespace("recipe_book/button_highlighted")
@@ -576,7 +573,6 @@ public abstract class RecipeBookComponent<T extends RecipeBookMenu> implements R
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record TabInfo(ItemStack primaryIcon, Optional<ItemStack> secondaryIcon, ExtendedRecipeBookCategory category) {
         public TabInfo(SearchRecipeBookCategory p_380261_) {
             this(new ItemStack(Items.COMPASS), Optional.empty(), p_380261_);

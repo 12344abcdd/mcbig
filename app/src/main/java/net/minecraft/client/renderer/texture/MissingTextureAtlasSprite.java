@@ -4,10 +4,7 @@ import com.mojang.blaze3d.platform.NativeImage;
 import net.minecraft.client.resources.metadata.animation.FrameSize;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceMetadata;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public final class MissingTextureAtlasSprite {
     private static final int MISSING_IMAGE_WIDTH = 16;
     private static final int MISSING_IMAGE_HEIGHT = 16;

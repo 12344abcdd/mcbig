@@ -31,11 +31,8 @@ import net.minecraft.network.chat.ComponentUtils;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerSelectionList extends ObjectSelectionList<ServerSelectionList.Entry> {
     static final ResourceLocation INCOMPATIBLE_SPRITE = ResourceLocation.withDefaultNamespace("server_list/incompatible");
     static final ResourceLocation UNREACHABLE_SPRITE = ResourceLocation.withDefaultNamespace("server_list/unreachable");
@@ -141,14 +138,12 @@ public class ServerSelectionList extends ObjectSelectionList<ServerSelectionList
     public void removed() {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public abstract static class Entry extends ObjectSelectionList.Entry<ServerSelectionList.Entry> implements AutoCloseable {
         @Override
         public void close() {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class LANHeader extends ServerSelectionList.Entry {
         private final Minecraft minecraft = Minecraft.getInstance();
 
@@ -183,7 +178,6 @@ public class ServerSelectionList extends ObjectSelectionList<ServerSelectionList
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class NetworkServerEntry extends ServerSelectionList.Entry {
         private static final int ICON_WIDTH = 32;
         private static final Component LAN_SERVER_HEADER = Component.translatable("lanServer.title");
@@ -246,7 +240,6 @@ public class ServerSelectionList extends ObjectSelectionList<ServerSelectionList
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class OnlineServerEntry extends ServerSelectionList.Entry {
         private static final int ICON_WIDTH = 32;
         private static final int ICON_HEIGHT = 32;

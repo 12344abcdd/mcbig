@@ -1,10 +1,7 @@
 package net.minecraft.client.data.models.model;
 
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public final class TextureSlot {
     public static final TextureSlot ALL = create("all");
     public static final TextureSlot TEXTURE = create("texture", ALL);

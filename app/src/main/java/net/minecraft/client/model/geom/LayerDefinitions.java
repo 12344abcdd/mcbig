@@ -112,10 +112,7 @@ import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.WitherSkullRenderer;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LayerDefinitions {
     private static final CubeDeformation FISH_PATTERN_DEFORMATION = new CubeDeformation(0.008F);
     private static final CubeDeformation OUTER_ARMOR_DEFORMATION = new CubeDeformation(1.0F);

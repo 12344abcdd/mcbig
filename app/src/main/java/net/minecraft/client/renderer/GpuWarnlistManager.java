@@ -21,11 +21,8 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.util.profiling.Zone;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class GpuWarnlistManager extends SimplePreparableReloadListener<GpuWarnlistManager.Preparations> {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final ResourceLocation GPU_WARNLIST_LOCATION = ResourceLocation.withDefaultNamespace("gpu_warnlist.json");
@@ -133,7 +130,6 @@ public class GpuWarnlistManager extends SimplePreparableReloadListener<GpuWarnli
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static final class Preparations {
         private final List<Pattern> rendererPatterns;
         private final List<Pattern> versionPatterns;

@@ -12,10 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.world.level.ChunkPos;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SystemToast implements Toast {
     private static final ResourceLocation BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace("toast/system");
     private static final int MAX_LINE_SIZE = 200;
@@ -190,7 +187,6 @@ public class SystemToast implements Toast {
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class SystemToastId {
         public static final SystemToast.SystemToastId NARRATOR_TOGGLE = new SystemToast.SystemToastId();
         public static final SystemToast.SystemToastId WORLD_BACKUP = new SystemToast.SystemToastId();

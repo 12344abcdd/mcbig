@@ -2,10 +2,7 @@ package net.minecraft.client.resources.language;
 
 import java.util.IllegalFormatException;
 import net.minecraft.locale.Language;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class I18n {
     private static volatile Language language = Language.getInstance();
 

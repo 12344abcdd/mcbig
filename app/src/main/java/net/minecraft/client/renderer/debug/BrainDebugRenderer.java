@@ -23,11 +23,8 @@ import net.minecraft.network.protocol.common.custom.BrainDebugPayload;
 import net.minecraft.network.protocol.game.DebugEntityNameGenerator;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class BrainDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final boolean SHOW_NAME_FOR_ALL = true;
@@ -347,7 +344,6 @@ public class BrainDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
         DebugRenderer.getTargetedEntity(this.minecraft.getCameraEntity(), 8).ifPresent(p_113212_ -> this.lastLookedAtUuid = p_113212_.getUUID());
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class PoiInfo {
         public final BlockPos pos;
         public final String type;

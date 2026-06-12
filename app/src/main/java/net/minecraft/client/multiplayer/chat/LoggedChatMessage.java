@@ -15,10 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.network.chat.PlayerChatMessage;
 import net.minecraft.util.ExtraCodecs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface LoggedChatMessage extends LoggedChatEvent {
     static LoggedChatMessage.Player player(GameProfile p_261832_, PlayerChatMessage p_261491_, ChatTrustLevel p_262141_) {
         return new LoggedChatMessage.Player(p_261832_, p_261491_, p_262141_);
@@ -36,7 +33,6 @@ public interface LoggedChatMessage extends LoggedChatEvent {
 
     boolean canReport(UUID p_242315_);
 
-    @OnlyIn(Dist.CLIENT)
     public static record Player(GameProfile profile, PlayerChatMessage message, ChatTrustLevel trustLevel) implements LoggedChatMessage {
         public static final MapCodec<LoggedChatMessage.Player> CODEC = RecordCodecBuilder.mapCodec(
             p_261382_ -> p_261382_.group(
@@ -90,7 +86,6 @@ public interface LoggedChatMessage extends LoggedChatEvent {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record System(Component message, Instant timeStamp) implements LoggedChatMessage {
         public static final MapCodec<LoggedChatMessage.System> CODEC = RecordCodecBuilder.mapCodec(
             p_304056_ -> p_304056_.group(

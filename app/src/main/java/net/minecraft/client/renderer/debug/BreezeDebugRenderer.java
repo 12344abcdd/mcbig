@@ -17,11 +17,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.breeze.Breeze;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class BreezeDebugRenderer {
     private static final int JUMP_TARGET_LINE_COLOR = ARGB.color(255, 255, 100, 255);
     private static final int TARGET_LINE_COLOR = ARGB.color(255, 100, 255, 255);

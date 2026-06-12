@@ -36,10 +36,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class StatsScreen extends Screen {
     private static final Component TITLE = Component.translatable("gui.stats");
     static final ResourceLocation SLOT_SPRITE = ResourceLocation.withDefaultNamespace("container/slot");
@@ -154,7 +151,6 @@ public class StatsScreen extends Screen {
         return "stat." + p_96947_.getValue().toString().replace(':', '.');
     }
 
-    @OnlyIn(Dist.CLIENT)
     class GeneralStatisticsList extends ObjectSelectionList<StatsScreen.GeneralStatisticsList.Entry> {
         public GeneralStatisticsList(Minecraft p_96995_) {
             super(p_96995_, StatsScreen.this.width, StatsScreen.this.height - 33 - 58, 33, 14);
@@ -171,7 +167,6 @@ public class StatsScreen extends Screen {
             return 280;
         }
 
-        @OnlyIn(Dist.CLIENT)
         class Entry extends ObjectSelectionList.Entry<StatsScreen.GeneralStatisticsList.Entry> {
             private final Stat<ResourceLocation> stat;
             private final Component statDisplay;
@@ -214,7 +209,6 @@ public class StatsScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ItemStatisticsList extends ObjectSelectionList<StatsScreen.ItemStatisticsList.ItemRow> {
         private static final int SLOT_BG_SIZE = 18;
         private static final int SLOT_STAT_HEIGHT = 22;
@@ -403,7 +397,6 @@ public class StatsScreen extends Screen {
             this.children().sort(this.itemStatSorter);
         }
 
-        @OnlyIn(Dist.CLIENT)
         class ItemRow extends ObjectSelectionList.Entry<StatsScreen.ItemStatisticsList.ItemRow> {
             private final Item item;
 
@@ -467,7 +460,6 @@ public class StatsScreen extends Screen {
             }
         }
 
-        @OnlyIn(Dist.CLIENT)
         class ItemRowComparator implements Comparator<StatsScreen.ItemStatisticsList.ItemRow> {
             public int compare(StatsScreen.ItemStatisticsList.ItemRow p_169524_, StatsScreen.ItemStatisticsList.ItemRow p_169525_) {
                 Item item = p_169524_.getItem();
@@ -494,7 +486,6 @@ public class StatsScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class MobsStatisticsList extends ObjectSelectionList<StatsScreen.MobsStatisticsList.MobRow> {
         public MobsStatisticsList(Minecraft p_97100_) {
             super(p_97100_, StatsScreen.this.width, StatsScreen.this.height - 33 - 58, 33, 9 * 4);
@@ -512,7 +503,6 @@ public class StatsScreen extends Screen {
             return 280;
         }
 
-        @OnlyIn(Dist.CLIENT)
         class MobRow extends ObjectSelectionList.Entry<StatsScreen.MobsStatisticsList.MobRow> {
             private final Component mobName;
             private final Component kills;

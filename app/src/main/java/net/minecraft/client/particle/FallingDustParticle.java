@@ -9,10 +9,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FallingDustParticle extends TextureSheetParticle {
     private final float rotSpeed;
     private final SpriteSet sprites;
@@ -65,7 +62,6 @@ public class FallingDustParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<BlockParticleOption> {
         private final SpriteSet sprite;
 

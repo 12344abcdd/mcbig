@@ -5,10 +5,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class InBedChatScreen extends ChatScreen {
     private Button leaveBedButton;
 

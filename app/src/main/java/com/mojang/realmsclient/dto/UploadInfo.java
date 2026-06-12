@@ -10,11 +10,8 @@ import java.net.URISyntaxException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class UploadInfo extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final String DEFAULT_SCHEMA = "http://";

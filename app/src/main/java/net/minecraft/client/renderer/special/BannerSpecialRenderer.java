@@ -14,10 +14,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BannerPatternLayers;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BannerSpecialRenderer implements SpecialModelRenderer<BannerPatternLayers> {
     private final BannerRenderer bannerRenderer;
     private final DyeColor baseColor;
@@ -45,7 +42,6 @@ public class BannerSpecialRenderer implements SpecialModelRenderer<BannerPattern
             .renderInHand(p_388611_, p_388866_, p_387337_, p_386801_, this.baseColor, Objects.requireNonNullElse(p_388526_, BannerPatternLayers.EMPTY));
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(DyeColor baseColor) implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<BannerSpecialRenderer.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_386477_ -> p_386477_.group(DyeColor.CODEC.fieldOf("color").forGetter(BannerSpecialRenderer.Unbaked::baseColor))

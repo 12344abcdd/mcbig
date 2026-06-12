@@ -9,10 +9,7 @@ import net.minecraft.client.model.geom.builders.MeshTransformer;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.DolphinRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DolphinModel extends EntityModel<DolphinRenderState> {
     public static final MeshTransformer BABY_TRANSFORMER = MeshTransformer.scaling(0.5F);
     private final ModelPart body;

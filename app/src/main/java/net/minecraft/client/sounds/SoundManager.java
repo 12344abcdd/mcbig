@@ -38,11 +38,8 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.util.profiling.Zone;
 import net.minecraft.util.valueproviders.ConstantFloat;
 import net.minecraft.util.valueproviders.MultipliedFloats;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class SoundManager extends SimplePreparableReloadListener<SoundManager.Preparations> {
     public static final ResourceLocation EMPTY_SOUND_LOCATION = ResourceLocation.withDefaultNamespace("empty");
     public static final Sound EMPTY_SOUND = new Sound(
@@ -233,7 +230,6 @@ public class SoundManager extends SimplePreparableReloadListener<SoundManager.Pr
         this.soundEngine.reload();
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class Preparations {
         final Map<ResourceLocation, WeighedSoundEvents> registry = Maps.newHashMap();
         private Map<ResourceLocation, Resource> soundCache = Map.of();

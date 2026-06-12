@@ -4,10 +4,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FlyTowardsPositionParticle extends TextureSheetParticle {
     private final double xStart;
     private final double yStart;
@@ -113,7 +110,6 @@ public class FlyTowardsPositionParticle extends TextureSheetParticle {
         super.render(p_324177_, p_323683_, p_323936_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class EnchantProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -139,7 +135,6 @@ public class FlyTowardsPositionParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class NautilusProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -165,7 +160,6 @@ public class FlyTowardsPositionParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class VaultConnectionProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

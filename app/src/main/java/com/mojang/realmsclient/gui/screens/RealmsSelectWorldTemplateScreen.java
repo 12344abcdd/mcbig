@@ -36,11 +36,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsSelectWorldTemplateScreen extends RealmsScreen {
     static final Logger LOGGER = LogUtils.getLogger();
     static final ResourceLocation SLOT_FRAME_SPRITE = ResourceLocation.withDefaultNamespace("widget/slot_frame");
@@ -254,7 +251,6 @@ public class RealmsSelectWorldTemplateScreen extends RealmsScreen {
         return this.warning != null ? row(1) : 33;
     }
 
-    @OnlyIn(Dist.CLIENT)
     class Entry extends ObjectSelectionList.Entry<RealmsSelectWorldTemplateScreen.Entry> {
         private static final WidgetSprites WEBSITE_LINK_SPRITES = new WidgetSprites(
             ResourceLocation.withDefaultNamespace("icon/link"), ResourceLocation.withDefaultNamespace("icon/link_highlighted")
@@ -368,7 +364,6 @@ public class RealmsSelectWorldTemplateScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class WorldTemplateList extends ObjectSelectionList<RealmsSelectWorldTemplateScreen.Entry> {
         public WorldTemplateList() {
             this(Collections.emptyList());

@@ -13,10 +13,7 @@ import java.util.concurrent.CompletionException;
 import net.minecraft.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ThrowingComponent;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface AbuseReportSender {
     static AbuseReportSender create(ReportEnvironment p_239536_, UserApiService p_239537_) {
         return new AbuseReportSender.Services(p_239536_, p_239537_);
@@ -30,14 +27,12 @@ public interface AbuseReportSender {
         return AbuseReportLimits.DEFAULTS;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class SendException extends ThrowingComponent {
         public SendException(Component p_239646_, Throwable p_239647_) {
             super(p_239646_, p_239647_);
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Services(ReportEnvironment environment, UserApiService userApiService) implements AbuseReportSender {
         private static final Component SERVICE_UNAVAILABLE_TEXT = Component.translatable("gui.abuseReport.send.service_unavailable");
         private static final Component HTTP_ERROR_TEXT = Component.translatable("gui.abuseReport.send.http_error");

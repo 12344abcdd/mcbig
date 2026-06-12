@@ -41,10 +41,7 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec2;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CommandSuggestions {
     private static final Pattern WHITESPACE_PATTERN = Pattern.compile("(\\s+)");
     private static final Style UNPARSED_STYLE = Style.EMPTY.withColor(ChatFormatting.RED);
@@ -398,7 +395,6 @@ public class CommandSuggestions {
         return (Component)(this.suggestions != null ? CommonComponents.NEW_LINE.copy().append(this.suggestions.getNarrationMessage()) : CommonComponents.EMPTY);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class SuggestionsList {
         private final Rect2i rect;
         private final String originalContents;

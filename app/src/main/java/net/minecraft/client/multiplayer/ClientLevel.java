@@ -92,11 +92,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.scores.Scoreboard;
 import net.minecraft.world.ticks.BlackholeTickAccess;
 import net.minecraft.world.ticks.LevelTickAccess;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientLevel extends Level {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final double FLUID_PARTICLE_SPAWN_OFFSET = 0.05;
@@ -965,7 +962,6 @@ public class ClientLevel extends Level {
         return this.seaLevel;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class ClientLevelData implements WritableLevelData {
         private final boolean hardcore;
         private final boolean isFlat;
@@ -1069,7 +1065,6 @@ public class ClientLevel extends Level {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     final class EntityCallbacks implements LevelCallback<Entity> {
         public void onCreated(Entity p_171696_) {
         }

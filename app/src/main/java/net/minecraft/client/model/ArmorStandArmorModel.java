@@ -8,10 +8,7 @@ import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.ArmorStandRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ArmorStandArmorModel extends HumanoidModel<ArmorStandRenderState> {
     public ArmorStandArmorModel(ModelPart p_170346_) {
         super(p_170346_);

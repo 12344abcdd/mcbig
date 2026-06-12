@@ -2,10 +2,7 @@ package net.minecraft.client.multiplayer.chat.report;
 
 import javax.annotation.Nullable;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum BanReason {
     GENERIC_VIOLATION("generic_violation"),
     FALSE_REPORTING("false_reporting"),

@@ -4,11 +4,8 @@ import java.util.Set;
 import javax.annotation.Nullable;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.core.Direction;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public final class CubeDefinition {
     @Nullable
     private final String comment;

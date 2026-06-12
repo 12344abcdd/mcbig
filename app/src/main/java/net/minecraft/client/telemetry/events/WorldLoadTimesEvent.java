@@ -6,10 +6,7 @@ import net.minecraft.client.telemetry.TelemetryEventSender;
 import net.minecraft.client.telemetry.TelemetryEventType;
 import net.minecraft.client.telemetry.TelemetryProperty;
 import net.minecraft.client.telemetry.TelemetryPropertyMap;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WorldLoadTimesEvent {
     private final boolean newWorld;
     @Nullable

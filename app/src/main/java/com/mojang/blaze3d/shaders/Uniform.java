@@ -8,8 +8,6 @@ import java.nio.IntBuffer;
 import java.util.Arrays;
 import java.util.List;
 import net.minecraft.client.renderer.ShaderProgramConfig;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
@@ -17,7 +15,6 @@ import org.joml.Vector4f;
 import org.lwjgl.system.MemoryUtil;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class Uniform extends AbstractUniform implements AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final int UT_INT1 = 0;

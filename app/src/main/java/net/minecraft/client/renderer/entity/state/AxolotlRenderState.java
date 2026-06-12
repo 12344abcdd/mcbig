@@ -1,10 +1,7 @@
 package net.minecraft.client.renderer.entity.state;
 
 import net.minecraft.world.entity.animal.axolotl.Axolotl;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class AxolotlRenderState extends LivingEntityRenderState {
     public Axolotl.Variant variant = Axolotl.Variant.LUCY;
     public float playingDeadFactor;

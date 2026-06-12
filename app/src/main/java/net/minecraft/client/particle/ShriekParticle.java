@@ -5,11 +5,8 @@ import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.ShriekParticleOption;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Quaternionf;
 
-@OnlyIn(Dist.CLIENT)
 public class ShriekParticle extends TextureSheetParticle {
     private static final float MAGICAL_X_ROT = 1.0472F;
     private int delay;
@@ -61,7 +58,6 @@ public class ShriekParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<ShriekParticleOption> {
         private final SpriteSet sprite;
 

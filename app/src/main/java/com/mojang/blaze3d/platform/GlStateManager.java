@@ -12,8 +12,6 @@ import java.util.function.Consumer;
 import java.util.stream.IntStream;
 import javax.annotation.Nullable;
 import net.minecraft.Util;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.lwjgl.PointerBuffer;
@@ -29,7 +27,6 @@ import org.lwjgl.opengl.GL32C;
 import org.lwjgl.system.MemoryStack;
 import org.lwjgl.system.MemoryUtil;
 
-@OnlyIn(Dist.CLIENT)
 @DontObfuscate
 public class GlStateManager {
     private static final boolean ON_LINUX = Util.getPlatform() == Util.OS.LINUX;
@@ -793,7 +790,6 @@ public class GlStateManager {
         GL32.glDeleteSync(p_373060_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class BlendState {
         public final GlStateManager.BooleanState mode = new GlStateManager.BooleanState(3042);
         public int srcRgb = 1;
@@ -802,7 +798,6 @@ public class GlStateManager {
         public int dstAlpha = 0;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class BooleanState {
         private final int state;
         private boolean enabled;
@@ -832,13 +827,11 @@ public class GlStateManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ColorLogicState {
         public final GlStateManager.BooleanState enable = new GlStateManager.BooleanState(3058);
         public int op = 5379;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ColorMask {
         public boolean red = true;
         public boolean green = true;
@@ -846,20 +839,17 @@ public class GlStateManager {
         public boolean alpha = true;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class CullState {
         public final GlStateManager.BooleanState enable = new GlStateManager.BooleanState(2884);
         public int mode = 1029;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class DepthState {
         public final GlStateManager.BooleanState mode = new GlStateManager.BooleanState(2929);
         public boolean mask = true;
         public int func = 513;
     }
 
-    @OnlyIn(Dist.CLIENT)
     @DontObfuscate
     public static enum DestFactor {
         CONSTANT_ALPHA(32771),
@@ -884,7 +874,6 @@ public class GlStateManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class FramebufferState {
         public int binding;
 
@@ -898,7 +887,6 @@ public class GlStateManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum LogicOp {
         AND(5377),
         AND_INVERTED(5380),
@@ -924,7 +912,6 @@ public class GlStateManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class PolygonOffsetState {
         public final GlStateManager.BooleanState fill = new GlStateManager.BooleanState(32823);
         public final GlStateManager.BooleanState line = new GlStateManager.BooleanState(10754);
@@ -932,12 +919,10 @@ public class GlStateManager {
         public float units;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ScissorState {
         public final GlStateManager.BooleanState mode = new GlStateManager.BooleanState(3089);
     }
 
-    @OnlyIn(Dist.CLIENT)
     @DontObfuscate
     public static enum SourceFactor {
         CONSTANT_ALPHA(32771),
@@ -963,14 +948,12 @@ public class GlStateManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class StencilFunc {
         public int func = 519;
         public int ref;
         public int mask = -1;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class StencilState {
         public final GlStateManager.StencilFunc func = new GlStateManager.StencilFunc();
         public int mask = -1;
@@ -979,12 +962,10 @@ public class GlStateManager {
         public int zpass = 7680;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class TextureState {
         public int binding;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Viewport {
         INSTANCE;
 

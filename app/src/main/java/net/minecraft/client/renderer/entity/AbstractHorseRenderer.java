@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.entity;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.state.EquineRenderState;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractHorseRenderer<T extends AbstractHorse, S extends EquineRenderState, M extends EntityModel<? super S>>
     extends AgeableMobRenderer<T, S, M> {
     public AbstractHorseRenderer(EntityRendererProvider.Context p_173906_, M p_360303_, M p_363195_) {

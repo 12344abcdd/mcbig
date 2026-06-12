@@ -10,10 +10,7 @@ import net.minecraft.client.StringSplitter;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.util.Mth;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TextFieldHelper {
     private final Supplier<String> getMessageFn;
     private final Consumer<String> setMessageFn;
@@ -285,7 +282,6 @@ public class TextFieldHelper {
         return this.cursorPos != this.selectionPos;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum CursorStep {
         CHARACTER,
         WORD;

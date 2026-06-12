@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.texture;
 import com.mojang.blaze3d.platform.NativeImage;
 import net.minecraft.Util;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MipmapGenerator {
     private static final int ALPHA_CUTOUT_CUTOFF = 96;
     private static final float[] POW22 = Util.make(new float[256], p_118058_ -> {

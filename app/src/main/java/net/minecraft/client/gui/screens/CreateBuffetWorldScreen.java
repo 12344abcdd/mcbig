@@ -23,10 +23,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CreateBuffetWorldScreen extends Screen {
     private static final Component BIOME_SELECT_INFO = Component.translatable("createWorld.customize.buffet.biome").withColor(-8355712);
     private static final int SPACING = 8;
@@ -80,7 +77,6 @@ public class CreateBuffetWorldScreen extends Screen {
         this.doneButton.active = this.list.getSelected() != null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     class BiomeList extends ObjectSelectionList<CreateBuffetWorldScreen.BiomeList.Entry> {
         BiomeList() {
             super(CreateBuffetWorldScreen.this.minecraft, CreateBuffetWorldScreen.this.width, CreateBuffetWorldScreen.this.height - 77, 40, 16);
@@ -101,7 +97,6 @@ public class CreateBuffetWorldScreen extends Screen {
             CreateBuffetWorldScreen.this.updateButtonValidity();
         }
 
-        @OnlyIn(Dist.CLIENT)
         class Entry extends ObjectSelectionList.Entry<CreateBuffetWorldScreen.BiomeList.Entry> {
             final Holder.Reference<Biome> biome;
             final Component name;

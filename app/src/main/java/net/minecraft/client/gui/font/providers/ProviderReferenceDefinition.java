@@ -5,10 +5,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record ProviderReferenceDefinition(ResourceLocation id) implements GlyphProviderDefinition {
     public static final MapCodec<ProviderReferenceDefinition> CODEC = RecordCodecBuilder.mapCodec(
         p_286521_ -> p_286521_.group(ResourceLocation.CODEC.fieldOf("id").forGetter(ProviderReferenceDefinition::id))

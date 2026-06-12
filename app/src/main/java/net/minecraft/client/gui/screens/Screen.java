@@ -49,11 +49,8 @@ import net.minecraft.util.StringUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class Screen extends AbstractContainerEventHandler implements Renderable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Component USAGE_NARRATION = Component.translatable("narrator.screen.usage");
@@ -628,11 +625,9 @@ public abstract class Screen extends AbstractContainerEventHandler implements Re
         return null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record DeferredTooltipRendering(List<FormattedCharSequence> tooltip, ClientTooltipPositioner positioner) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class NarratableSearchResult {
         public final NarratableEntry entry;
         public final int index;

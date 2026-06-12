@@ -17,12 +17,9 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.FogType;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class Camera {
     private static final float DEFAULT_CAMERA_DISTANCE = 4.0F;
     private static final Vector3f FORWARDS = new Vector3f(0.0F, 0.0F, -1.0F);
@@ -238,7 +235,6 @@ public class Camera {
         return this.partialTickTime;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class NearPlane {
         final Vec3 forward;
         private final Vec3 left;

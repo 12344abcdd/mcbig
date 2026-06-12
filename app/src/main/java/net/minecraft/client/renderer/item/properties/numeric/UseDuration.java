@@ -8,10 +8,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record UseDuration(boolean remaining) implements RangeSelectItemModelProperty {
     public static final MapCodec<UseDuration> MAP_CODEC = RecordCodecBuilder.mapCodec(
         p_387574_ -> p_387574_.group(Codec.BOOL.optionalFieldOf("remaining", Boolean.valueOf(false)).forGetter(UseDuration::remaining))

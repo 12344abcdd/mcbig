@@ -12,11 +12,8 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class SignEditScreen extends AbstractSignEditScreen {
     public static final float MAGIC_SCALE_NUMBER = 62.500004F;
     public static final float MAGIC_TEXT_SCALE = 0.9765628F;

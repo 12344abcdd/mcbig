@@ -6,10 +6,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import java.util.Optional;
 import net.minecraft.util.ExtraCodecs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record AnimationFrame(int index, Optional<Integer> time) {
     public static final Codec<AnimationFrame> FULL_CODEC = RecordCodecBuilder.create(
         p_389594_ -> p_389594_.group(

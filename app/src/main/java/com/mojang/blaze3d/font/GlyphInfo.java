@@ -3,10 +3,7 @@ package com.mojang.blaze3d.font;
 import java.util.function.Function;
 import net.minecraft.client.gui.font.glyphs.BakedGlyph;
 import net.minecraft.client.gui.font.glyphs.EmptyGlyph;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface GlyphInfo {
     float getAdvance();
 
@@ -24,7 +21,6 @@ public interface GlyphInfo {
 
     BakedGlyph bake(Function<SheetGlyphInfo, BakedGlyph> p_231088_);
 
-    @OnlyIn(Dist.CLIENT)
     public interface SpaceGlyphInfo extends GlyphInfo {
         @Override
         default BakedGlyph bake(Function<SheetGlyphInfo, BakedGlyph> p_231090_) {

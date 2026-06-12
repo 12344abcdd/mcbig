@@ -2,11 +2,8 @@ package com.mojang.blaze3d.platform;
 
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.system.MemoryUtil;
 
-@OnlyIn(Dist.CLIENT)
 public class GlUtil {
     public static ByteBuffer allocateMemory(int p_166248_) {
         return MemoryUtil.memAlloc(p_166248_);

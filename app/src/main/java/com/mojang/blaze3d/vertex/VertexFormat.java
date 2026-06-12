@@ -10,10 +10,7 @@ import it.unimi.dsi.fastutil.ints.IntList;
 import java.util.Arrays;
 import java.util.List;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VertexFormat {
     public static final int UNKNOWN_ELEMENT = -1;
     private final List<VertexFormatElement> elements;
@@ -142,7 +139,6 @@ public class VertexFormat {
         return vertexbuffer;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final ImmutableMap.Builder<String, VertexFormatElement> elements = ImmutableMap.builder();
         private final IntList offsets = new IntArrayList();
@@ -171,7 +167,6 @@ public class VertexFormat {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum IndexType {
         SHORT(5123, 2),
         INT(5125, 4);
@@ -189,7 +184,6 @@ public class VertexFormat {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Mode {
         LINES(4, 2, 2, false),
         LINE_STRIP(5, 2, 1, true),

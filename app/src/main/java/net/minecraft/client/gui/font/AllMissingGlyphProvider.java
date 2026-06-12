@@ -6,10 +6,7 @@ import it.unimi.dsi.fastutil.ints.IntSet;
 import it.unimi.dsi.fastutil.ints.IntSets;
 import javax.annotation.Nullable;
 import net.minecraft.client.gui.font.glyphs.SpecialGlyphs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class AllMissingGlyphProvider implements GlyphProvider {
     @Nullable
     @Override

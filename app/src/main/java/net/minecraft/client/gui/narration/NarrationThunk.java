@@ -5,10 +5,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Unit;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class NarrationThunk<T> {
     private final T contents;
     private final BiConsumer<Consumer<String>, T> converter;

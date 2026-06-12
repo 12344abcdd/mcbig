@@ -7,10 +7,7 @@ import com.mojang.realmsclient.dto.RealmsServer;
 import java.util.Locale;
 import javax.annotation.Nullable;
 import net.minecraft.client.Minecraft;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record ReportEnvironment(String clientVersion, @Nullable ReportEnvironment.Server server) {
     public static ReportEnvironment local() {
         return create(null);
@@ -56,16 +53,13 @@ public record ReportEnvironment(String clientVersion, @Nullable ReportEnvironmen
         return stringbuilder.toString();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Server {
-        @OnlyIn(Dist.CLIENT)
         public static record Realm(long realmId, int slotId) implements ReportEnvironment.Server {
             public Realm(RealmsServer p_239068_) {
                 this(p_239068_.id, p_239068_.activeSlot);
             }
         }
 
-        @OnlyIn(Dist.CLIENT)
         public static record ThirdParty(String ip) implements ReportEnvironment.Server {
         }
     }

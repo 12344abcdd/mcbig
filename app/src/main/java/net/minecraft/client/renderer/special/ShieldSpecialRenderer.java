@@ -19,10 +19,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BannerPatternLayers;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ShieldSpecialRenderer implements SpecialModelRenderer<DataComponentMap> {
     private final ShieldModel model;
 
@@ -76,7 +73,6 @@ public class ShieldSpecialRenderer implements SpecialModelRenderer<DataComponent
         p_387961_.popPose();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked() implements SpecialModelRenderer.Unbaked {
         public static final ShieldSpecialRenderer.Unbaked INSTANCE = new ShieldSpecialRenderer.Unbaked();
         public static final MapCodec<ShieldSpecialRenderer.Unbaked> MAP_CODEC = MapCodec.unit(INSTANCE);

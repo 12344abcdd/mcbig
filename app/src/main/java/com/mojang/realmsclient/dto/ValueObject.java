@@ -3,10 +3,7 @@ package com.mojang.realmsclient.dto;
 import com.google.gson.annotations.SerializedName;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class ValueObject {
     @Override
     public String toString() {

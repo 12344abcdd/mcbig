@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MultiPartBakedModel extends DelegateBakedModel {
     private final List<MultiPartBakedModel.Selector> selectors;
     private final Map<BlockState, BitSet> selectorCache = new Reference2ObjectOpenHashMap<>();
@@ -65,7 +62,6 @@ public class MultiPartBakedModel extends DelegateBakedModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Selector(Predicate<BlockState> condition, BakedModel model) {
     }
 }

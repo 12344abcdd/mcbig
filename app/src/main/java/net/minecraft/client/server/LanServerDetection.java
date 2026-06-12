@@ -12,16 +12,12 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.annotation.Nullable;
 import net.minecraft.DefaultUncaughtExceptionHandler;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class LanServerDetection {
     static final AtomicInteger UNIQUE_THREAD_ID = new AtomicInteger(0);
     static final Logger LOGGER = LogUtils.getLogger();
 
-    @OnlyIn(Dist.CLIENT)
     public static class LanServerDetector extends Thread {
         private final LanServerDetection.LanServerList serverList;
         private final InetAddress pingGroup;
@@ -68,7 +64,6 @@ public class LanServerDetection {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class LanServerList {
         private final List<LanServer> servers = Lists.newArrayList();
         private boolean isDirty;

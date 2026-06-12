@@ -1,10 +1,7 @@
 package com.mojang.realmsclient.gui.screens;
 
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class UploadResult {
     public final int statusCode;
     @Nullable
@@ -24,7 +21,6 @@ public class UploadResult {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private int statusCode = -1;
         private String errorMessage;

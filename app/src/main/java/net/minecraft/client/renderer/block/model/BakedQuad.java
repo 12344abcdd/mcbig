@@ -2,10 +2,7 @@ package net.minecraft.client.renderer.block.model;
 
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.Direction;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BakedQuad {
     protected final int[] vertices;
     protected final int tintIndex;

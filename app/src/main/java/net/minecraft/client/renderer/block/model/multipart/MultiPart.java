@@ -23,10 +23,7 @@ import net.minecraft.client.resources.model.ResolvableModel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MultiPart implements UnbakedBlockStateModel {
     private final List<MultiPart.InstantiatedSelector> selectors;
 
@@ -44,7 +41,6 @@ public class MultiPart implements UnbakedBlockStateModel {
             }
         }
 
-        @OnlyIn(Dist.CLIENT)
         record Key(MultiPart model, IntList selectors) {}
 
         return new Key(this, intlist);
@@ -67,7 +63,6 @@ public class MultiPart implements UnbakedBlockStateModel {
         return new MultiPartBakedModel(list);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Definition(List<Selector> selectors) {
         public MultiPart instantiate(StateDefinition<Block, BlockState> p_365071_) {
             List<MultiPart.InstantiatedSelector> list = this.selectors
@@ -82,7 +77,6 @@ public class MultiPart implements UnbakedBlockStateModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Deserializer implements JsonDeserializer<MultiPart.Definition> {
         public MultiPart.Definition deserialize(JsonElement p_111994_, Type p_111995_, JsonDeserializationContext p_111996_) throws JsonParseException {
             return new MultiPart.Definition(this.getSelectors(p_111996_, p_111994_.getAsJsonArray()));
@@ -102,7 +96,6 @@ public class MultiPart implements UnbakedBlockStateModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record InstantiatedSelector(Predicate<BlockState> predicate, MultiVariant variant) {
     }
 }

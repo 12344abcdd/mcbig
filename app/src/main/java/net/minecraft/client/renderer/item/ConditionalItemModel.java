@@ -11,10 +11,7 @@ import net.minecraft.client.resources.model.ResolvableModel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ConditionalItemModel implements ItemModel {
     private final ConditionalItemModelProperty property;
     private final ItemModel onTrue;
@@ -40,7 +37,6 @@ public class ConditionalItemModel implements ItemModel {
             .update(p_387756_, p_387286_, p_386644_, p_387754_, p_388301_, p_387078_, p_387025_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(ConditionalItemModelProperty property, ItemModel.Unbaked onTrue, ItemModel.Unbaked onFalse) implements ItemModel.Unbaked {
         public static final MapCodec<ConditionalItemModel.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_388916_ -> p_388916_.group(

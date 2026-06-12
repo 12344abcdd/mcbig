@@ -6,10 +6,7 @@ import com.mojang.blaze3d.platform.ScreenManager;
 import com.mojang.blaze3d.platform.Window;
 import javax.annotation.Nullable;
 import net.minecraft.client.Minecraft;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public final class VirtualScreen implements AutoCloseable {
     private final Minecraft minecraft;
     private final ScreenManager screenManager;

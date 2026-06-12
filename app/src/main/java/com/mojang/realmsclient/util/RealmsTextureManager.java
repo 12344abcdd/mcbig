@@ -12,12 +12,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.system.MemoryUtil;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsTextureManager {
     private static final Map<String, RealmsTextureManager.RealmsTexture> TEXTURES = Maps.newHashMap();
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -62,7 +59,6 @@ public class RealmsTextureManager {
         return null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record RealmsTexture(String image, ResourceLocation textureId) {
     }
 }

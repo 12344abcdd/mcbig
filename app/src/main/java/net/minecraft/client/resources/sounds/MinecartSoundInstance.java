@@ -5,10 +5,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.vehicle.AbstractMinecart;
 import net.minecraft.world.entity.vehicle.NewMinecartBehavior;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MinecartSoundInstance extends AbstractTickableSoundInstance {
     private static final float VOLUME_MIN = 0.0F;
     private static final float VOLUME_MAX = 0.7F;

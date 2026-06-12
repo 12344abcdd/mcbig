@@ -13,10 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import javax.annotation.Nullable;
 import javax.sound.sampled.AudioFormat;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class JOrbisAudioStream implements FloatSampleSource {
     private static final int BUFSIZE = 8192;
     private static final int PAGEOUT_RECAPTURE = -1;

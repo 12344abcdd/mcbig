@@ -6,10 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TextRenderingUtils {
     private TextRenderingUtils() {
     }
@@ -74,7 +71,6 @@ public class TextRenderingUtils {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Line {
         public final List<TextRenderingUtils.LineSegment> segments;
 
@@ -109,7 +105,6 @@ public class TextRenderingUtils {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class LineSegment {
         private final String fullText;
         @Nullable

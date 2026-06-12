@@ -5,10 +5,7 @@ import net.minecraft.core.particles.TrailParticleOption;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TrailParticle extends TextureSheetParticle {
     private final Vec3 target;
 
@@ -60,7 +57,6 @@ public class TrailParticle extends TextureSheetParticle {
         return 15728880;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<TrailParticleOption> {
         private final SpriteSet sprite;
 

@@ -11,11 +11,8 @@ import net.minecraft.client.renderer.texture.atlas.SpriteSources;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class SingleFile implements SpriteSource {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final MapCodec<SingleFile> CODEC = RecordCodecBuilder.mapCodec(

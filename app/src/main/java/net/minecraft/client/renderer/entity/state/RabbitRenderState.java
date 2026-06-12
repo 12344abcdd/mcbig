@@ -1,10 +1,7 @@
 package net.minecraft.client.renderer.entity.state;
 
 import net.minecraft.world.entity.animal.Rabbit;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RabbitRenderState extends LivingEntityRenderState {
     public float jumpCompletion;
     public boolean isToast;

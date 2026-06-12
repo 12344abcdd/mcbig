@@ -10,10 +10,7 @@ import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.state.ArrowRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ArrowModel extends EntityModel<ArrowRenderState> {
     public ArrowModel(ModelPart p_360867_) {
         super(p_360867_, RenderType::entityCutout);

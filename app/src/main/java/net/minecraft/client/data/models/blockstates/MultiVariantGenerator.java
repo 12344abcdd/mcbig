@@ -16,10 +16,7 @@ import java.util.stream.Stream;
 import net.minecraft.Util;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MultiVariantGenerator implements BlockStateGenerator {
     private final Block block;
     private final List<Variant> baseVariants;

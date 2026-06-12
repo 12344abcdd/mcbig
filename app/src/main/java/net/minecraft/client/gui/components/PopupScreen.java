@@ -15,10 +15,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PopupScreen extends Screen {
     private static final ResourceLocation BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace("popup/background");
     private static final int SPACING = 12;
@@ -131,7 +128,6 @@ public class PopupScreen extends Screen {
         this.minecraft.setScreen(this.backgroundScreen);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final Screen backgroundScreen;
         private final Component title;
@@ -182,7 +178,6 @@ public class PopupScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ButtonOption(Component message, Consumer<PopupScreen> action) {
     }
 }

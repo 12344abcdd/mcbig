@@ -4,12 +4,8 @@ import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class UnderwaterAmbientSoundInstances {
-    @OnlyIn(Dist.CLIENT)
     public static class SubSound extends AbstractTickableSoundInstance {
         private final LocalPlayer player;
 
@@ -30,7 +26,6 @@ public class UnderwaterAmbientSoundInstances {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class UnderwaterAmbientSoundInstance extends AbstractTickableSoundInstance {
         public static final int FADE_DURATION = 40;
         private final LocalPlayer player;

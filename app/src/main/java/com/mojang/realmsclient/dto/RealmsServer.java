@@ -19,12 +19,9 @@ import java.util.Map.Entry;
 import javax.annotation.Nullable;
 import net.minecraft.Util;
 import net.minecraft.client.multiplayer.ServerData;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsServer extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int NO_VALUE = -1;
@@ -336,7 +333,6 @@ public class RealmsServer extends ValueObject {
         return new ServerData(Objects.requireNonNullElse(this.name, "unknown server"), p_87523_, ServerData.Type.REALM);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Compatibility {
         UNVERIFIABLE,
         INCOMPATIBLE,
@@ -358,7 +354,6 @@ public class RealmsServer extends ValueObject {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class McoServerComparator implements Comparator<RealmsServer> {
         private final String refOwner;
 
@@ -379,14 +374,12 @@ public class RealmsServer extends ValueObject {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum State {
         CLOSED,
         OPEN,
         UNINITIALIZED;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum WorldType {
         NORMAL,
         MINIGAME,

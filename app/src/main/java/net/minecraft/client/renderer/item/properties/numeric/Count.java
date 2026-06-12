@@ -9,10 +9,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record Count(boolean normalize) implements RangeSelectItemModelProperty {
     public static final MapCodec<Count> MAP_CODEC = RecordCodecBuilder.mapCodec(
         p_387175_ -> p_387175_.group(Codec.BOOL.optionalFieldOf("normalize", Boolean.valueOf(true)).forGetter(Count::normalize)).apply(p_387175_, Count::new)

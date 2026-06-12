@@ -8,10 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.BundleItem;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BundleSelectedItemSpecialRenderer implements ItemModel {
     static final ItemModel INSTANCE = new BundleSelectedItemSpecialRenderer();
 
@@ -31,7 +28,6 @@ public class BundleSelectedItemSpecialRenderer implements ItemModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked() implements ItemModel.Unbaked {
         public static final MapCodec<BundleSelectedItemSpecialRenderer.Unbaked> MAP_CODEC = MapCodec.unit(new BundleSelectedItemSpecialRenderer.Unbaked());
 

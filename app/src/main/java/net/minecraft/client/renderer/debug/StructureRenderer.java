@@ -16,10 +16,7 @@ import net.minecraft.network.protocol.common.custom.StructuresDebugPayload;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class StructureRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
     private final Map<ResourceKey<Level>, Map<String, BoundingBox>> postMainBoxes = Maps.newIdentityHashMap();

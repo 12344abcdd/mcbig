@@ -26,10 +26,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ModelProvider implements DataProvider {
     private final PackOutput.PathProvider blockStatePathProvider;
     private final PackOutput.PathProvider itemInfoPathProvider;
@@ -66,7 +63,6 @@ public class ModelProvider implements DataProvider {
         return "Model Definitions";
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class BlockStateGeneratorCollector implements Consumer<BlockStateGenerator> {
         private final Map<Block, BlockStateGenerator> generators = new HashMap<>();
 
@@ -93,7 +89,6 @@ public class ModelProvider implements DataProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ItemInfoCollector implements ItemModelOutput {
         private final Map<Item, ClientItem> itemInfos = new HashMap<>();
         private final Map<Item, Item> copies = new HashMap<>();
@@ -149,7 +144,6 @@ public class ModelProvider implements DataProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class SimpleModelCollector implements BiConsumer<ResourceLocation, ModelInstance> {
         private final Map<ResourceLocation, ModelInstance> models = new HashMap<>();
 

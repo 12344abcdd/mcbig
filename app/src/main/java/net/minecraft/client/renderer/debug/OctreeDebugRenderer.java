@@ -10,11 +10,8 @@ import net.minecraft.client.renderer.ShapeRenderer;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.AABB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.mutable.MutableInt;
 
-@OnlyIn(Dist.CLIENT)
 public class OctreeDebugRenderer {
     private final Minecraft minecraft;
 

@@ -2,18 +2,13 @@ package net.minecraft.client.animation;
 
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public record AnimationChannel(AnimationChannel.Target target, Keyframe... keyframes) {
-    @OnlyIn(Dist.CLIENT)
     public interface Interpolation {
         Vector3f apply(Vector3f p_253818_, float p_232224_, Keyframe[] p_232225_, int p_232226_, int p_232227_, float p_232228_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Interpolations {
         public static final AnimationChannel.Interpolation LINEAR = (p_253292_, p_253293_, p_253294_, p_253295_, p_253296_, p_253297_) -> {
             Vector3f vector3f = p_253294_[p_253295_].target();
@@ -34,12 +29,10 @@ public record AnimationChannel(AnimationChannel.Target target, Keyframe... keyfr
         };
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Target {
         void apply(ModelPart p_232248_, Vector3f p_253771_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Targets {
         public static final AnimationChannel.Target POSITION = ModelPart::offsetPos;
         public static final AnimationChannel.Target ROTATION = ModelPart::offsetRotation;

@@ -10,10 +10,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.ConduitRenderer;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ConduitSpecialRenderer implements NoDataSpecialModelRenderer {
     private final ModelPart model;
 
@@ -30,7 +27,6 @@ public class ConduitSpecialRenderer implements NoDataSpecialModelRenderer {
         p_386873_.popPose();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked() implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<ConduitSpecialRenderer.Unbaked> MAP_CODEC = MapCodec.unit(new ConduitSpecialRenderer.Unbaked());
 

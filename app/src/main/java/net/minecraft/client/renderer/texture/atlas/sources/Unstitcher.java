@@ -21,11 +21,8 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceMetadata;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class Unstitcher implements SpriteSource {
     static final Logger LOGGER = LogUtils.getLogger();
     public static final MapCodec<Unstitcher> CODEC = RecordCodecBuilder.mapCodec(
@@ -69,7 +66,6 @@ public class Unstitcher implements SpriteSource {
         return SpriteSources.UNSTITCHER;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Region(ResourceLocation sprite, double x, double y, double width, double height) {
         public static final Codec<Unstitcher.Region> CODEC = RecordCodecBuilder.create(
             p_261521_ -> p_261521_.group(
@@ -83,7 +79,6 @@ public class Unstitcher implements SpriteSource {
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class RegionInstance implements SpriteSource.SpriteSupplier {
         private final LazyLoadedImage image;
         private final Unstitcher.Region region;

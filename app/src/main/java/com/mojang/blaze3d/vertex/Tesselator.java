@@ -1,10 +1,7 @@
 package com.mojang.blaze3d.vertex;
 
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Tesselator {
     private static final int MAX_BYTES = 786432;
     private final ByteBufferBuilder buffer;

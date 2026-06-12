@@ -12,12 +12,9 @@ import java.util.stream.IntStream;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fStack;
 
-@OnlyIn(Dist.CLIENT)
 public class CubeMap {
     private static final int SIDES = 6;
     private final List<ResourceLocation> sides;

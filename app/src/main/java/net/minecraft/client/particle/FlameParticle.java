@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FlameParticle extends RisingParticle {
     FlameParticle(ClientLevel p_106800_, double p_106801_, double p_106802_, double p_106803_, double p_106804_, double p_106805_, double p_106806_) {
         super(p_106800_, p_106801_, p_106802_, p_106803_, p_106804_, p_106805_, p_106806_);
@@ -44,7 +41,6 @@ public class FlameParticle extends RisingParticle {
         return j | k << 16;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 
@@ -68,7 +64,6 @@ public class FlameParticle extends RisingParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class SmallFlameProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

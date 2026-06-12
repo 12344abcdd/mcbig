@@ -12,10 +12,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DripParticle extends TextureSheetParticle {
     private final Fluid type;
     protected boolean isGlowing;
@@ -355,7 +352,6 @@ public class DripParticle extends TextureSheetParticle {
         return dripparticle;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class CoolingDripHangParticle extends DripParticle.DripHangParticle {
         CoolingDripHangParticle(ClientLevel p_106068_, double p_106069_, double p_106070_, double p_106071_, Fluid p_106072_, ParticleOptions p_106073_) {
             super(p_106068_, p_106069_, p_106070_, p_106071_, p_106072_, p_106073_);
@@ -370,7 +366,6 @@ public class DripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class DripHangParticle extends DripParticle {
         private final ParticleOptions fallingParticle;
 
@@ -397,7 +392,6 @@ public class DripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class DripLandParticle extends DripParticle {
         DripLandParticle(ClientLevel p_106102_, double p_106103_, double p_106104_, double p_106105_, Fluid p_106106_) {
             super(p_106102_, p_106103_, p_106104_, p_106105_, p_106106_);
@@ -405,7 +399,6 @@ public class DripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class DripstoneFallAndLandParticle extends DripParticle.FallAndLandParticle {
         DripstoneFallAndLandParticle(ClientLevel p_171930_, double p_171931_, double p_171932_, double p_171933_, Fluid p_171934_, ParticleOptions p_171935_) {
             super(p_171930_, p_171931_, p_171932_, p_171933_, p_171934_, p_171935_);
@@ -423,7 +416,6 @@ public class DripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class FallAndLandParticle extends DripParticle.FallingParticle {
         protected final ParticleOptions landParticle;
 
@@ -441,7 +433,6 @@ public class DripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class FallingParticle extends DripParticle {
         FallingParticle(ClientLevel p_106132_, double p_106133_, double p_106134_, double p_106135_, Fluid p_106136_) {
             this(p_106132_, p_106133_, p_106134_, p_106135_, p_106136_, (int)(64.0 / (Math.random() * 0.8 + 0.2)));
@@ -460,7 +451,6 @@ public class DripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class HoneyFallAndLandParticle extends DripParticle.FallAndLandParticle {
         HoneyFallAndLandParticle(ClientLevel p_106146_, double p_106147_, double p_106148_, double p_106149_, Fluid p_106150_, ParticleOptions p_106151_) {
             super(p_106146_, p_106147_, p_106148_, p_106149_, p_106150_, p_106151_);

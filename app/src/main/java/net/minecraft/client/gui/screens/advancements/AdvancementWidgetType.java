@@ -2,10 +2,7 @@ package net.minecraft.client.gui.screens.advancements;
 
 import net.minecraft.advancements.AdvancementType;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum AdvancementWidgetType {
     OBTAINED(
         ResourceLocation.withDefaultNamespace("advancements/box_obtained"),

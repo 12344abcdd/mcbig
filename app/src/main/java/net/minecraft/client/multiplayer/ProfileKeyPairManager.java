@@ -6,10 +6,7 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import net.minecraft.client.User;
 import net.minecraft.world.entity.player.ProfileKeyPair;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface ProfileKeyPairManager {
     ProfileKeyPairManager EMPTY_KEY_MANAGER = new ProfileKeyPairManager() {
         @Override

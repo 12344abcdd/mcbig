@@ -7,10 +7,7 @@ import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WeighedSoundEvents implements Weighted<Sound> {
     private final List<Weighted<Sound>> list = Lists.newArrayList();
     @Nullable

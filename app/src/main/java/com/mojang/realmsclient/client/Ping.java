@@ -8,11 +8,8 @@ import java.net.SocketAddress;
 import java.util.Comparator;
 import java.util.List;
 import net.minecraft.Util;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.io.IOUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class Ping {
     public static List<RegionPingResult> ping(Ping.Region... p_87131_) {
         for (Ping.Region ping$region : p_87131_) {
@@ -59,7 +56,6 @@ public class Ping {
         return ping(Ping.Region.values());
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum Region {
         US_EAST_1("us-east-1", "ec2.us-east-1.amazonaws.com"),
         US_WEST_2("us-west-2", "ec2.us-west-2.amazonaws.com"),

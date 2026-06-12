@@ -5,10 +5,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface NoDataSpecialModelRenderer extends SpecialModelRenderer<Void> {
     @Nullable
     default Void extractArgument(ItemStack p_386451_) {

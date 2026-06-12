@@ -20,12 +20,9 @@ import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class CloudRenderer extends SimplePreparableReloadListener<Optional<CloudRenderer.TextureData>> implements AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final ResourceLocation TEXTURE_LOCATION = ResourceLocation.withDefaultNamespace("textures/environment/clouds.png");
@@ -357,14 +354,12 @@ public class CloudRenderer extends SimplePreparableReloadListener<Optional<Cloud
         this.vertexBuffer.close();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum RelativeCameraPos {
         ABOVE_CLOUDS,
         INSIDE_CLOUDS,
         BELOW_CLOUDS;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record TextureData(long[] cells, int width, int height) {
     }
 }

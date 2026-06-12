@@ -82,12 +82,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.CommonLinks;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.GameType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsMainScreen extends RealmsScreen {
     static final ResourceLocation INFO_SPRITE = ResourceLocation.withDefaultNamespace("icon/info");
     static final ResourceLocation NEW_REALM_SPRITE = ResourceLocation.withDefaultNamespace("icon/new_realm");
@@ -704,7 +701,6 @@ public class RealmsMainScreen extends RealmsScreen {
         p_294591_.pose().popPose();
     }
 
-    @OnlyIn(Dist.CLIENT)
     class AvailableSnapshotEntry extends RealmsMainScreen.Entry {
         private static final Component START_SNAPSHOT_REALM = Component.translatable("mco.snapshot.start");
         private static final int TEXT_PADDING = 5;
@@ -784,7 +780,6 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ButtonEntry extends RealmsMainScreen.Entry {
         private final Button button;
 
@@ -832,7 +827,6 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class CrossButton extends ImageButton {
         private static final WidgetSprites SPRITES = new WidgetSprites(
             ResourceLocation.withDefaultNamespace("widget/cross_button"), ResourceLocation.withDefaultNamespace("widget/cross_button_highlighted")
@@ -844,7 +838,6 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class EmptyEntry extends RealmsMainScreen.Entry {
         @Override
         public void render(
@@ -867,7 +860,6 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     abstract class Entry extends ObjectSelectionList.Entry<RealmsMainScreen.Entry> {
         protected static final int STATUS_LIGHT_WIDTH = 10;
         private static final int STATUS_LIGHT_HEIGHT = 28;
@@ -988,14 +980,12 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum LayoutState {
         LOADING,
         NO_REALMS,
         LIST;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class NotificationButton extends SpriteIconButton.CenteredIcon {
         private static final ResourceLocation[] NOTIFICATION_ICONS = new ResourceLocation[]{
             ResourceLocation.withDefaultNamespace("notification/1"),
@@ -1037,7 +1027,6 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class NotificationMessageEntry extends RealmsMainScreen.Entry {
         private static final int SIDE_MARGINS = 40;
         private static final int OUTLINE_COLOR = -12303292;
@@ -1153,7 +1142,6 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ParentEntry extends RealmsMainScreen.Entry {
         private final RealmsServer server;
         private final WidgetTooltipHolder tooltip = new WidgetTooltipHolder();
@@ -1205,7 +1193,6 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class RealmSelectionList extends ObjectSelectionList<RealmsMainScreen.Entry> {
         public RealmSelectionList() {
             super(Minecraft.getInstance(), RealmsMainScreen.this.width, RealmsMainScreen.this.height, 0, 36);
@@ -1273,12 +1260,10 @@ public class RealmsMainScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface RealmsCall<T> {
         T request(RealmsClient p_275639_) throws RealmsServiceException;
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ServerEntry extends RealmsMainScreen.Entry {
         private static final Component ONLINE_PLAYERS_TOOLTIP_HEADER = Component.translatable("mco.onlinePlayers");
         private static final int PLAYERS_ONLINE_SPRITE_SIZE = 9;

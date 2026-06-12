@@ -2,10 +2,7 @@ package com.mojang.blaze3d.framegraph;
 
 import com.mojang.blaze3d.resource.ResourceDescriptor;
 import com.mojang.blaze3d.resource.ResourceHandle;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface FramePass {
     <T> ResourceHandle<T> createsInternal(String p_361080_, ResourceDescriptor<T> p_361202_);
 

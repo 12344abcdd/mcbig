@@ -9,14 +9,11 @@ import java.util.Set;
 import java.util.stream.Stream;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public final class ModelPart {
     public static final float DEFAULT_SCALE = 1.0F;
     public float x;
@@ -200,7 +197,6 @@ public final class ModelPart {
         return Stream.concat(Stream.of(this), this.children.values().stream().flatMap(ModelPart::getAllParts));
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Cube {
         public final ModelPart.Polygon[] polygons;
         public final float minX;
@@ -375,7 +371,6 @@ public final class ModelPart {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Polygon(ModelPart.Vertex[] vertices, Vector3f normal) {
         public Polygon(
             ModelPart.Vertex[] p_104362_,
@@ -411,7 +406,6 @@ public final class ModelPart {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Vertex(Vector3f pos, float u, float v) {
         public Vertex(float p_104375_, float p_104376_, float p_104377_, float p_104378_, float p_104379_) {
             this(new Vector3f(p_104375_, p_104376_, p_104377_), p_104378_, p_104379_);
@@ -423,7 +417,6 @@ public final class ModelPart {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface Visitor {
         void visit(PoseStack.Pose p_171342_, String p_171343_, int p_171344_, ModelPart.Cube p_171345_);
     }

@@ -18,11 +18,8 @@ import net.minecraft.network.chat.FilterMask;
 import net.minecraft.network.chat.MessageSignature;
 import net.minecraft.network.chat.PlayerChatMessage;
 import net.minecraft.util.StringDecomposer;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class ChatListener {
     private static final Component CHAT_VALIDATION_ERROR = Component.translatable("chat.validation_error").withStyle(ChatFormatting.RED, ChatFormatting.ITALIC);
     private final Minecraft minecraft;
@@ -201,7 +198,6 @@ public class ChatListener {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Message(@Nullable MessageSignature signature, BooleanSupplier handler) {
         public boolean accept() {
             return this.handler.getAsBoolean();

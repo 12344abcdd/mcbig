@@ -12,11 +12,8 @@ import javax.annotation.Nullable;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.reporting.SkinReportScreen;
 import net.minecraft.client.resources.PlayerSkin;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class SkinReport extends Report {
     final Supplier<PlayerSkin> skinGetter;
 
@@ -42,7 +39,6 @@ public class SkinReport extends Report {
         return new SkinReportScreen(p_299975_, p_299961_, this);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder extends Report.Builder<SkinReport> {
         public Builder(SkinReport p_299828_, AbuseReportLimits p_299881_) {
             super(p_299828_, p_299881_);

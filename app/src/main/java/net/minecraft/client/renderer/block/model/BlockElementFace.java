@@ -9,14 +9,10 @@ import java.lang.reflect.Type;
 import javax.annotation.Nullable;
 import net.minecraft.core.Direction;
 import net.minecraft.util.GsonHelper;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record BlockElementFace(@Nullable Direction cullForDirection, int tintIndex, String texture, BlockFaceUV uv) {
     public static final int NO_TINT = -1;
 
-    @OnlyIn(Dist.CLIENT)
     protected static class Deserializer implements JsonDeserializer<BlockElementFace> {
         private static final int DEFAULT_TINT_INDEX = -1;
 

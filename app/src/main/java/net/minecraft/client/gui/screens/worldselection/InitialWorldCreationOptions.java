@@ -5,10 +5,7 @@ import javax.annotation.Nullable;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.levelgen.flat.FlatLevelGeneratorPreset;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record InitialWorldCreationOptions(
     WorldCreationUiState.SelectedGameMode selectedGameMode,
     Set<GameRules.Key<GameRules.BooleanValue>> disabledGameRules,

@@ -9,10 +9,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class DimensionSpecialEffects {
     private static final Object2ObjectMap<ResourceLocation, DimensionSpecialEffects> EFFECTS = Util.make(new Object2ObjectArrayMap<>(), p_108881_ -> {
         DimensionSpecialEffects.OverworldEffects dimensionspecialeffects$overworldeffects = new DimensionSpecialEffects.OverworldEffects();
@@ -71,7 +68,6 @@ public abstract class DimensionSpecialEffects {
         return this.constantAmbientLight;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class EndEffects extends DimensionSpecialEffects {
         public EndEffects() {
             super(Float.NaN, false, DimensionSpecialEffects.SkyType.END, true, false);
@@ -88,7 +84,6 @@ public abstract class DimensionSpecialEffects {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class NetherEffects extends DimensionSpecialEffects {
         public NetherEffects() {
             super(Float.NaN, true, DimensionSpecialEffects.SkyType.NONE, false, true);
@@ -105,7 +100,6 @@ public abstract class DimensionSpecialEffects {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class OverworldEffects extends DimensionSpecialEffects {
         public static final int CLOUD_LEVEL = 192;
         private static final float SUNRISE_AND_SUNSET_TIMESPAN = 0.4F;
@@ -139,7 +133,6 @@ public abstract class DimensionSpecialEffects {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum SkyType {
         NONE,
         OVERWORLD,

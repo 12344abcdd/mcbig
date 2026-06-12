@@ -26,10 +26,7 @@ import net.minecraft.core.component.DataComponentType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemModelUtils {
     public static ItemModel.Unbaked plainModel(ResourceLocation p_386489_) {
         return new BlockModelWrapper.Unbaked(p_386489_, List.of());

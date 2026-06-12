@@ -10,10 +10,7 @@ import net.minecraft.client.model.geom.builders.MeshTransformer;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.VillagerRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VillagerModel extends EntityModel<VillagerRenderState> implements HeadedModel, VillagerLikeModel {
     public static final MeshTransformer BABY_TRANSFORMER = MeshTransformer.scaling(0.5F);
     private final ModelPart head;

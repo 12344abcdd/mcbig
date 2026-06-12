@@ -13,10 +13,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.state.AllayRenderState;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class AllayModel extends EntityModel<AllayRenderState> implements ArmedModel {
     private final ModelPart head = this.root.getChild("head");
     private final ModelPart body = this.root.getChild("body");

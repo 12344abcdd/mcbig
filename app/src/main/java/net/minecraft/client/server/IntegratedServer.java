@@ -29,11 +29,8 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.chunk.storage.RegionStorageInfo;
 import net.minecraft.world.level.storage.LevelStorageSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class IntegratedServer extends MinecraftServer {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int MIN_SIM_DISTANCE = 2;

@@ -11,10 +11,7 @@ import net.minecraft.client.telemetry.events.WorldUnloadEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WorldSessionTelemetryManager {
     private final UUID worldSessionId = UUID.randomUUID();
     private final TelemetryEventSender eventSender;

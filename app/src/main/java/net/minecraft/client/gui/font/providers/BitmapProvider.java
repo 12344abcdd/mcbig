@@ -23,11 +23,8 @@ import net.minecraft.client.gui.font.CodepointMap;
 import net.minecraft.client.gui.font.glyphs.BakedGlyph;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class BitmapProvider implements GlyphProvider {
     static final Logger LOGGER = LogUtils.getLogger();
     private final NativeImage image;
@@ -54,7 +51,6 @@ public class BitmapProvider implements GlyphProvider {
         return IntSets.unmodifiable(this.glyphs.keySet());
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Definition(ResourceLocation file, int height, int ascent, int[][] codepointGrid) implements GlyphProviderDefinition {
         private static final Codec<int[][]> CODEPOINT_GRID_CODEC = Codec.STRING.listOf().xmap(p_286900_ -> {
             int i = p_286900_.size();
@@ -182,7 +178,6 @@ public class BitmapProvider implements GlyphProvider {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Glyph(float scale, NativeImage image, int offsetX, int offsetY, int width, int height, int advance, int ascent) implements GlyphInfo {
         @Override
         public float getAdvance() {

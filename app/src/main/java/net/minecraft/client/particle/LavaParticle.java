@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LavaParticle extends TextureSheetParticle {
     LavaParticle(ClientLevel p_107074_, double p_107075_, double p_107076_, double p_107077_) {
         super(p_107074_, p_107075_, p_107076_, p_107077_, 0.0, 0.0, 0.0);
@@ -50,7 +47,6 @@ public class LavaParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

@@ -10,10 +10,7 @@ import net.minecraft.client.model.geom.builders.MeshTransformer;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.EquineRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractEquineModel<T extends EquineRenderState> extends EntityModel<T> {
     private static final float DEG_125 = 2.1816616F;
     private static final float DEG_60 = (float) (Math.PI / 3);

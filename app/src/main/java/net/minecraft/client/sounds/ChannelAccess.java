@@ -11,10 +11,7 @@ import java.util.concurrent.Executor;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ChannelAccess {
     private final Set<ChannelAccess.ChannelHandle> channels = Sets.newIdentityHashSet();
     final Library library;
@@ -64,7 +61,6 @@ public class ChannelAccess {
         this.channels.clear();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class ChannelHandle {
         @Nullable
         Channel channel;

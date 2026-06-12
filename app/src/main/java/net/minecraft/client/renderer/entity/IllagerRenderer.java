@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.state.ArmedEntityRenderState;
 import net.minecraft.client.renderer.entity.state.IllagerRenderState;
 import net.minecraft.world.entity.monster.AbstractIllager;
 import net.minecraft.world.item.CrossbowItem;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class IllagerRenderer<T extends AbstractIllager, S extends IllagerRenderState> extends MobRenderer<T, S, IllagerModel<S>> {
     protected IllagerRenderer(EntityRendererProvider.Context p_174182_, IllagerModel<S> p_174183_, float p_174184_) {
         super(p_174182_, p_174183_, p_174184_);

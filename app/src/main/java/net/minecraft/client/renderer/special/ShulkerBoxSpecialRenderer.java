@@ -14,10 +14,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ShulkerBoxSpecialRenderer implements NoDataSpecialModelRenderer {
     private final ShulkerBoxRenderer shulkerBoxRenderer;
     private final float openness;
@@ -36,7 +33,6 @@ public class ShulkerBoxSpecialRenderer implements NoDataSpecialModelRenderer {
         this.shulkerBoxRenderer.render(p_387209_, p_388521_, p_388851_, p_387596_, this.orientation, this.openness, this.material);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(ResourceLocation texture, float openness, Direction orientation) implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<ShulkerBoxSpecialRenderer.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_386593_ -> p_386593_.group(

@@ -35,13 +35,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
-@OnlyIn(Dist.CLIENT)
 public class SoundEngine {
     private static final Marker MARKER = MarkerFactory.getMarker("SOUNDS");
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -504,7 +501,6 @@ public class SoundEngine {
         return this.listener.getTransform();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum DeviceCheckState {
         ONGOING,
         CHANGE_DETECTED,

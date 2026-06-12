@@ -9,11 +9,8 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.EndCrystalRenderer;
 import net.minecraft.client.renderer.entity.state.EndCrystalRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Quaternionf;
 
-@OnlyIn(Dist.CLIENT)
 public class EndCrystalModel extends EntityModel<EndCrystalRenderState> {
     private static final String OUTER_GLASS = "outer_glass";
     private static final String INNER_GLASS = "inner_glass";

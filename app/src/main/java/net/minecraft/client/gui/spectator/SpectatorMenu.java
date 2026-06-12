@@ -10,10 +10,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpectatorMenu {
     static final ResourceLocation CLOSE_SPRITE = ResourceLocation.withDefaultNamespace("spectator/close");
     static final ResourceLocation SCROLL_LEFT_SPRITE = ResourceLocation.withDefaultNamespace("spectator/scroll_left");
@@ -115,7 +112,6 @@ public class SpectatorMenu {
         return new SpectatorPage(this.getItems(), this.selectedSlot);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class CloseSpectatorItem implements SpectatorMenuItem {
         @Override
         public void selectItem(SpectatorMenu p_101823_) {
@@ -140,7 +136,6 @@ public class SpectatorMenu {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ScrollMenuItem implements SpectatorMenuItem {
         private final int direction;
         private final boolean enabled;

@@ -33,11 +33,8 @@ import net.minecraft.network.protocol.status.ClientStatusPacketListener;
 import net.minecraft.network.protocol.status.ClientboundStatusResponsePacket;
 import net.minecraft.network.protocol.status.ServerStatus;
 import net.minecraft.network.protocol.status.ServerboundStatusRequestPacket;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerStatusPinger {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Component CANT_CONNECT_MESSAGE = Component.translatable("multiplayer.status.cannot_connect").withColor(-65536);

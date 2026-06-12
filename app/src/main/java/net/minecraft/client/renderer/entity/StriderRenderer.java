@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.layers.SaddleLayer;
 import net.minecraft.client.renderer.entity.state.StriderRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Strider;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class StriderRenderer extends AgeableMobRenderer<Strider, StriderRenderState, StriderModel> {
     private static final ResourceLocation STRIDER_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/strider/strider.png");
     private static final ResourceLocation COLD_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/strider/strider_cold.png");

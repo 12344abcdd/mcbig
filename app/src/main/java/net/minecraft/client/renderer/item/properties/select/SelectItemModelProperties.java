@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.item.properties.select;
 import com.mojang.serialization.Codec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ExtraCodecs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SelectItemModelProperties {
     private static final ExtraCodecs.LateBoundIdMapper<ResourceLocation, SelectItemModelProperty.Type<?, ?>> ID_MAPPER = new ExtraCodecs.LateBoundIdMapper<>();
     public static final Codec<SelectItemModelProperty.Type<?, ?>> CODEC = ID_MAPPER.codec(ResourceLocation.CODEC);

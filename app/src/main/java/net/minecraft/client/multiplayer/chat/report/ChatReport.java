@@ -23,11 +23,8 @@ import net.minecraft.client.multiplayer.chat.LoggedChatMessage;
 import net.minecraft.network.chat.MessageSignature;
 import net.minecraft.network.chat.SignedMessageBody;
 import net.minecraft.network.chat.SignedMessageLink;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class ChatReport extends Report {
     final IntSet reportedMessages = new IntOpenHashSet();
 
@@ -57,7 +54,6 @@ public class ChatReport extends Report {
         return new ChatReportScreen(p_300022_, p_299859_, this);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder extends Report.Builder<ChatReport> {
         public Builder(ChatReport p_299929_, AbuseReportLimits p_299930_) {
             super(p_299929_, p_299930_);

@@ -1,10 +1,7 @@
 package com.mojang.blaze3d.platform;
 
 import com.mojang.blaze3d.DontObfuscate;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 @DontObfuscate
 public class GlConst {
     public static final int GL_READ_FRAMEBUFFER = 36008;

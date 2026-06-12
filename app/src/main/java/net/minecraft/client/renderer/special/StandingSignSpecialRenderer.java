@@ -14,10 +14,7 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class StandingSignSpecialRenderer implements NoDataSpecialModelRenderer {
     private final Model model;
     private final Material material;
@@ -32,7 +29,6 @@ public class StandingSignSpecialRenderer implements NoDataSpecialModelRenderer {
         SignRenderer.renderInHand(p_389707_, p_389673_, p_389471_, p_389604_, this.model, this.material);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(WoodType woodType, Optional<ResourceLocation> texture) implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<StandingSignSpecialRenderer.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_389433_ -> p_389433_.group(

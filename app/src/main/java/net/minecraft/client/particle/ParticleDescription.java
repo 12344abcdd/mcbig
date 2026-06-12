@@ -8,10 +8,7 @@ import com.google.gson.JsonObject;
 import java.util.List;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ParticleDescription {
     private final List<ResourceLocation> textures;
 

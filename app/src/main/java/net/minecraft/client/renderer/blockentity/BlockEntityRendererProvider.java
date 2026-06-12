@@ -9,15 +9,11 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
 @FunctionalInterface
-@OnlyIn(Dist.CLIENT)
 public interface BlockEntityRendererProvider<T extends BlockEntity> {
     BlockEntityRenderer<T> create(BlockEntityRendererProvider.Context p_173571_);
 
-    @OnlyIn(Dist.CLIENT)
     public static class Context {
         private final BlockEntityRenderDispatcher blockEntityRenderDispatcher;
         private final BlockRenderDispatcher blockRenderDispatcher;

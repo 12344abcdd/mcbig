@@ -42,11 +42,8 @@ import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.server.packs.repository.RepositorySource;
 import net.minecraft.util.HttpUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class DownloadedPackSource implements AutoCloseable {
     private static final Component SERVER_NAME = Component.translatable("resourcePack.server.name");
     private static final Pattern SHA1 = Pattern.compile("^[a-fA-F0-9]{40}$");

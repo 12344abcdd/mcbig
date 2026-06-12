@@ -11,10 +11,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.Connection;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerReconfigScreen extends Screen {
     private static final int DISCONNECT_TIME = 600;
     private final Connection connection;

@@ -18,10 +18,7 @@ import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerSkinWidget extends AbstractWidget {
     private static final float MODEL_OFFSET = 0.0625F;
     private static final float MODEL_HEIGHT = 2.125F;
@@ -83,7 +80,6 @@ public class PlayerSkinWidget extends AbstractWidget {
         return null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Model(PlayerModel wideModel, PlayerModel slimModel) {
         public static PlayerSkinWidget.Model bake(EntityModelSet p_300003_) {
             PlayerModel playermodel = new PlayerModel(p_300003_.bakeLayer(ModelLayers.PLAYER), false);

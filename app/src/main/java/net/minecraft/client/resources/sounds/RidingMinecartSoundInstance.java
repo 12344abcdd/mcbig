@@ -6,10 +6,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.AbstractMinecart;
 import net.minecraft.world.entity.vehicle.NewMinecartBehavior;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RidingMinecartSoundInstance extends AbstractTickableSoundInstance {
     private static final float VOLUME_MIN = 0.0F;
     private static final float VOLUME_MAX = 0.75F;

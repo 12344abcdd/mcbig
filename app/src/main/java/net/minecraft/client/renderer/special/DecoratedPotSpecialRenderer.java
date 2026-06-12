@@ -11,10 +11,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.PotDecorations;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DecoratedPotSpecialRenderer implements SpecialModelRenderer<PotDecorations> {
     private final DecoratedPotRenderer decoratedPotRenderer;
 
@@ -39,7 +36,6 @@ public class DecoratedPotSpecialRenderer implements SpecialModelRenderer<PotDeco
         this.decoratedPotRenderer.renderInHand(p_387712_, p_386487_, p_388845_, p_388255_, Objects.requireNonNullElse(p_387830_, PotDecorations.EMPTY));
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked() implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<DecoratedPotSpecialRenderer.Unbaked> MAP_CODEC = MapCodec.unit(new DecoratedPotSpecialRenderer.Unbaked());
 

@@ -25,10 +25,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SocialInteractionsScreen extends Screen {
     private static final Component TITLE = Component.translatable("gui.socialInteractions.title");
     private static final ResourceLocation BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace("social_interactions/background");
@@ -295,7 +292,6 @@ public class SocialInteractionsScreen extends Screen {
         this.socialInteractionsPlayerList.removePlayer(p_100780_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Page {
         ALL,
         HIDDEN,

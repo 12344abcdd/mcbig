@@ -7,8 +7,6 @@ import com.mojang.logging.LogUtils;
 import java.util.List;
 import java.util.Queue;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.opengl.ARBDebugOutput;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
@@ -18,7 +16,6 @@ import org.lwjgl.opengl.GLDebugMessageCallback;
 import org.lwjgl.opengl.KHRDebug;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class GlDebug {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int CIRCULAR_LOG_SIZE = 10;
@@ -153,7 +150,6 @@ public class GlDebug {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class LogEntry {
         private final int id;
         private final int source;

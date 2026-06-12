@@ -16,10 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FindTreeTutorialStepInstance implements TutorialStepInstance {
     private static final int HINT_DELAY = 6000;
     private static final Component TITLE = Component.translatable("tutorial.find_tree.title");

@@ -1,9 +1,6 @@
 package com.mojang.blaze3d.font;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface SheetGlyphInfo {
     int getPixelWidth();
 

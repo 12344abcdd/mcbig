@@ -5,10 +5,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.VertexMultiConsumer;
 import java.util.Optional;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class OutlineBufferSource implements MultiBufferSource {
     private final MultiBufferSource.BufferSource bufferSource;
     private final MultiBufferSource.BufferSource outlineBufferSource = MultiBufferSource.immediate(new ByteBufferBuilder(1536));
@@ -52,7 +49,6 @@ public class OutlineBufferSource implements MultiBufferSource {
         this.outlineBufferSource.endBatch();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record EntityOutlineGenerator(VertexConsumer delegate, int color) implements VertexConsumer {
         public EntityOutlineGenerator(VertexConsumer p_109943_, int p_109944_, int p_109945_, int p_109946_, int p_109947_) {
             this(p_109943_, ARGB.color(p_109947_, p_109944_, p_109945_, p_109946_));

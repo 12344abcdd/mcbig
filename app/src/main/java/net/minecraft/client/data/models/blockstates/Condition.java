@@ -12,10 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface Condition extends Supplier<JsonElement> {
     void validate(StateDefinition<?, ?> p_387380_);
 
@@ -31,7 +28,6 @@ public interface Condition extends Supplier<JsonElement> {
         return new Condition.CompositeCondition(Condition.Operation.OR, Arrays.asList(p_386471_));
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class CompositeCondition implements Condition {
         private final Condition.Operation operation;
         private final List<Condition> subconditions;
@@ -55,7 +51,6 @@ public interface Condition extends Supplier<JsonElement> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Operation {
         AND("AND"),
         OR("OR");
@@ -67,7 +62,6 @@ public interface Condition extends Supplier<JsonElement> {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class TerminalCondition implements Condition {
         private final Map<Property<?>, String> terms = Maps.newHashMap();
 

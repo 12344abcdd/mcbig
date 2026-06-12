@@ -11,10 +11,7 @@ import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.SkeletonRenderState;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SkeletonModel<S extends SkeletonRenderState> extends HumanoidModel<S> {
     public SkeletonModel(ModelPart p_170941_) {
         super(p_170941_);

@@ -3,10 +3,7 @@ package net.minecraft.client.gui.components;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractStringWidget extends AbstractWidget {
     private final Font font;
     private int color = 16777215;

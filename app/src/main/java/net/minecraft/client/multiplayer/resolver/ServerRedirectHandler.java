@@ -7,12 +7,9 @@ import javax.naming.directory.Attribute;
 import javax.naming.directory.Attributes;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
 @FunctionalInterface
-@OnlyIn(Dist.CLIENT)
 public interface ServerRedirectHandler {
     Logger LOGGER = LogUtils.getLogger();
     ServerRedirectHandler EMPTY = p_171897_ -> Optional.empty();

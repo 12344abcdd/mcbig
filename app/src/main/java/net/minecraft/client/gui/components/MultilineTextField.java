@@ -10,10 +10,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Style;
 import net.minecraft.util.Mth;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MultilineTextField {
     public static final int NO_CHARACTER_LIMIT = Integer.MAX_VALUE;
     private static final int LINE_SEEK_PIXEL_BIAS = 2;
@@ -373,7 +370,6 @@ public class MultilineTextField {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static record StringView(int beginIndex, int endIndex) {
         static final MultilineTextField.StringView EMPTY = new MultilineTextField.StringView(0, 0);
     }

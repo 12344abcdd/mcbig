@@ -23,10 +23,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ModelBlockRenderer {
     private static final int FACE_CUBIC = 0;
     private static final int FACE_PARTIAL = 1;
@@ -380,7 +377,6 @@ public class ModelBlockRenderer {
         CACHE.get().disable();
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static enum AdjacencyInfo {
         DOWN(
             new Direction[]{Direction.WEST, Direction.EAST, Direction.NORTH, Direction.SOUTH},
@@ -690,7 +686,6 @@ public class ModelBlockRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class AmbientOcclusionFace {
         final float[] brightness = new float[4];
         final int[] lightmap = new int[4];
@@ -902,7 +897,6 @@ public class ModelBlockRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum AmbientVertexRemap {
         DOWN(0, 1, 2, 3),
         UP(2, 3, 0, 1),
@@ -936,7 +930,6 @@ public class ModelBlockRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Cache {
         private boolean enabled;
         private final it.unimi.dsi.fastutil.objects.Object2IntLinkedOpenHashMap<BlockPos> colorCache = Util.make(() -> {
@@ -1014,7 +1007,6 @@ public class ModelBlockRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static enum SizeInfo {
         DOWN(Direction.DOWN, false),
         UP(Direction.UP, false),

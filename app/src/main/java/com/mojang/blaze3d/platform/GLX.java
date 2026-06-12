@@ -16,8 +16,6 @@ import java.util.function.Consumer;
 import java.util.function.LongSupplier;
 import java.util.function.Supplier;
 import net.minecraft.client.renderer.CoreShaders;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWErrorCallback;
@@ -28,7 +26,6 @@ import org.slf4j.Logger;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 
-@OnlyIn(Dist.CLIENT)
 @DontObfuscate
 public class GLX {
     private static final Logger LOGGER = LogUtils.getLogger();

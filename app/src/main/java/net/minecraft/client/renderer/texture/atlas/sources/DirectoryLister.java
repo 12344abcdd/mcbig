@@ -11,10 +11,7 @@ import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DirectoryLister implements SpriteSource {
     public static final MapCodec<DirectoryLister> CODEC = RecordCodecBuilder.mapCodec(
         p_262096_ -> p_262096_.group(

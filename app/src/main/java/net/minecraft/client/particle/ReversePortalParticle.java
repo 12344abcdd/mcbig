@@ -2,10 +2,7 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ReversePortalParticle extends PortalParticle {
     ReversePortalParticle(ClientLevel p_107590_, double p_107591_, double p_107592_, double p_107593_, double p_107594_, double p_107595_, double p_107596_) {
         super(p_107590_, p_107591_, p_107592_, p_107593_, p_107594_, p_107595_, p_107596_);
@@ -34,7 +31,6 @@ public class ReversePortalParticle extends PortalParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class ReversePortalProvider implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprite;
 

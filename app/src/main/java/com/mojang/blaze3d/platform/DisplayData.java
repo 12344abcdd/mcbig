@@ -1,10 +1,7 @@
 package com.mojang.blaze3d.platform;
 
 import java.util.OptionalInt;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DisplayData {
     public final int width;
     public final int height;

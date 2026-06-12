@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.layers.SheepWoolLayer;
 import net.minecraft.client.renderer.entity.state.SheepRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Sheep;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SheepRenderer extends AgeableMobRenderer<Sheep, SheepRenderState, SheepModel> {
     private static final ResourceLocation SHEEP_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/sheep/sheep.png");
 

@@ -10,10 +10,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsSettingsScreen extends RealmsScreen {
     private static final int COMPONENT_WIDTH = 212;
     private static final Component NAME_LABEL = Component.translatable("mco.configure.world.name");

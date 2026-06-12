@@ -9,10 +9,7 @@ import net.minecraft.client.resources.metadata.gui.GuiMetadataSection;
 import net.minecraft.client.resources.metadata.gui.GuiSpriteScaling;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.metadata.MetadataSectionType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GuiSpriteManager extends TextureAtlasHolder {
     private static final Set<MetadataSectionType<?>> METADATA_SECTIONS = Set.of(AnimationMetadataSection.TYPE, GuiMetadataSection.TYPE);
 

@@ -18,10 +18,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SubtitleOverlay implements SoundEventListener {
     private static final long DISPLAY_TIME = 3000L;
     private final Minecraft minecraft;
@@ -133,11 +130,9 @@ public class SubtitleOverlay implements SoundEventListener {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record SoundPlayedAt(Vec3 location, long time) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Subtitle {
         private final Component text;
         private final float range;

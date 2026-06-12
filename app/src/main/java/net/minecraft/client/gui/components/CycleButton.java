@@ -14,10 +14,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CycleButton<T> extends AbstractButton {
     public static final BooleanSupplier DEFAULT_ALT_LIST_SELECTOR = Screen::hasAltDown;
     private static final List<Boolean> BOOLEAN_OPTIONS = ImmutableList.of(Boolean.TRUE, Boolean.FALSE);
@@ -165,7 +162,6 @@ public class CycleButton<T> extends AbstractButton {
         return onOffBuilder().withInitialValue(p_168917_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder<T> {
         private int initialIndex;
         @Nullable
@@ -264,12 +260,10 @@ public class CycleButton<T> extends AbstractButton {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface OnValueChange<T> {
         void onValueChange(CycleButton<T> p_168966_, T p_168967_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface ValueListSupplier<T> {
         List<T> getSelectedList();
 

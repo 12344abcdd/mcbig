@@ -15,10 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
 import net.minecraft.world.level.GameType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TeleportToPlayerMenuCategory implements SpectatorMenuCategory, SpectatorMenuItem {
     private static final ResourceLocation TELEPORT_TO_PLAYER_SPRITE = ResourceLocation.withDefaultNamespace("spectator/teleport_to_player");
     private static final Comparator<PlayerInfo> PROFILE_ORDER = Comparator.comparing(p_253335_ -> p_253335_.getProfile().getId());

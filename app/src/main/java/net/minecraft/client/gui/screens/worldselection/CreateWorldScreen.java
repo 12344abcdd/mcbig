@@ -82,12 +82,9 @@ import net.minecraft.world.level.storage.LevelStorageSource;
 import net.minecraft.world.level.storage.PrimaryLevelData;
 import net.minecraft.world.level.storage.WorldData;
 import net.minecraft.world.level.validation.DirectoryValidator;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.mutable.MutableObject;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class CreateWorldScreen extends Screen {
     private static final int GROUP_BOTTOM = 1;
     private static final int TAB_COLUMN_WIDTH = 210;
@@ -604,7 +601,6 @@ public class CreateWorldScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class GameTab extends GridLayoutTab {
         private static final Component TITLE = Component.translatable("createWorld.tab.game.title");
         private static final Component ALLOW_COMMANDS = Component.translatable("selectWorld.allowCommands");
@@ -688,7 +684,6 @@ public class CreateWorldScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class MoreTab extends GridLayoutTab {
         private static final Component TITLE = Component.translatable("createWorld.tab.more.title");
         private static final Component GAME_RULES_LABEL = Component.translatable("selectWorld.gameRules");
@@ -730,7 +725,6 @@ public class CreateWorldScreen extends Screen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class WorldTab extends GridLayoutTab {
         private static final Component TITLE = Component.translatable("createWorld.tab.world.title");
         private static final Component AMPLIFIED_HELP_TEXT = Component.translatable("generator.minecraft.amplified.info");

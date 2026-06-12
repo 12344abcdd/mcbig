@@ -2,10 +2,7 @@ package com.mojang.blaze3d.vertex;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BufferUploader {
     @Nullable
     private static VertexBuffer lastImmediateBuffer;

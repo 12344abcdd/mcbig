@@ -18,10 +18,7 @@ import net.minecraft.realms.RealmsScreen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class AddRealmPopupScreen extends RealmsScreen {
     private static final Component POPUP_TEXT = Component.translatable("mco.selectServer.popup");
     private static final Component CLOSE_TEXT = Component.translatable("mco.selectServer.close");

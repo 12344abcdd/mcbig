@@ -10,10 +10,7 @@ import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.ServerLinks;
 import net.minecraft.world.flag.FeatureFlagSet;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record CommonListenerCookie(
     GameProfile localGameProfile,
     WorldSessionTelemetryManager telemetryManager,

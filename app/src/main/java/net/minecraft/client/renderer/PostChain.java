@@ -20,11 +20,8 @@ import javax.annotation.Nullable;
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class PostChain {
     public static final ResourceLocation MAIN_TARGET_ID = ResourceLocation.withDefaultNamespace("main");
     private final List<PostPass> passes;
@@ -134,7 +131,6 @@ public class PostChain {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface TargetBundle {
         static PostChain.TargetBundle of(final ResourceLocation p_362084_, final ResourceHandle<RenderTarget> p_365173_) {
             return new PostChain.TargetBundle() {

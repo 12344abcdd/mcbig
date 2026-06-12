@@ -7,10 +7,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record GuiMessageTag(int indicatorColor, @Nullable GuiMessageTag.Icon icon, @Nullable Component text, @Nullable String logTag) {
     private static final Component SYSTEM_TEXT = Component.translatable("chat.tag.system");
     private static final Component SYSTEM_TEXT_SINGLE_PLAYER = Component.translatable("chat.tag.system_single_player");
@@ -46,7 +43,6 @@ public record GuiMessageTag(int indicatorColor, @Nullable GuiMessageTag.Icon ico
         return CHAT_ERROR;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Icon {
         CHAT_MODIFIED(ResourceLocation.withDefaultNamespace("icon/chat_modified"), 9, 9);
 

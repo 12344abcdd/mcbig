@@ -24,11 +24,8 @@ import net.minecraft.client.server.LanServer;
 import net.minecraft.client.server.LanServerDetection;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class JoinMultiplayerScreen extends Screen {
     public static final int BUTTON_ROW_WIDTH = 308;
     public static final int TOP_ROW_BUTTON_WIDTH = 100;

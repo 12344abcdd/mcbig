@@ -9,10 +9,7 @@ import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TridentSpecialRenderer implements NoDataSpecialModelRenderer {
     private final TridentModel model;
 
@@ -29,7 +26,6 @@ public class TridentSpecialRenderer implements NoDataSpecialModelRenderer {
         p_386661_.popPose();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked() implements SpecialModelRenderer.Unbaked {
         public static final MapCodec<TridentSpecialRenderer.Unbaked> MAP_CODEC = MapCodec.unit(new TridentSpecialRenderer.Unbaked());
 

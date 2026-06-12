@@ -9,10 +9,7 @@ import net.minecraft.util.StringUtil;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.LevelSettings;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsWorldOptions extends ValueObject {
     public final boolean pvp;
     public final boolean spawnMonsters;

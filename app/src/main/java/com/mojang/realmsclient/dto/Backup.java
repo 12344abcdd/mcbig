@@ -8,11 +8,8 @@ import com.mojang.realmsclient.util.JsonUtils;
 import java.util.Date;
 import java.util.Map;
 import java.util.Map.Entry;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class Backup extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     public String backupId;

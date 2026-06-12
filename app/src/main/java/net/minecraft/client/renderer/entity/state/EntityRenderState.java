@@ -3,10 +3,7 @@ package net.minecraft.client.renderer.entity.state;
 import javax.annotation.Nullable;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class EntityRenderState {
     public double x;
     public double y;
@@ -28,7 +25,6 @@ public class EntityRenderState {
     @Nullable
     public EntityRenderState.LeashState leashState;
 
-    @OnlyIn(Dist.CLIENT)
     public static class LeashState {
         public Vec3 offset = Vec3.ZERO;
         public Vec3 start = Vec3.ZERO;

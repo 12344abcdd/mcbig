@@ -11,10 +11,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemEntityRenderer extends EntityRenderer<ItemEntity, ItemEntityRenderState> {
     private static final float ITEM_BUNDLE_OFFSET_SCALE = 0.15F;
     private static final float FLAT_ITEM_BUNDLE_OFFSET_X = 0.0F;

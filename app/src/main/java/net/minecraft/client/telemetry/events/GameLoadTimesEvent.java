@@ -13,11 +13,8 @@ import net.minecraft.client.telemetry.TelemetryEventSender;
 import net.minecraft.client.telemetry.TelemetryEventType;
 import net.minecraft.client.telemetry.TelemetryProperty;
 import net.minecraft.client.telemetry.TelemetryPropertyMap;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class GameLoadTimesEvent {
     public static final GameLoadTimesEvent INSTANCE = new GameLoadTimesEvent(Ticker.systemTicker());
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -86,7 +83,6 @@ public class GameLoadTimesEvent {
         this.bootstrapTime = OptionalLong.of(p_286847_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Measurement(int millis) {
         public static final Codec<GameLoadTimesEvent.Measurement> CODEC = Codec.INT.xmap(GameLoadTimesEvent.Measurement::new, p_286736_ -> p_286736_.millis);
     }

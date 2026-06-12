@@ -16,8 +16,6 @@ import javax.annotation.Nullable;
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.LazyLoadedValue;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWCharModsCallbackI;
 import org.lwjgl.glfw.GLFWCursorPosCallbackI;
@@ -26,7 +24,6 @@ import org.lwjgl.glfw.GLFWKeyCallbackI;
 import org.lwjgl.glfw.GLFWMouseButtonCallbackI;
 import org.lwjgl.glfw.GLFWScrollCallbackI;
 
-@OnlyIn(Dist.CLIENT)
 public class InputConstants {
     @Nullable
     private static final MethodHandle GLFW_RAW_MOUSE_MOTION_SUPPORTED;
@@ -239,7 +236,6 @@ public class InputConstants {
         UNKNOWN = InputConstants.Type.KEYSYM.getOrCreate(-1);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class Key {
         private final String name;
         private final InputConstants.Type type;
@@ -302,7 +298,6 @@ public class InputConstants {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type {
         KEYSYM("key.keyboard", (p_288232_, p_288233_) -> {
             if ("key.keyboard.unknown".equals(p_288233_)) {

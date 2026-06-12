@@ -12,8 +12,6 @@ import java.util.Set;
 import javax.annotation.Nullable;
 import net.minecraft.SharedConstants;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.openal.AL;
 import org.lwjgl.openal.AL10;
 import org.lwjgl.openal.ALC;
@@ -26,7 +24,6 @@ import org.lwjgl.openal.SOFTHRTF;
 import org.lwjgl.system.MemoryStack;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class Library {
     static final Logger LOGGER = LogUtils.getLogger();
     private static final int NO_DEVICE = 0;
@@ -259,7 +256,6 @@ public class Library {
         return this.supportsDisconnections && ALC11.alcGetInteger(this.currentDevice, 787) == 0;
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface ChannelPool {
         @Nullable
         Channel acquire();
@@ -273,7 +269,6 @@ public class Library {
         int getUsedCount();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class CountingChannelPool implements Library.ChannelPool {
         private final int limit;
         private final Set<Channel> activeChannels = Sets.newIdentityHashSet();
@@ -328,7 +323,6 @@ public class Library {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Pool {
         STATIC,
         STREAMING;

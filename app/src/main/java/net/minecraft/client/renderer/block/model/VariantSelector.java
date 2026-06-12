@@ -11,10 +11,7 @@ import javax.annotation.Nullable;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.StateHolder;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VariantSelector {
     private static final Splitter COMMA_SPLITTER = Splitter.on(',');
     private static final Splitter EQUAL_SPLITTER = Splitter.on('=').limit(2);

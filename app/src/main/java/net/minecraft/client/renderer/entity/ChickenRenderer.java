@@ -6,10 +6,7 @@ import net.minecraft.client.renderer.entity.state.ChickenRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.animal.Chicken;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ChickenRenderer extends AgeableMobRenderer<Chicken, ChickenRenderState, ChickenModel> {
     private static final ResourceLocation CHICKEN_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/chicken.png");
 

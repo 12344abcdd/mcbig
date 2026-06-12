@@ -58,12 +58,9 @@ import net.minecraft.world.level.storage.LevelStorageSource;
 import net.minecraft.world.level.storage.LevelSummary;
 import net.minecraft.world.level.validation.ContentValidationException;
 import net.minecraft.world.level.validation.ForbiddenSymlinkInfo;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class WorldSelectionList extends ObjectSelectionList<WorldSelectionList.Entry> {
     public static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).withZone(ZoneId.systemDefault());
     static final ResourceLocation ERROR_HIGHLIGHTED_SPRITE = ResourceLocation.withDefaultNamespace("world_list/error_highlighted");
@@ -263,14 +260,12 @@ public class WorldSelectionList extends ObjectSelectionList<WorldSelectionList.E
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public abstract static class Entry extends ObjectSelectionList.Entry<WorldSelectionList.Entry> implements AutoCloseable {
         @Override
         public void close() {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class LoadingHeader extends WorldSelectionList.Entry {
         private static final Component LOADING_LABEL = Component.translatable("selectWorld.loading_list");
         private final Minecraft minecraft;
@@ -307,7 +302,6 @@ public class WorldSelectionList extends ObjectSelectionList<WorldSelectionList.E
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public final class WorldListEntry extends WorldSelectionList.Entry {
         private static final int ICON_WIDTH = 32;
         private static final int ICON_HEIGHT = 32;

@@ -8,10 +8,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ShapeRenderer;
 import net.minecraft.core.BlockPos;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WorldGenAttemptRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final List<BlockPos> toRender = Lists.newArrayList();
     private final List<Float> scales = Lists.newArrayList();

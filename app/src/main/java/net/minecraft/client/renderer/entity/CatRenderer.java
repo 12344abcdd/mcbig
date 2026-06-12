@@ -9,10 +9,7 @@ import net.minecraft.client.renderer.entity.state.CatRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.animal.Cat;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CatRenderer extends AgeableMobRenderer<Cat, CatRenderState, CatModel> {
     public CatRenderer(EntityRendererProvider.Context p_173943_) {
         super(p_173943_, new CatModel(p_173943_.bakeLayer(ModelLayers.CAT)), new CatModel(p_173943_.bakeLayer(ModelLayers.CAT_BABY)), 0.4F);

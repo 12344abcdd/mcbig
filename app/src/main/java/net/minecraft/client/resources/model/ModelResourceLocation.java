@@ -2,10 +2,7 @@ package net.minecraft.client.resources.model;
 
 import java.util.Locale;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record ModelResourceLocation(ResourceLocation id, String variant) {
     public ModelResourceLocation(ResourceLocation id, String variant) {
         variant = lowercaseVariant(variant);

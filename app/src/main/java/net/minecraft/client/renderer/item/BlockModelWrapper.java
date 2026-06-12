@@ -18,10 +18,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockModelWrapper implements ItemModel {
     private final BakedModel model;
     private final List<ItemTintSource> tints;
@@ -63,7 +60,6 @@ public class BlockModelWrapper implements ItemModel {
         return p_387217_.is(ItemTags.COMPASSES) || p_387217_.is(Items.CLOCK);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(ResourceLocation model, List<ItemTintSource> tints) implements ItemModel.Unbaked {
         public static final MapCodec<BlockModelWrapper.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_387684_ -> p_387684_.group(

@@ -14,10 +14,7 @@ import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.state.HorseRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.horse.Markings;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class HorseMarkingLayer extends RenderLayer<HorseRenderState, HorseModel> {
     private static final Map<Markings, ResourceLocation> LOCATION_BY_MARKINGS = Util.make(Maps.newEnumMap(Markings.class), p_349908_ -> {
         p_349908_.put(Markings.NONE, null);

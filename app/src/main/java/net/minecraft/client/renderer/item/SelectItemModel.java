@@ -17,10 +17,7 @@ import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SelectItemModel<T> implements ItemModel {
     private final SelectItemModelProperty<T> property;
     private final Object2ObjectMap<T, ItemModel> models;
@@ -47,7 +44,6 @@ public class SelectItemModel<T> implements ItemModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record SwitchCase<T>(List<T> values, ItemModel.Unbaked model) {
         public static <T> Codec<SelectItemModel.SwitchCase<T>> codec(Codec<T> p_387015_) {
             return RecordCodecBuilder.create(
@@ -60,7 +56,6 @@ public class SelectItemModel<T> implements ItemModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Unbaked(SelectItemModel.UnbakedSwitch<?, ?> unbakedSwitch, Optional<ItemModel.Unbaked> fallback) implements ItemModel.Unbaked {
         public static final MapCodec<SelectItemModel.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
             p_386872_ -> p_386872_.group(
@@ -88,7 +83,6 @@ public class SelectItemModel<T> implements ItemModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record UnbakedSwitch<P extends SelectItemModelProperty<T>, T>(P property, List<SelectItemModel.SwitchCase<T>> cases) {
         public static final MapCodec<SelectItemModel.UnbakedSwitch<?, ?>> MAP_CODEC = SelectItemModelProperties.CODEC
             .dispatchMap("property", p_387573_ -> p_387573_.property().type(), SelectItemModelProperty.Type::switchCodec);

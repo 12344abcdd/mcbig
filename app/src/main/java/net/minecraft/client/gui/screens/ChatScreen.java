@@ -14,11 +14,8 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.util.Mth;
 import net.minecraft.util.StringUtil;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.lang3.StringUtils;
 
-@OnlyIn(Dist.CLIENT)
 public class ChatScreen extends Screen {
     public static final double MOUSE_SCROLL_SPEED = 7.0;
     private static final Component USAGE_TEXT = Component.translatable("chat_screen.usage");

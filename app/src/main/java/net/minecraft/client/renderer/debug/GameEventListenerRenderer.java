@@ -22,10 +22,7 @@ import net.minecraft.world.level.gameevent.PositionSource;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.Shapes;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GameEventListenerRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
     private static final int LISTENER_RENDER_DIST = 32;
@@ -161,14 +158,12 @@ public class GameEventListenerRenderer implements DebugRenderer.SimpleDebugRende
         this.trackedListeners.add(new GameEventListenerRenderer.TrackedListener(p_173831_, p_173832_));
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record TrackedGameEvent(long timeStamp, ResourceKey<GameEvent> gameEvent, Vec3 position) {
         public boolean isExpired() {
             return Util.getMillis() - this.timeStamp > 3000L;
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class TrackedListener implements GameEventListener {
         public final PositionSource listenerSource;
         public final int listenerRange;

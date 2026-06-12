@@ -8,11 +8,8 @@ import java.net.InetAddress;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.atomic.AtomicInteger;
 import net.minecraft.DefaultUncaughtExceptionHandler;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class LanServerPinger extends Thread {
     private static final AtomicInteger UNIQUE_THREAD_ID = new AtomicInteger(0);
     private static final Logger LOGGER = LogUtils.getLogger();

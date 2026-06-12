@@ -46,12 +46,9 @@ import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Vector2ic;
 
-@OnlyIn(Dist.CLIENT)
 public class GuiGraphics {
     public static final float MAX_GUI_Z = 10000.0F;
     public static final float MIN_GUI_Z = -10000.0F;
@@ -1042,7 +1039,6 @@ public class GuiGraphics {
         this.bufferSource.endBatch();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class ScissorStack {
         private final Deque<ScreenRectangle> stack = new ArrayDeque<>();
 

@@ -6,11 +6,8 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Quaternionf;
 
-@OnlyIn(Dist.CLIENT)
 public enum BlockModelRotation implements ModelState {
     X0_Y0(0, 0),
     X0_Y90(0, 90),

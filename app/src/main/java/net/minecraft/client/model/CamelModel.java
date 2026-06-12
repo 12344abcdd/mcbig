@@ -11,10 +11,7 @@ import net.minecraft.client.model.geom.builders.MeshTransformer;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.CamelRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CamelModel extends EntityModel<CamelRenderState> {
     private static final float MAX_WALK_ANIMATION_SPEED = 2.0F;
     private static final float WALK_ANIMATION_SCALE_FACTOR = 2.5F;

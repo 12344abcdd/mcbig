@@ -9,10 +9,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class Report {
     protected final UUID reportId;
     protected final Instant createdAt;
@@ -36,7 +33,6 @@ public abstract class Report {
 
     public abstract Screen createScreen(Screen p_299960_, ReportingContext p_299959_);
 
-    @OnlyIn(Dist.CLIENT)
     public abstract static class Builder<R extends Report> {
         protected final R report;
         protected final AbuseReportLimits limits;
@@ -89,7 +85,6 @@ public abstract class Report {
         public abstract Either<Report.Result, Report.CannotBuildReason> build(ReportingContext p_299877_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record CannotBuildReason(Component message) {
         public static final Report.CannotBuildReason NO_REASON = new Report.CannotBuildReason(Component.translatable("gui.abuseReport.send.no_reason"));
         public static final Report.CannotBuildReason NO_REPORTED_MESSAGES = new Report.CannotBuildReason(
@@ -108,7 +103,6 @@ public abstract class Report {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Result(UUID id, ReportType reportType, AbuseReport report) {
     }
 }

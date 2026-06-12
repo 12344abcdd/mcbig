@@ -11,10 +11,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record IsKeybindDown(KeyMapping keybind) implements ConditionalItemModelProperty {
     private static final Codec<KeyMapping> KEYBIND_CODEC = Codec.STRING.comapFlatMap(p_389642_ -> {
         KeyMapping keymapping = KeyMapping.get(p_389642_);

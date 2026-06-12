@@ -2,11 +2,8 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.DustParticleOptions;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class DustParticle extends DustParticleBase<DustParticleOptions> {
     protected DustParticle(
         ClientLevel p_106415_,
@@ -27,7 +24,6 @@ public class DustParticle extends DustParticleBase<DustParticleOptions> {
         this.bCol = this.randomizeColor(vector3f.z(), f);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<DustParticleOptions> {
         private final SpriteSet sprites;
 

@@ -14,10 +14,7 @@ import net.minecraft.world.inventory.MerchantMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class MerchantScreen extends AbstractContainerScreen<MerchantMenu> {
     private static final ResourceLocation OUT_OF_STOCK_SPRITE = ResourceLocation.withDefaultNamespace("container/villager/out_of_stock");
     private static final ResourceLocation EXPERIENCE_BAR_BACKGROUND_SPRITE = ResourceLocation.withDefaultNamespace(
@@ -292,7 +289,6 @@ public class MerchantScreen extends AbstractContainerScreen<MerchantMenu> {
         return super.mouseClicked(p_99131_, p_99132_, p_99133_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     class TradeOfferButton extends Button {
         final int index;
 

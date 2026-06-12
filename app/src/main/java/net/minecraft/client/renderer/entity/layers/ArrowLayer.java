@@ -7,10 +7,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.TippableArrowRenderer;
 import net.minecraft.client.renderer.entity.state.PlayerRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ArrowLayer<M extends PlayerModel> extends StuckInBodyLayer<M> {
     public ArrowLayer(LivingEntityRenderer<?, PlayerRenderState, M> p_174466_, EntityRendererProvider.Context p_174465_) {
         super(

@@ -10,10 +10,7 @@ import net.minecraft.core.SectionPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LightDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
     private static final int MAX_RENDER_DIST = 10;

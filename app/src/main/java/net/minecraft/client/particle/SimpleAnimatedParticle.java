@@ -1,10 +1,7 @@
 package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SimpleAnimatedParticle extends TextureSheetParticle {
     protected final SpriteSet sprites;
     private float fadeR;

@@ -16,10 +16,7 @@ import net.minecraft.network.chat.SignedMessageValidator;
 import net.minecraft.world.entity.player.ProfilePublicKey;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.scores.PlayerTeam;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PlayerInfo {
     private final GameProfile profile;
     private final Supplier<PlayerSkin> skinLookup;

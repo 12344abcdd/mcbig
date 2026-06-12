@@ -22,8 +22,6 @@ import javax.annotation.Nullable;
 import net.minecraft.client.gui.font.providers.FreeTypeUtil;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.PngInfo;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.io.IOUtils;
 import org.lwjgl.stb.STBIWriteCallback;
 import org.lwjgl.stb.STBImage;
@@ -37,7 +35,6 @@ import org.lwjgl.util.freetype.FT_GlyphSlot;
 import org.lwjgl.util.freetype.FreeType;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public final class NativeImage implements AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final MemoryPool MEMORY_POOL = TracyClient.createMemoryPool("NativeImage");
@@ -566,7 +563,6 @@ public final class NativeImage implements AutoCloseable {
         DebugMemoryUntracker.untrack(this.pixels);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Format {
         RGBA(4, 6408, true, true, true, false, true, 0, 8, 16, 255, 24, true),
         RGB(3, 6407, true, true, true, false, false, 0, 8, 16, 255, 255, true),
@@ -726,7 +722,6 @@ public final class NativeImage implements AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum InternalGlFormat {
         RGBA(6408),
         RGB(6407),
@@ -744,7 +739,6 @@ public final class NativeImage implements AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class WriteCallback extends STBIWriteCallback {
         private final WritableByteChannel output;
         @Nullable

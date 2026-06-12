@@ -1,9 +1,6 @@
 package net.minecraft.client.model.geom;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PartNames {
     public static final String LEFT_FIN = "left_fin";
     public static final String RIGHT_FIN = "right_fin";

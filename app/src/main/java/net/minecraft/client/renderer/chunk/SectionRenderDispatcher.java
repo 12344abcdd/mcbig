@@ -49,10 +49,7 @@ import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SectionRenderDispatcher {
     private final CompileTaskDynamicQueue compileQueue = new CompileTaskDynamicQueue();
     private final Queue<Runnable> toUpload = Queues.newConcurrentLinkedQueue();
@@ -216,7 +213,6 @@ public class SectionRenderDispatcher {
         this.uploadAllPendingUploads();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class CompiledSection {
         public static final SectionRenderDispatcher.CompiledSection UNCOMPILED = new SectionRenderDispatcher.CompiledSection() {
             @Override
@@ -253,7 +249,6 @@ public class SectionRenderDispatcher {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class RenderSection {
         public static final int SIZE = 16;
         public final int index;
@@ -441,7 +436,6 @@ public class SectionRenderDispatcher {
             );
         }
 
-        @OnlyIn(Dist.CLIENT)
         public abstract class CompileTask {
             protected final AtomicBoolean isCancelled = new AtomicBoolean(false);
             protected final AtomicBoolean isCompleted = new AtomicBoolean(false);
@@ -466,7 +460,6 @@ public class SectionRenderDispatcher {
             }
         }
 
-        @OnlyIn(Dist.CLIENT)
         class RebuildTask extends SectionRenderDispatcher.RenderSection.CompileTask {
             @Nullable
             protected volatile RenderChunkRegion region;
@@ -547,7 +540,6 @@ public class SectionRenderDispatcher {
             }
         }
 
-        @OnlyIn(Dist.CLIENT)
         class ResortTransparencyTask extends SectionRenderDispatcher.RenderSection.CompileTask {
             private final SectionRenderDispatcher.CompiledSection compiledSection;
 
@@ -616,13 +608,11 @@ public class SectionRenderDispatcher {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum SectionTaskResult {
         SUCCESSFUL,
         CANCELLED;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class TranslucencyPointOfView {
         private int x;
         private int y;

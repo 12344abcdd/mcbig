@@ -2,10 +2,7 @@ package net.minecraft.client.multiplayer.resolver;
 
 import com.google.common.annotations.VisibleForTesting;
 import java.util.Optional;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerNameResolver {
     public static final ServerNameResolver DEFAULT = new ServerNameResolver(
         ServerAddressResolver.SYSTEM, ServerRedirectHandler.createDnsSrvRedirectHandler(), AddressCheck.createFromService()

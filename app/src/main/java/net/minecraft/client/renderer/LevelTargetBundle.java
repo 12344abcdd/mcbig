@@ -5,10 +5,7 @@ import com.mojang.blaze3d.resource.ResourceHandle;
 import java.util.Set;
 import javax.annotation.Nullable;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LevelTargetBundle implements PostChain.TargetBundle {
     public static final ResourceLocation MAIN_TARGET_ID = PostChain.MAIN_TARGET_ID;
     public static final ResourceLocation TRANSLUCENT_TARGET_ID = ResourceLocation.withDefaultNamespace("translucent");

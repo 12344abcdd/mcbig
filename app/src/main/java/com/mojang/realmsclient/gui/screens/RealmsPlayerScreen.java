@@ -27,11 +27,8 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsPlayerScreen extends RealmsScreen {
     static final Logger LOGGER = LogUtils.getLogger();
     private static final Component TITLE = Component.translatable("mco.configure.world.players.title");
@@ -101,7 +98,6 @@ public class RealmsPlayerScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class Entry extends ContainerObjectSelectionList.Entry<RealmsPlayerScreen.Entry> {
         private static final Component NORMAL_USER_TEXT = Component.translatable("mco.configure.world.invites.normal.tooltip");
         private static final Component OP_TEXT = Component.translatable("mco.configure.world.invites.ops.tooltip");
@@ -264,7 +260,6 @@ public class RealmsPlayerScreen extends RealmsScreen {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class InvitedObjectSelectionList extends ContainerObjectSelectionList<RealmsPlayerScreen.Entry> {
         private static final int ITEM_HEIGHT = 36;
 

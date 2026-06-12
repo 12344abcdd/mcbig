@@ -34,10 +34,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.AbstractSkullBlock;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.scores.Team;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class LivingEntityRenderer<T extends LivingEntity, S extends LivingEntityRenderState, M extends EntityModel<? super S>>
     extends EntityRenderer<T, S>
     implements RenderLayerParent<S, M> {

@@ -2,10 +2,7 @@ package com.mojang.realmsclient.gui;
 
 import com.mojang.realmsclient.dto.RealmsNews;
 import com.mojang.realmsclient.util.RealmsPersistence;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsNewsManager {
     private final RealmsPersistence newsLocalStorage;
     private boolean hasUnreadNews;

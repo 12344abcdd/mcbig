@@ -17,11 +17,8 @@ import net.minecraft.client.renderer.item.MissingItemModel;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ModelBakery {
     public static final Material FIRE_0 = new Material(TextureAtlas.LOCATION_BLOCKS, ResourceLocation.withDefaultNamespace("block/fire_0"));
     public static final Material FIRE_1 = new Material(TextureAtlas.LOCATION_BLOCKS, ResourceLocation.withDefaultNamespace("block/fire_1"));
@@ -95,11 +92,9 @@ public class ModelBakery {
         return new ModelBakery.BakingResult(bakedmodel, map, itemmodel, map1, map2);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record BakedCacheKey(ResourceLocation id, Transformation transformation, boolean isUvLocked) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record BakingResult(
         BakedModel missingModel,
         Map<ModelResourceLocation, BakedModel> blockStateModels,
@@ -109,7 +104,6 @@ public class ModelBakery {
     ) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ModelBakerImpl implements ModelBaker {
         private final ModelDebugName rootName;
         private final SpriteGetter modelTextureGetter;
@@ -154,7 +148,6 @@ public class ModelBakery {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface TextureGetter {
         TextureAtlasSprite get(ModelDebugName p_388528_, Material p_352128_);
 

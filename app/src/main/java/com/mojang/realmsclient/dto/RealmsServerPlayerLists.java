@@ -17,11 +17,8 @@ import java.util.Map;
 import java.util.UUID;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.GsonHelper;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsServerPlayerLists extends ValueObject {
     private static final Logger LOGGER = LogUtils.getLogger();
     public Map<Long, List<ProfileResult>> servers = Map.of();

@@ -10,10 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.SequencedMap;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface MultiBufferSource {
     static MultiBufferSource.BufferSource immediate(ByteBufferBuilder p_350664_) {
         return immediateWithBuffers(Object2ObjectSortedMaps.emptyMap(), p_350664_);
@@ -25,7 +22,6 @@ public interface MultiBufferSource {
 
     VertexConsumer getBuffer(RenderType p_109903_);
 
-    @OnlyIn(Dist.CLIENT)
     public static class BufferSource implements MultiBufferSource {
         protected final ByteBufferBuilder sharedBuffer;
         protected final SequencedMap<RenderType, ByteBufferBuilder> fixedBuffers;

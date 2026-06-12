@@ -39,11 +39,8 @@ import java.util.UUID;
 import javax.annotation.Nullable;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.Minecraft;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsClient {
     public static final RealmsClient.Environment ENVIRONMENT = Optional.ofNullable(System.getenv("realms.environment"))
         .or(() -> Optional.ofNullable(System.getProperty("realms.environment")))
@@ -429,14 +426,12 @@ public class RealmsClient {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum CompatibleVersionResponse {
         COMPATIBLE,
         OUTDATED,
         OTHER;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Environment {
         PRODUCTION("pc.realms.minecraft.net", "https"),
         STAGE("pc-stage.realms.minecraft.net", "https"),

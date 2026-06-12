@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class HugeExplosionSeedParticle extends NoRenderParticle {
     HugeExplosionSeedParticle(ClientLevel p_106947_, double p_106948_, double p_106949_, double p_106950_) {
         super(p_106947_, p_106948_, p_106949_, p_106950_, 0.0, 0.0, 0.0);
@@ -28,7 +25,6 @@ public class HugeExplosionSeedParticle extends NoRenderParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Provider implements ParticleProvider<SimpleParticleType> {
         public Particle createParticle(
             SimpleParticleType p_106969_,

@@ -18,11 +18,8 @@ import javax.annotation.Nullable;
 import net.minecraft.SharedConstants;
 import net.minecraft.Util;
 import net.minecraft.client.User;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsWorldUpload {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final int UPLOAD_RETRIES = 20;

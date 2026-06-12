@@ -2,10 +2,7 @@ package net.minecraft.client.renderer;
 
 import com.mojang.blaze3d.vertex.VertexFormat;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record ShaderProgram(ResourceLocation configId, VertexFormat vertexFormat, ShaderDefines defines) {
     @Override
     public String toString() {

@@ -13,10 +13,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.level.pathfinder.Node;
 import net.minecraft.world.level.pathfinder.Path;
 import net.minecraft.world.phys.AABB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class PathfindingRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Map<Integer, Path> pathMap = Maps.newHashMap();
     private final Map<Integer, Float> pathMaxDist = Maps.newHashMap();

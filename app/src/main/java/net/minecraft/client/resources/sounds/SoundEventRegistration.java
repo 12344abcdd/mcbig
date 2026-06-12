@@ -2,10 +2,7 @@ package net.minecraft.client.resources.sounds;
 
 import java.util.List;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SoundEventRegistration {
     private final List<Sound> sounds;
     private final boolean replace;

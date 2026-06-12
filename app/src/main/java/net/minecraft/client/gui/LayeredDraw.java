@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BooleanSupplier;
 import net.minecraft.client.DeltaTracker;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LayeredDraw {
     public static final float Z_SEPARATION = 200.0F;
     private final List<LayeredDraw.Layer> layers = new ArrayList<>();
@@ -38,7 +35,6 @@ public class LayeredDraw {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Layer {
         void render(GuiGraphics p_316811_, DeltaTracker p_348559_);
     }

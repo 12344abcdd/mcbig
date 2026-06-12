@@ -10,11 +10,8 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 import net.minecraft.Util;
 import net.minecraft.util.eventlog.EventLogDirectory;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class TelemetryLogManager implements AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final String RAW_EXTENSION = ".json";

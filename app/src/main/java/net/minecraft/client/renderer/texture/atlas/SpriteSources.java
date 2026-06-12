@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.texture.atlas.sources.SingleFile;
 import net.minecraft.client.renderer.texture.atlas.sources.SourceFilter;
 import net.minecraft.client.renderer.texture.atlas.sources.Unstitcher;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpriteSources {
     private static final BiMap<ResourceLocation, SpriteSourceType> TYPES = HashBiMap.create();
     public static final SpriteSourceType SINGLE_FILE = register("single", SingleFile.CODEC);

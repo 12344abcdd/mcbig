@@ -12,12 +12,9 @@ import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 import org.joml.Vector4f;
 
-@OnlyIn(Dist.CLIENT)
 public class ChunkCullingDebugRenderer implements DebugRenderer.SimpleDebugRenderer {
     public static final Direction[] DIRECTIONS = Direction.values();
     private final Minecraft minecraft;

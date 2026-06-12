@@ -3,10 +3,7 @@ package net.minecraft.client;
 import com.mojang.serialization.Codec;
 import net.minecraft.util.OptionEnum;
 import net.minecraft.util.StringRepresentable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum CloudStatus implements OptionEnum, StringRepresentable {
     OFF(0, "false", "options.off"),
     FAST(1, "fast", "options.clouds.fast"),

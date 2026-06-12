@@ -5,10 +5,7 @@ import it.unimi.dsi.fastutil.ints.IntSet;
 import java.util.Arrays;
 import java.util.function.IntFunction;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CodepointMap<T> {
     private static final int BLOCK_BITS = 8;
     private static final int BLOCK_SIZE = 256;
@@ -109,7 +106,6 @@ public class CodepointMap<T> {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface Output<T> {
         void accept(int p_285163_, T p_285313_);
     }

@@ -13,11 +13,8 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class HeightMapRenderer implements DebugRenderer.SimpleDebugRenderer {
     private final Minecraft minecraft;
     private static final int CHUNK_DIST = 2;

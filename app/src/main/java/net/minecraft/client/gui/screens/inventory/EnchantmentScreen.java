@@ -26,10 +26,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.EnchantmentMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class EnchantmentScreen extends AbstractContainerScreen<EnchantmentMenu> {
     private static final ResourceLocation[] ENABLED_LEVEL_SPRITES = new ResourceLocation[]{
         ResourceLocation.withDefaultNamespace("container/enchanting_table/level_1"),

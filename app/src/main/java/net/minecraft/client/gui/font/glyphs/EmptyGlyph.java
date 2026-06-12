@@ -3,11 +3,8 @@ package net.minecraft.client.gui.font.glyphs;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.gui.font.GlyphRenderTypes;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class EmptyGlyph extends BakedGlyph {
     public static final EmptyGlyph INSTANCE = new EmptyGlyph();
 

@@ -8,10 +8,7 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.entity.state.PlayerRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpinAttackEffectModel extends EntityModel<PlayerRenderState> {
     private static final int BOX_COUNT = 2;
     private final ModelPart[] boxes = new ModelPart[2];

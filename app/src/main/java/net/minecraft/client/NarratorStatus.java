@@ -3,10 +3,7 @@ package net.minecraft.client;
 import java.util.function.IntFunction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.ByIdMap;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum NarratorStatus {
     OFF(0, "options.narrator.off"),
     ALL(1, "options.narrator.all"),

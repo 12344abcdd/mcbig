@@ -9,10 +9,7 @@ import net.minecraft.client.gui.font.glyphs.BakedGlyph;
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.client.renderer.texture.Dumpable;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FontTexture extends AbstractTexture implements Dumpable {
     private static final int SIZE = 256;
     private final GlyphRenderTypes renderTypes;
@@ -67,7 +64,6 @@ public class FontTexture extends AbstractTexture implements Dumpable {
         TextureUtil.writeAsPNG(p_285511_, s, this.getId(), 0, 256, 256, p_285145_ -> (p_285145_ & 0xFF000000) == 0 ? -16777216 : p_285145_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Node {
         final int x;
         final int y;

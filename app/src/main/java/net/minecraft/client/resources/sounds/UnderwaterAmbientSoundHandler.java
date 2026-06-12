@@ -3,10 +3,7 @@ package net.minecraft.client.resources.sounds;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.sounds.SoundEvents;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class UnderwaterAmbientSoundHandler implements AmbientSoundHandler {
     public static final float CHANCE_PER_TICK = 0.01F;
     public static final float RARE_CHANCE_PER_TICK = 0.001F;

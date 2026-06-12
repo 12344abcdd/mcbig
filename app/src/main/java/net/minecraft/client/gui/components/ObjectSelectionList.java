@@ -8,10 +8,7 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.gui.narration.NarrationSupplier;
 import net.minecraft.client.gui.navigation.FocusNavigationEvent;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class ObjectSelectionList<E extends ObjectSelectionList.Entry<E>> extends AbstractSelectionList<E> {
     private static final Component USAGE_NARRATION = Component.translatable("narration.selection.usage");
 
@@ -67,7 +64,6 @@ public abstract class ObjectSelectionList<E extends ObjectSelectionList.Entry<E>
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public abstract static class Entry<E extends ObjectSelectionList.Entry<E>> extends AbstractSelectionList.Entry<E> implements NarrationSupplier {
         public abstract Component getNarration();
 

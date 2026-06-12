@@ -4,10 +4,7 @@ import com.mojang.blaze3d.font.SpaceProvider;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.util.StringRepresentable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum GlyphProviderType implements StringRepresentable {
     BITMAP("bitmap", BitmapProvider.Definition.CODEC),
     TTF("ttf", TrueTypeGlyphProviderDefinition.CODEC),

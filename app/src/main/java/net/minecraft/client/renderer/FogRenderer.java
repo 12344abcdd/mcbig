@@ -23,12 +23,9 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeManager;
 import net.minecraft.world.level.material.FogType;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 
-@OnlyIn(Dist.CLIENT)
 public class FogRenderer {
     private static final int WATER_FOG_DISTANCE = 96;
     private static final List<FogRenderer.MobEffectFogFunction> MOB_EFFECT_FOG = Lists.newArrayList(
@@ -280,7 +277,6 @@ public class FogRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class BlindnessFogFunction implements FogRenderer.MobEffectFogFunction {
         @Override
         public Holder<MobEffect> getMobEffect() {
@@ -300,7 +296,6 @@ public class FogRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class DarknessFogFunction implements FogRenderer.MobEffectFogFunction {
         @Override
         public Holder<MobEffect> getMobEffect() {
@@ -324,7 +319,6 @@ public class FogRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class FogData {
         public final FogRenderer.FogMode mode;
         public float start;
@@ -336,13 +330,11 @@ public class FogRenderer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum FogMode {
         FOG_SKY,
         FOG_TERRAIN;
     }
 
-    @OnlyIn(Dist.CLIENT)
     interface MobEffectFogFunction {
         Holder<MobEffect> getMobEffect();
 

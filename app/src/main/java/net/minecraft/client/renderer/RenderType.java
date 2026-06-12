@@ -17,10 +17,7 @@ import net.minecraft.client.renderer.blockentity.TheEndPortalRenderer;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.TriState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class RenderType extends RenderStateShard {
     private static final int MEGABYTE = 1048576;
     public static final int BIG_BUFFER_SIZE = 4194304;
@@ -1580,7 +1577,6 @@ public abstract class RenderType extends RenderStateShard {
         return this.sortOnUpload;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static final class CompositeRenderType extends RenderType {
         static final BiFunction<ResourceLocation, RenderStateShard.CullStateShard, RenderType> OUTLINE = Util.memoize(
             (p_359244_, p_359245_) -> RenderType.create(
@@ -1647,7 +1643,6 @@ public abstract class RenderType extends RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static final class CompositeState {
         final RenderStateShard.EmptyTextureStateShard textureState;
         private final RenderStateShard.ShaderStateShard shaderState;
@@ -1721,7 +1716,6 @@ public abstract class RenderType extends RenderStateShard {
             return new RenderType.CompositeState.CompositeStateBuilder();
         }
 
-        @OnlyIn(Dist.CLIENT)
         public static class CompositeStateBuilder {
             private RenderStateShard.EmptyTextureStateShard textureState = RenderStateShard.NO_TEXTURE;
             private RenderStateShard.ShaderStateShard shaderState = RenderStateShard.NO_SHADER;
@@ -1830,7 +1824,6 @@ public abstract class RenderType extends RenderStateShard {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum OutlineProperty {
         NONE("none"),
         IS_OUTLINE("is_outline"),

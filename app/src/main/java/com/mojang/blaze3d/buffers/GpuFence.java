@@ -1,10 +1,7 @@
 package com.mojang.blaze3d.buffers;
 
 import com.mojang.blaze3d.platform.GlStateManager;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GpuFence implements AutoCloseable {
     private long handle = GlStateManager._glFenceSync(37143, 0);
 

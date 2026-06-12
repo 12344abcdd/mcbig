@@ -11,10 +11,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class Checkbox extends AbstractButton {
     private static final ResourceLocation CHECKBOX_SELECTED_HIGHLIGHTED_SPRITE = ResourceLocation.withDefaultNamespace("widget/checkbox_selected_highlighted");
     private static final ResourceLocation CHECKBOX_SELECTED_SPRITE = ResourceLocation.withDefaultNamespace("widget/checkbox_selected");
@@ -97,7 +94,6 @@ public class Checkbox extends AbstractButton {
         this.textWidget.renderWidget(p_283124_, p_282925_, p_282705_, p_282612_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Builder {
         private final Component message;
         private final Font font;
@@ -161,7 +157,6 @@ public class Checkbox extends AbstractButton {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface OnValueChange {
         Checkbox.OnValueChange NOP = (p_309046_, p_309014_) -> {
         };

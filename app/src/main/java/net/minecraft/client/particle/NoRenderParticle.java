@@ -3,10 +3,7 @@ package net.minecraft.client.particle;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class NoRenderParticle extends Particle {
     protected NoRenderParticle(ClientLevel p_107149_, double p_107150_, double p_107151_, double p_107152_) {
         super(p_107149_, p_107150_, p_107151_, p_107152_);

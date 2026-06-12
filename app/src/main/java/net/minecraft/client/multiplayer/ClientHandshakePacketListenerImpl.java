@@ -52,11 +52,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.ServerLinks;
 import net.minecraft.util.Crypt;
 import net.minecraft.world.flag.FeatureFlags;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientHandshakePacketListenerImpl implements ClientLoginPacketListener {
     private static final Logger LOGGER = LogUtils.getLogger();
     private final Minecraft minecraft;
@@ -253,7 +250,6 @@ public class ClientHandshakePacketListenerImpl implements ClientLoginPacketListe
         p_315015_.setDetail("Is Local", () -> String.valueOf(this.connection.isMemoryConnection()));
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum State {
         CONNECTING(Component.translatable("connect.connecting"), Set.of()),
         AUTHORIZING(Component.translatable("connect.authorizing"), Set.of(CONNECTING)),

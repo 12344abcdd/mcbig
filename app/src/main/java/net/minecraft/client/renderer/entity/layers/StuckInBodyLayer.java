@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class StuckInBodyLayer<M extends PlayerModel> extends RenderLayer<PlayerRenderState, M> {
     private final Model model;
     private final ResourceLocation texture;
@@ -83,7 +80,6 @@ public abstract class StuckInBodyLayer<M extends PlayerModel> extends RenderLaye
         return p_361108_ > 0.5F ? 1.0F : 0.5F;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum PlacementStyle {
         IN_CUBE,
         ON_SURFACE;

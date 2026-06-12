@@ -5,10 +5,7 @@ import net.minecraft.Util;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SplashRenderer {
     public static final SplashRenderer CHRISTMAS = new SplashRenderer("Merry X-mas!");
     public static final SplashRenderer NEW_YEAR = new SplashRenderer("Happy new year!");

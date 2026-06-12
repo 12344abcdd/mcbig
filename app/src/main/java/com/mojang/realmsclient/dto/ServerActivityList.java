@@ -6,10 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.mojang.realmsclient.util.JsonUtils;
 import java.util.List;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerActivityList extends ValueObject {
     public long periodInMillis;
     public List<ServerActivity> serverActivities = Lists.newArrayList();

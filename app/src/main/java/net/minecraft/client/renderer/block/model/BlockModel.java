@@ -22,10 +22,7 @@ import net.minecraft.client.resources.model.SimpleBakedModel;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BlockModel implements UnbakedModel {
     @VisibleForTesting
     static final Gson GSON = new GsonBuilder()
@@ -125,7 +122,6 @@ public class BlockModel implements UnbakedModel {
         return this.parentLocation;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class Deserializer implements JsonDeserializer<BlockModel> {
         public BlockModel deserialize(JsonElement p_111498_, Type p_111499_, JsonDeserializationContext p_111500_) throws JsonParseException {
             JsonObject jsonobject = p_111498_.getAsJsonObject();

@@ -76,10 +76,7 @@ import net.minecraft.world.level.levelgen.RandomState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DebugScreenOverlay {
     private static final int COLOR_GREY = 14737632;
     private static final int MARGIN_RIGHT = 2;
@@ -659,7 +656,6 @@ public class DebugScreenOverlay {
         this.bandwidthLogger.reset();
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class AllocationRateCalculator {
         private static final int UPDATE_INTERVAL_MS = 500;
         private static final List<GarbageCollectorMXBean> GC_MBEANS = ManagementFactory.getGarbageCollectorMXBeans();

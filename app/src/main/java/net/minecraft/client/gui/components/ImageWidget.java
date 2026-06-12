@@ -9,10 +9,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class ImageWidget extends AbstractWidget {
     ImageWidget(int p_275421_, int p_275294_, int p_275403_, int p_275631_) {
         super(p_275421_, p_275294_, p_275403_, p_275631_, CommonComponents.EMPTY);
@@ -45,7 +42,6 @@ public abstract class ImageWidget extends AbstractWidget {
         return null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Sprite extends ImageWidget {
         private final ResourceLocation sprite;
 
@@ -60,7 +56,6 @@ public abstract class ImageWidget extends AbstractWidget {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Texture extends ImageWidget {
         private final ResourceLocation texture;
         private final int textureWidth;

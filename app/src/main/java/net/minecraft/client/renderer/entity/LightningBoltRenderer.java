@@ -7,11 +7,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.state.LightningBoltRenderState;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LightningBolt;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
-@OnlyIn(Dist.CLIENT)
 public class LightningBoltRenderer extends EntityRenderer<LightningBolt, LightningBoltRenderState> {
     public LightningBoltRenderer(EntityRendererProvider.Context p_174286_) {
         super(p_174286_);

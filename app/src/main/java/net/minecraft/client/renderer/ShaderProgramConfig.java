@@ -6,10 +6,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import java.util.List;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record ShaderProgramConfig(
     ResourceLocation vertex,
     ResourceLocation fragment,
@@ -28,7 +25,6 @@ public record ShaderProgramConfig(
                 .apply(p_366526_, ShaderProgramConfig::new)
     );
 
-    @OnlyIn(Dist.CLIENT)
     public static record Sampler(String name) {
         public static final Codec<ShaderProgramConfig.Sampler> CODEC = RecordCodecBuilder.create(
             p_366896_ -> p_366896_.group(Codec.STRING.fieldOf("name").forGetter(ShaderProgramConfig.Sampler::name))
@@ -36,7 +32,6 @@ public record ShaderProgramConfig(
         );
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Uniform(String name, String type, int count, List<Float> values) {
         public static final Codec<ShaderProgramConfig.Uniform> CODEC = RecordCodecBuilder.<ShaderProgramConfig.Uniform>create(
                 p_366477_ -> p_366477_.group(

@@ -4,12 +4,19 @@ plugins {
 }
 
 repositories {
+    maven { url "https://maven.aliyun.com/repository/public" }
     mavenCentral()
 }
 
+
 dependencies {
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-  Implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'org.lwjgl:lwjgl:3.3.2'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.2'
+    // 如需原生库（Linux/Android/Termux 必备）
+    runtimeOnly 'org.lwjgl:lwjgl-glfw:natives-linux'
+    runtimeOnly 'org.lwjgl:lwjgl:natives-linux'
 }
 
 java {

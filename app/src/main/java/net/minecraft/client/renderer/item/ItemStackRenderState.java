@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemStackRenderState {
     ItemDisplayContext displayContext = ItemDisplayContext.NONE;
     boolean isLeftHand;
@@ -86,14 +83,12 @@ public class ItemStackRenderState {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum FoilType {
         NONE,
         STANDARD,
         SPECIAL;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public class LayerRenderState {
         @Nullable
         BakedModel model;

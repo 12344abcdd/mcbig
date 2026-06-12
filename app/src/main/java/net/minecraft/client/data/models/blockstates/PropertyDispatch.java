@@ -11,10 +11,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class PropertyDispatch {
     private final Map<Selector, List<Variant>> values = Maps.newHashMap();
 
@@ -72,7 +69,6 @@ public abstract class PropertyDispatch {
         return new PropertyDispatch.C5<>(p_387985_, p_386573_, p_388732_, p_388219_, p_387978_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class C1<T1 extends Comparable<T1>> extends PropertyDispatch {
         private final Property<T1> property1;
 
@@ -106,7 +102,6 @@ public abstract class PropertyDispatch {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class C2<T1 extends Comparable<T1>, T2 extends Comparable<T2>> extends PropertyDispatch {
         private final Property<T1> property1;
         private final Property<T2> property2;
@@ -154,7 +149,6 @@ public abstract class PropertyDispatch {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class C3<T1 extends Comparable<T1>, T2 extends Comparable<T2>, T3 extends Comparable<T3>> extends PropertyDispatch {
         private final Property<T1> property1;
         private final Property<T2> property2;
@@ -220,7 +214,6 @@ public abstract class PropertyDispatch {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class C4<T1 extends Comparable<T1>, T2 extends Comparable<T2>, T3 extends Comparable<T3>, T4 extends Comparable<T4>> extends PropertyDispatch {
         private final Property<T1> property1;
         private final Property<T2> property2;
@@ -306,7 +299,6 @@ public abstract class PropertyDispatch {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class C5<T1 extends Comparable<T1>, T2 extends Comparable<T2>, T3 extends Comparable<T3>, T4 extends Comparable<T4>, T5 extends Comparable<T5>>
         extends PropertyDispatch {
         private final Property<T1> property1;
@@ -414,19 +406,16 @@ public abstract class PropertyDispatch {
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface PentaFunction<P1, P2, P3, P4, P5, R> {
         R apply(P1 p_387441_, P2 p_388498_, P3 p_388335_, P4 p_387526_, P5 p_387583_);
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface QuadFunction<P1, P2, P3, P4, R> {
         R apply(P1 p_388149_, P2 p_387160_, P3 p_387565_, P4 p_387690_);
     }
 
     @FunctionalInterface
-    @OnlyIn(Dist.CLIENT)
     public interface TriFunction<P1, P2, P3, R> {
         R apply(P1 p_386859_, P2 p_386986_, P3 p_386583_);
     }

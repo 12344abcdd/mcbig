@@ -11,10 +11,7 @@ import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.MapItemColor;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record MapColor(int defaultColor) implements ItemTintSource {
     public static final MapCodec<MapColor> MAP_CODEC = RecordCodecBuilder.mapCodec(
         p_386787_ -> p_386787_.group(ExtraCodecs.RGB_COLOR_CODEC.fieldOf("default").forGetter(MapColor::defaultColor)).apply(p_386787_, MapColor::new)

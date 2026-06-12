@@ -8,10 +8,7 @@ import net.minecraft.client.renderer.entity.state.WolfRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ARGB;
 import net.minecraft.world.entity.animal.Wolf;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WolfRenderer extends AgeableMobRenderer<Wolf, WolfRenderState, WolfModel> {
     public WolfRenderer(EntityRendererProvider.Context p_174452_) {
         super(p_174452_, new WolfModel(p_174452_.bakeLayer(ModelLayers.WOLF)), new WolfModel(p_174452_.bakeLayer(ModelLayers.WOLF_BABY)), 0.5F);

@@ -4,10 +4,7 @@ import net.minecraft.Util;
 import net.minecraft.client.InactivityFpsLimit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class FramerateLimitTracker {
     private static final int OUT_OF_LEVEL_MENU_LIMIT = 60;
     private static final int ICONIFIED_WINDOW_LIMIT = 10;

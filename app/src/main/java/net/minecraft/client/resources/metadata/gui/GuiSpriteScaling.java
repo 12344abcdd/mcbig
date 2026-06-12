@@ -9,17 +9,13 @@ import com.mojang.serialization.codecs.RecordCodecBuilder.Instance;
 import java.util.OptionalInt;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.StringRepresentable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface GuiSpriteScaling {
     Codec<GuiSpriteScaling> CODEC = GuiSpriteScaling.Type.CODEC.dispatch(GuiSpriteScaling::type, GuiSpriteScaling.Type::codec);
     GuiSpriteScaling DEFAULT = new GuiSpriteScaling.Stretch();
 
     GuiSpriteScaling.Type type();
 
-    @OnlyIn(Dist.CLIENT)
     public static record NineSlice(int width, int height, GuiSpriteScaling.NineSlice.Border border, boolean stretchInner) implements GuiSpriteScaling {
         public static final MapCodec<GuiSpriteScaling.NineSlice> CODEC = RecordCodecBuilder.<GuiSpriteScaling.NineSlice>mapCodec(
                 p_370353_ -> p_370353_.group(
@@ -62,7 +58,6 @@ public interface GuiSpriteScaling {
             return GuiSpriteScaling.Type.NINE_SLICE;
         }
 
-        @OnlyIn(Dist.CLIENT)
         public static record Border(int left, int top, int right, int bottom) {
             private static final Codec<GuiSpriteScaling.NineSlice.Border> VALUE_CODEC = ExtraCodecs.POSITIVE_INT
                 .flatComapMap(p_295538_ -> new GuiSpriteScaling.NineSlice.Border(p_295538_, p_295538_, p_295538_, p_295538_), p_295407_ -> {
@@ -89,7 +84,6 @@ public interface GuiSpriteScaling {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Stretch() implements GuiSpriteScaling {
         public static final MapCodec<GuiSpriteScaling.Stretch> CODEC = MapCodec.unit(GuiSpriteScaling.Stretch::new);
 
@@ -99,7 +93,6 @@ public interface GuiSpriteScaling {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Tile(int width, int height) implements GuiSpriteScaling {
         public static final MapCodec<GuiSpriteScaling.Tile> CODEC = RecordCodecBuilder.mapCodec(
             p_294311_ -> p_294311_.group(
@@ -115,7 +108,6 @@ public interface GuiSpriteScaling {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type implements StringRepresentable {
         STRETCH("stretch", GuiSpriteScaling.Stretch.CODEC),
         TILE("tile", GuiSpriteScaling.Tile.CODEC),

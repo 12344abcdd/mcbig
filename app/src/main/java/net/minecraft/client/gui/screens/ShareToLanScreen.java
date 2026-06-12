@@ -13,10 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.commands.PublishCommand;
 import net.minecraft.util.HttpUtil;
 import net.minecraft.world.level.GameType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ShareToLanScreen extends Screen {
     private static final int PORT_LOWER_BOUND = 1024;
     private static final int PORT_HIGHER_BOUND = 65535;

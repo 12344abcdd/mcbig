@@ -3,10 +3,7 @@ package net.minecraft.client;
 import java.util.function.IntFunction;
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.OptionEnum;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public enum GraphicsStatus implements OptionEnum {
     FAST(0, "options.graphics.fast"),
     FANCY(1, "options.graphics.fancy"),

@@ -29,11 +29,8 @@ import net.minecraft.util.Crypt;
 import net.minecraft.util.CryptException;
 import net.minecraft.world.entity.player.ProfileKeyPair;
 import net.minecraft.world.entity.player.ProfilePublicKey;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class AccountProfileKeyPairManager implements ProfileKeyPairManager {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Duration MINIMUM_PROFILE_KEY_REFRESH_INTERVAL = Duration.ofHours(1L);

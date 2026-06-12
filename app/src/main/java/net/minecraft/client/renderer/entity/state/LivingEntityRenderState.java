@@ -7,10 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.level.block.SkullBlock;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LivingEntityRenderState extends EntityRenderState {
     public float bodyRot;
     public float yRot;

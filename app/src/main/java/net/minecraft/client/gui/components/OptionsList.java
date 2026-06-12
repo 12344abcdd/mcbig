@@ -14,10 +14,7 @@ import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.narration.NarratableEntry;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.options.OptionsSubScreen;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class OptionsList extends ContainerObjectSelectionList<OptionsList.Entry> {
     private static final int BIG_BUTTON_WIDTH = 310;
     private static final int DEFAULT_ITEM_HEIGHT = 25;
@@ -95,7 +92,6 @@ public class OptionsList extends ContainerObjectSelectionList<OptionsList.Entry>
         return Optional.empty();
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class Entry extends ContainerObjectSelectionList.Entry<OptionsList.Entry> {
         private final List<AbstractWidget> children;
         private final Screen screen;
@@ -150,7 +146,6 @@ public class OptionsList extends ContainerObjectSelectionList<OptionsList.Entry>
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     protected static class OptionEntry extends OptionsList.Entry {
         final Map<OptionInstance<?>, AbstractWidget> options;
 

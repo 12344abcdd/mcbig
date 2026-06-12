@@ -1,10 +1,7 @@
 package com.mojang.blaze3d.vertex;
 
 import java.util.function.Consumer;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class VertexMultiConsumer {
     public static VertexConsumer create() {
         throw new IllegalArgumentException();
@@ -22,7 +19,6 @@ public class VertexMultiConsumer {
         return new VertexMultiConsumer.Multiple(p_167064_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Double implements VertexConsumer {
         private final VertexConsumer first;
         private final VertexConsumer second;
@@ -97,7 +93,6 @@ public class VertexMultiConsumer {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record Multiple(VertexConsumer[] delegates) implements VertexConsumer {
         Multiple(VertexConsumer[] delegates) {
             for (int i = 0; i < delegates.length; i++) {

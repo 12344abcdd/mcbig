@@ -14,10 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.Equippable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LlamaDecorLayer extends RenderLayer<LlamaRenderState, LlamaModel> {
     private final LlamaModel adultModel;
     private final LlamaModel babyModel;

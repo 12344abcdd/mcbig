@@ -4,10 +4,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import javax.annotation.Nullable;
 import net.minecraft.client.renderer.SpriteCoordinateExpander;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TextureAtlasSprite {
     private final ResourceLocation atlasLocation;
     private final SpriteContents contents;
@@ -120,7 +117,6 @@ public class TextureAtlasSprite {
         return new SpriteCoordinateExpander(p_118382_, this);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public interface Ticker extends AutoCloseable {
         void tickAndUpload();
 

@@ -15,11 +15,8 @@ import net.minecraft.client.resources.model.SpriteGetter;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 
-@OnlyIn(Dist.CLIENT)
 public class ItemModelGenerator implements UnbakedModel {
     public static final ResourceLocation GENERATED_ITEM_MODEL_ID = ResourceLocation.withDefaultNamespace("builtin/generated");
     public static final List<String> LAYERS = List.of("layer0", "layer1", "layer2", "layer3", "layer4");
@@ -234,7 +231,6 @@ public class ItemModelGenerator implements UnbakedModel {
             : true;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class Span {
         private final ItemModelGenerator.SpanFacing facing;
         private int min;
@@ -273,7 +269,6 @@ public class ItemModelGenerator implements UnbakedModel {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum SpanFacing {
         UP(Direction.UP, 0, -1),
         DOWN(Direction.DOWN, 0, 1),

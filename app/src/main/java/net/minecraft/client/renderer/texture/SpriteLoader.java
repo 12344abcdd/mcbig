@@ -23,11 +23,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.metadata.MetadataSectionType;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class SpriteLoader {
     public static final Set<MetadataSectionType<?>> DEFAULT_METADATA_SECTIONS = Set.of(AnimationMetadataSection.TYPE);
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -145,7 +142,6 @@ public class SpriteLoader {
         return map;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Preparations(
         int width,
         int height,

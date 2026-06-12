@@ -25,11 +25,8 @@ import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.level.chunk.LevelChunkSection;
 import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.level.lighting.LevelLightEngine;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientChunkCache extends ChunkSource {
     static final Logger LOGGER = LogUtils.getLogger();
     private final LevelChunk emptyChunk;
@@ -189,7 +186,6 @@ public class ClientChunkCache extends ChunkSource {
         this.storage.onSectionEmptinessChanged(p_366524_, p_366407_, p_366651_, p_366887_);
     }
 
-    @OnlyIn(Dist.CLIENT)
     final class Storage {
         final AtomicReferenceArray<LevelChunk> chunks;
         final it.unimi.dsi.fastutil.objects.ObjectOpenHashSet<SectionPos> loadedEmptySections = new it.unimi.dsi.fastutil.objects.ObjectOpenHashSet<>();

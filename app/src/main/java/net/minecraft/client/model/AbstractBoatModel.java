@@ -3,10 +3,7 @@ package net.minecraft.client.model;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.entity.state.BoatRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractBoatModel extends EntityModel<BoatRenderState> {
     private final ModelPart leftPaddle;
     private final ModelPart rightPaddle;

@@ -9,10 +9,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ComponentUtils;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class UnsupportedGraphicsWarningScreen extends Screen {
     private static final int BUTTON_PADDING = 20;
     private static final int BUTTON_MARGIN = 5;
@@ -74,7 +71,6 @@ public class UnsupportedGraphicsWarningScreen extends Screen {
         return false;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static final class ButtonOption {
         final Component message;
         final Button.OnPress onPress;

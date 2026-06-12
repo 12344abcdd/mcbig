@@ -5,10 +5,7 @@ import net.minecraft.Util;
 import net.minecraft.client.gui.components.DebugScreenOverlay;
 import net.minecraft.network.protocol.game.ServerboundDebugSampleSubscriptionPacket;
 import net.minecraft.util.debugchart.RemoteDebugSampleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class DebugSampleSubscriber {
     public static final int REQUEST_INTERVAL_MS = 5000;
     private final ClientPacketListener connection;

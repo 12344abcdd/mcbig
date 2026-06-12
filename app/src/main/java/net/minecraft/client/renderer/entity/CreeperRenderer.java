@@ -8,10 +8,7 @@ import net.minecraft.client.renderer.entity.state.CreeperRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.monster.Creeper;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class CreeperRenderer extends MobRenderer<Creeper, CreeperRenderState, CreeperModel> {
     private static final ResourceLocation CREEPER_LOCATION = ResourceLocation.withDefaultNamespace("textures/entity/creeper/creeper.png");
 

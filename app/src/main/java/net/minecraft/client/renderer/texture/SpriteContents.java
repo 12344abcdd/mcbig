@@ -19,11 +19,8 @@ import net.minecraft.client.resources.metadata.animation.FrameSize;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceMetadata;
 import net.minecraft.util.ARGB;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class SpriteContents implements Stitcher.Entry, AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private final ResourceLocation name;
@@ -193,7 +190,6 @@ public class SpriteContents implements Stitcher.Entry, AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class AnimatedTexture {
         final List<SpriteContents.FrameInfo> frames;
         private final int frameRowSize;
@@ -232,11 +228,9 @@ public class SpriteContents implements Stitcher.Entry, AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record FrameInfo(int index, int time) {
     }
 
-    @OnlyIn(Dist.CLIENT)
     final class InterpolationData implements AutoCloseable {
         private final NativeImage[] activeFrame = new NativeImage[SpriteContents.this.byMipLevel.length];
 
@@ -289,7 +283,6 @@ public class SpriteContents implements Stitcher.Entry, AutoCloseable {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class Ticker implements SpriteTicker {
         int frame;
         int subFrame;

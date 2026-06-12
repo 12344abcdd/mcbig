@@ -9,11 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import net.minecraft.client.Minecraft;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsPersistence {
     private static final String FILE_NAME = "realms_persistence.json";
     private static final GuardedSerializer GSON = new GuardedSerializer();
@@ -57,7 +54,6 @@ public class RealmsPersistence {
         return Minecraft.getInstance().gameDirectory.toPath().resolve("realms_persistence.json");
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class RealmsPersistenceData implements ReflectionBasedSerialization {
         @SerializedName("newsLink")
         public String newsLink;

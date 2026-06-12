@@ -43,11 +43,8 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ModelManager implements PreparableReloadListener, AutoCloseable {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final FileToIdConverter MODEL_LISTER = FileToIdConverter.json("models");
@@ -350,7 +347,6 @@ public class ModelManager implements PreparableReloadListener, AutoCloseable {
         return () -> this.entityModelSet;
     }
 
-    @OnlyIn(Dist.CLIENT)
     static record ReloadState(
         ModelBakery.BakingResult bakedModels,
         Object2IntMap<BlockState> modelGroups,

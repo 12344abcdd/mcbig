@@ -12,10 +12,7 @@ import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.state.WardenRenderState;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class WardenModel extends EntityModel<WardenRenderState> {
     private static final float DEFAULT_ARM_X_Y = 13.0F;
     private static final float DEFAULT_ARM_Z = 1.0F;

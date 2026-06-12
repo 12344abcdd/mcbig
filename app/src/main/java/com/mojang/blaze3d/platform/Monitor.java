@@ -4,13 +4,10 @@ import com.google.common.collect.Lists;
 import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.glfw.GLFWVidMode.Buffer;
 
-@OnlyIn(Dist.CLIENT)
 public final class Monitor {
     private final long monitor;
     private final List<VideoMode> videoModes;

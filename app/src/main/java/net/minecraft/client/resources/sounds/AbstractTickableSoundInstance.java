@@ -3,10 +3,7 @@ package net.minecraft.client.resources.sounds;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public abstract class AbstractTickableSoundInstance extends AbstractSoundInstance implements TickableSoundInstance {
     private boolean stopped;
 

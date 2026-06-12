@@ -3,10 +3,7 @@ package net.minecraft.client.multiplayer;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.core.BlockPos;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class LevelLoadStatusManager {
     private final LocalPlayer player;
     private final ClientLevel level;
@@ -42,7 +39,6 @@ public class LevelLoadStatusManager {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static enum Status {
         WAITING_FOR_SERVER,
         WAITING_FOR_PLAYER_CHUNK,

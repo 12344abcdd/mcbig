@@ -2,10 +2,7 @@ package net.minecraft.client.gui.narration;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface NarrationElementOutput {
     default void add(NarratedElementType p_169147_, Component p_169148_) {
         this.add(p_169147_, NarrationThunk.from(p_169148_.getString()));

@@ -11,10 +11,7 @@ import net.minecraft.client.gui.layouts.GridLayout;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.CommonLinks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class NoticeWithLinkScreen extends Screen {
     private static final Component SYMLINK_WORLD_TITLE = Component.translatable("symlink_warning.title.world").withStyle(ChatFormatting.BOLD);
     private static final Component SYMLINK_WORLD_MESSAGE_TEXT = Component.translatable(

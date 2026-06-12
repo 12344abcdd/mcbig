@@ -9,10 +9,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ReceivingLevelScreen extends Screen {
     private static final Component DOWNLOADING_TERRAIN_TEXT = Component.translatable("multiplayer.downloadingTerrain");
     private static final long CHUNK_LOADING_START_WAIT_LIMIT_MS = 30000L;
@@ -88,7 +85,6 @@ public class ReceivingLevelScreen extends Screen {
         return false;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Reason {
         NETHER_PORTAL,
         END_PORTAL,

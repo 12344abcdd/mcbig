@@ -3,10 +3,7 @@ package net.minecraft.client.gui.font;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public record GlyphRenderTypes(RenderType normal, RenderType seeThrough, RenderType polygonOffset) {
     public static GlyphRenderTypes createForIntensityTexture(ResourceLocation p_285411_) {
         return new GlyphRenderTypes(

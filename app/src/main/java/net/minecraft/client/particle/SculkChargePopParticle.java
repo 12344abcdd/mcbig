@@ -2,10 +2,7 @@ package net.minecraft.client.particle;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SculkChargePopParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
 
@@ -36,7 +33,6 @@ public class SculkChargePopParticle extends TextureSheetParticle {
         this.setSpriteFromAge(this.sprites);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Provider(SpriteSet sprite) implements ParticleProvider<SimpleParticleType> {
         public Particle createParticle(
             SimpleParticleType p_233958_,

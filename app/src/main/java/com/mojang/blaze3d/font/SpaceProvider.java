@@ -15,10 +15,7 @@ import net.minecraft.client.gui.font.providers.GlyphProviderDefinition;
 import net.minecraft.client.gui.font.providers.GlyphProviderType;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.ExtraCodecs;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class SpaceProvider implements GlyphProvider {
     private final Int2ObjectMap<GlyphInfo.SpaceGlyphInfo> glyphs;
 
@@ -38,7 +35,6 @@ public class SpaceProvider implements GlyphProvider {
         return IntSets.unmodifiable(this.glyphs.keySet());
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record Definition(Map<Integer, Float> advances) implements GlyphProviderDefinition {
         public static final MapCodec<SpaceProvider.Definition> CODEC = RecordCodecBuilder.mapCodec(
             p_286766_ -> p_286766_.group(

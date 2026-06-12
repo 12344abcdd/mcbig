@@ -17,10 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.JigsawBlock;
 import net.minecraft.world.level.block.entity.JigsawBlockEntity;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class JigsawBlockEditScreen extends Screen {
     private static final Component JOINT_LABEL = Component.translatable("jigsaw_block.joint_label");
     private static final Component POOL_LABEL = Component.translatable("jigsaw_block.pool");

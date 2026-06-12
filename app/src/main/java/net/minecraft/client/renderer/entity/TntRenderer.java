@@ -7,10 +7,7 @@ import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 import net.minecraft.client.renderer.entity.state.TntRenderState;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.item.PrimedTnt;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TntRenderer extends EntityRenderer<PrimedTnt, TntRenderState> {
     private final BlockRenderDispatcher blockRenderer;
 

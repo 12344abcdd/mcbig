@@ -11,11 +11,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.status.ServerStatus;
 import net.minecraft.util.PngInfo;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class ServerData {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final int MAX_ICON_SIZE = 1024;
@@ -147,7 +144,6 @@ public class ServerData {
         return null;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum ServerPackStatus {
         ENABLED("enabled"),
         DISABLED("disabled"),
@@ -164,7 +160,6 @@ public class ServerData {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum State {
         INITIAL,
         PINGING,
@@ -173,7 +168,6 @@ public class ServerData {
         SUCCESSFUL;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static enum Type {
         LAN,
         REALM,

@@ -24,8 +24,6 @@ import net.minecraft.nbt.NbtException;
 import net.minecraft.nbt.ReportedNbtException;
 import net.minecraft.world.level.storage.LevelStorageSource;
 import net.minecraft.world.level.validation.ContentValidationException;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
@@ -41,7 +39,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class FileDownload {
     static final Logger LOGGER = LogUtils.getLogger();
     volatile boolean cancelled;
@@ -336,7 +333,6 @@ public class FileDownload {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     static class DownloadCountingOutputStream extends CountingOutputStream {
         @Nullable
         private ActionListener listener;
@@ -358,7 +354,6 @@ public class FileDownload {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ProgressListener implements ActionListener {
         private final String worldName;
         private final File tempFile;
@@ -387,7 +382,6 @@ public class FileDownload {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     class ResourcePackProgressListener implements ActionListener {
         private final File tempFile;
         private final RealmsDownloadLatestWorldScreen.DownloadStatus downloadStatus;

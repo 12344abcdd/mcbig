@@ -12,10 +12,7 @@ import net.minecraft.client.renderer.entity.state.TropicalFishRenderState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.animal.TropicalFish;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class TropicalFishRenderer extends MobRenderer<TropicalFish, TropicalFishRenderState, EntityModel<TropicalFishRenderState>> {
     private final EntityModel<TropicalFishRenderState> modelA = this.getModel();
     private final EntityModel<TropicalFishRenderState> modelB;

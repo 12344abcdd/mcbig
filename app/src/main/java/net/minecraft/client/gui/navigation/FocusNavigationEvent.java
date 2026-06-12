@@ -1,13 +1,9 @@
 package net.minecraft.client.gui.navigation;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface FocusNavigationEvent {
     ScreenDirection getVerticalDirectionForInitialFocus();
 
-    @OnlyIn(Dist.CLIENT)
     public static record ArrowNavigation(ScreenDirection direction) implements FocusNavigationEvent {
         @Override
         public ScreenDirection getVerticalDirectionForInitialFocus() {
@@ -15,7 +11,6 @@ public interface FocusNavigationEvent {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static class InitialFocus implements FocusNavigationEvent {
         @Override
         public ScreenDirection getVerticalDirectionForInitialFocus() {
@@ -23,7 +18,6 @@ public interface FocusNavigationEvent {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static record TabNavigation(boolean forward) implements FocusNavigationEvent {
         @Override
         public ScreenDirection getVerticalDirectionForInitialFocus() {

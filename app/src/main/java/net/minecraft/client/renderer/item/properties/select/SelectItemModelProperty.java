@@ -16,17 +16,13 @@ import net.minecraft.client.renderer.item.SelectItemModel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public interface SelectItemModelProperty<T> {
     @Nullable
     T get(ItemStack p_387845_, @Nullable ClientLevel p_387945_, @Nullable LivingEntity p_388349_, int p_388630_, ItemDisplayContext p_388902_);
 
     SelectItemModelProperty.Type<? extends SelectItemModelProperty<T>, T> type();
 
-    @OnlyIn(Dist.CLIENT)
     public static record Type<P extends SelectItemModelProperty<T>, T>(MapCodec<SelectItemModel.UnbakedSwitch<P, T>> switchCodec) {
         public static <P extends SelectItemModelProperty<T>, T> SelectItemModelProperty.Type<P, T> create(MapCodec<P> p_386816_, Codec<T> p_387850_) {
             Codec<List<SelectItemModel.SwitchCase<T>>> codec = SelectItemModel.SwitchCase.codec(p_387850_)

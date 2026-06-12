@@ -31,10 +31,7 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.realms.RealmsScreen;
 import net.minecraft.world.level.storage.LevelSummary;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class RealmsUploadScreen extends RealmsScreen implements RealmsWorldUploadStatusTracker {
     private static final int BAR_WIDTH = 200;
     private static final int BAR_TOP = 80;

@@ -4,10 +4,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.FocusableTextWidget;
 import net.minecraft.network.chat.Component;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class GenericMessageScreen extends Screen {
     @Nullable
     private FocusableTextWidget textWidget;

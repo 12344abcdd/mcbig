@@ -5,11 +5,8 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.lwjgl.system.MemoryUtil;
 
-@OnlyIn(Dist.CLIENT)
 public class BufferBuilder implements VertexConsumer {
     private static final long NOT_BUILDING = -1L;
     private static final long UNKNOWN_ELEMENT = -1L;

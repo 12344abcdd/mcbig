@@ -10,10 +10,7 @@ import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.state.BreezeRenderState;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class BreezeModel extends EntityModel<BreezeRenderState> {
     private static final float WIND_TOP_SPEED = 0.6F;
     private static final float WIND_MIDDLE_SPEED = 0.8F;

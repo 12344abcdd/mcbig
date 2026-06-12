@@ -6,11 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 import javax.annotation.Nullable;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 import org.slf4j.Logger;
 
-@OnlyIn(Dist.CLIENT)
 public class SectionBufferBuilderPool {
     private static final Logger LOGGER = LogUtils.getLogger();
     private final Queue<SectionBufferBuilderPack> freeBuffers;
