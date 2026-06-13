@@ -24,7 +24,8 @@ public class ProtoChunkTicks<T> implements SerializableTickContainer<T>, TickCon
 
     @Override
     public boolean hasScheduledTick(BlockPos p_193300_, T p_193301_) {
-        return this.ticksPerPosition.contains(SavedTick.probe(p_193301_, p_193300_));
+        //return this.ticksPerPosition.contains(SavedTick.probe(p_193301_, p_193300_));
+        return false;
     }
 
     @Override

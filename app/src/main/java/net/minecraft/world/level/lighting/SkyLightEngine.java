@@ -31,7 +31,8 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
     }
 
     private static boolean isSourceLevel(int p_285004_) {
-        return p_285004_ == 15;
+        //return p_285004_ == 15;
+        return true;
     }
 
     private int getLowestSourceY(me.alphamode.mcbig.math.BigInteger p_285058_, me.alphamode.mcbig.math.BigInteger p_285191_, int p_285111_) {
@@ -48,7 +49,7 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
     }
 
     @Override
-    protected void checkNode(BlockPos p_75859_) {
+    protected void checkNode(BlockPos p_75859_) {/*
         me.alphamode.mcbig.math.BigInteger i = p_75859_.getBigX();
         me.alphamode.mcbig.math.BigInteger j = p_75859_.getBigY();
         me.alphamode.mcbig.math.BigInteger k = p_75859_.getBigZ();
@@ -72,16 +73,16 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     this.enqueueDecrease(p_75859_, PULL_LIGHT_IN_ENTRY);
                 }
             }
-        }
+        }*/
     }
 
-    private void updateSourcesInColumn(me.alphamode.mcbig.math.BigInteger p_285053_, me.alphamode.mcbig.math.BigInteger p_285140_, int p_285337_) {
+    private void updateSourcesInColumn(me.alphamode.mcbig.math.BigInteger p_285053_, me.alphamode.mcbig.math.BigInteger p_285140_, int p_285337_) {/*
         int i = SectionPos.sectionToBlockCoord(this.storage.getBottomSectionY());
         this.removeSourcesBelow(p_285053_, p_285140_, p_285337_, i);
-        this.addSourcesAbove(p_285053_, p_285140_, p_285337_, i);
+        this.addSourcesAbove(p_285053_, p_285140_, p_285337_, i);*/
     }
 
-    private void removeSourcesBelow(me.alphamode.mcbig.math.BigInteger p_285475_, me.alphamode.mcbig.math.BigInteger p_285138_, int p_285130_, int p_285112_) {
+    private void removeSourcesBelow(me.alphamode.mcbig.math.BigInteger p_285475_, me.alphamode.mcbig.math.BigInteger p_285138_, int p_285130_, int p_285112_) {/*
         if (p_285130_ > p_285112_) {
             me.alphamode.mcbig.math.BigInteger i = SectionPos.blockToSectionCoord(p_285475_);
             me.alphamode.mcbig.math.BigInteger j = SectionPos.blockToSectionCoord(p_285138_);
@@ -103,10 +104,10 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     }
                 }
             }
-        }
+        }*/
     }
 
-    private void addSourcesAbove(me.alphamode.mcbig.math.BigInteger p_285241_, me.alphamode.mcbig.math.BigInteger p_285212_, int p_284972_, int p_285134_) {
+    private void addSourcesAbove(me.alphamode.mcbig.math.BigInteger p_285241_, me.alphamode.mcbig.math.BigInteger p_285212_, int p_284972_, int p_285134_) {/*
         me.alphamode.mcbig.math.BigInteger i = SectionPos.blockToSectionCoord(p_285241_);
         me.alphamode.mcbig.math.BigInteger j = SectionPos.blockToSectionCoord(p_285212_);
         int k = Math.max(
@@ -132,11 +133,11 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     }
                 }
             }
-        }
+        }*/
     }
 
     @Override
-    protected void propagateIncrease(BlockPos p_285341_, long p_285204_, int p_285003_) {
+    protected void propagateIncrease(BlockPos p_285341_, long p_285204_, int p_285003_) {/*
         BlockState blockstate = null;
         int i = this.countEmptySectionsBelowIfAtBorder(p_285341_);
 
@@ -171,11 +172,11 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     }
                 }
             }
-        }
+        }*/
     }
 
     @Override
-    protected void propagateDecrease(BlockPos p_285015_, long p_285395_) {
+    protected void propagateDecrease(BlockPos p_285015_, long p_285395_) {/*
         int i = this.countEmptySectionsBelowIfAtBorder(p_285015_);
         int j = LightEngine.QueueEntry.getFromLevel(p_285395_);
 
@@ -195,7 +196,7 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     }
                 }
             }
-        }
+        }*/
     }
 
     private int countEmptySectionsBelowIfAtBorder(BlockPos p_285356_) {
@@ -225,7 +226,7 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
         }
     }
 
-    private void propagateFromEmptySections(BlockPos p_284965_, Direction p_285308_, int p_284977_, boolean p_285001_, int p_285052_) {
+    private void propagateFromEmptySections(BlockPos p_284965_, Direction p_285308_, int p_284977_, boolean p_285001_, int p_285052_) {/*
         if (p_285052_ != 0) {
             me.alphamode.mcbig.math.BigInteger i = p_284965_.getBigX();
             me.alphamode.mcbig.math.BigInteger j = p_284965_.getBigZ();
@@ -259,7 +260,7 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     }
                 }
             }
-        }
+        }*/
     }
 
     private static boolean crossedSectionEdge(Direction p_285014_, int p_284991_, int p_285468_) {
@@ -273,7 +274,7 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
     }
 
     @Override
-    public void setLightEnabled(ChunkPos p_285459_, boolean p_285013_) {
+    public void setLightEnabled(ChunkPos p_285459_, boolean p_285013_) {/*
         super.setLightEnabled(p_285459_, p_285013_);
         if (p_285013_) {
             ChunkSkyLightSources chunkskylightsources = Objects.requireNonNullElse(this.getChunkSources(p_285459_.x(), p_285459_.z()), this.emptyChunkSources);
@@ -289,11 +290,11 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     datalayer.fill(15);
                 }
             }
-        }
+        }*/
     }
 
     @Override
-    public void propagateLightSources(ChunkPos p_285333_) {
+    public void propagateLightSources(ChunkPos p_285333_) {/*
         SectionPos i = SectionPos.getZeroNode(p_285333_.x(), p_285333_.z());
         this.storage.setLightEnabled(i, true);
         ChunkSkyLightSources chunkskylightsources = Objects.requireNonNullElse(this.getChunkSources(p_285333_.x(), p_285333_.z()), this.emptyChunkSources);
@@ -343,6 +344,6 @@ public final class SkyLightEngine extends LightEngine<SkyLightSectionStorage.Sky
                     break;
                 }
             }
-        }
+        }*/
     }
 }

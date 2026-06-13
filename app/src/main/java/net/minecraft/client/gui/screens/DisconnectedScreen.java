@@ -84,6 +84,6 @@ public class DisconnectedScreen extends Screen {
 
     @Override
     public boolean shouldCloseOnEsc() {
-        return false;
+        return true;
     }
 }

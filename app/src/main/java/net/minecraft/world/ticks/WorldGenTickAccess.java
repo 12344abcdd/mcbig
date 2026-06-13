@@ -12,7 +12,8 @@ public class WorldGenTickAccess<T> implements LevelTickAccess<T> {
 
     @Override
     public boolean hasScheduledTick(BlockPos p_193459_, T p_193460_) {
-        return this.containerGetter.apply(p_193459_).hasScheduledTick(p_193459_, p_193460_);
+        //return this.containerGetter.apply(p_193459_).hasScheduledTick(p_193459_, p_193460_);
+        return false;
     }
 
     @Override

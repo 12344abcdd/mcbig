@@ -145,10 +145,11 @@ public class LevelLightEngine implements LightEventListener {
         }
     }
 
-    public int getRawBrightness(BlockPos p_75832_, int p_75833_) {
+    public int getRawBrightness(BlockPos p_75832_, int p_75833_) {/*
         int i = this.skyEngine == null ? 0 : this.skyEngine.getLightValue(p_75832_) - p_75833_;
         int j = this.blockEngine == null ? 0 : this.blockEngine.getLightValue(p_75832_);
-        return Math.max(j, i);
+        return Math.max(j, i);*/
+        return 15;
     }
 
     public boolean lightOnInColumn(SectionPos p_366813_) {
