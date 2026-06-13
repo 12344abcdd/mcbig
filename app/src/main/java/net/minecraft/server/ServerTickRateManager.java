@@ -12,7 +12,7 @@ public class ServerTickRateManager extends TickRateManager {
     private long sprintTickStartTime = 0L;
     private long sprintTimeSpend = 0L;
     private long scheduledCurrentSprintTicks = 0L;
-    private boolean previousIsFrozen = false;
+    private boolean previousIsFrozen = true;
     private final MinecraftServer server;
 
     public ServerTickRateManager(MinecraftServer p_309004_) {

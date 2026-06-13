@@ -10,7 +10,7 @@ public class TickRateManager {
     protected long nanosecondsPerTick = TimeUtil.NANOSECONDS_PER_SECOND / 20L;
     protected int frozenTicksToRun = 0;
     protected boolean runGameElements = true;
-    protected boolean isFrozen = false;
+    protected boolean isFrozen = true;
 
     public void setTickRate(float p_308963_) {
         this.tickrate = Math.max(p_308963_, 1.0F);

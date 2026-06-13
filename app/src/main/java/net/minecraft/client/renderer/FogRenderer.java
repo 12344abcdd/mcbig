@@ -198,7 +198,8 @@ public class FogRenderer {
     }
 
     public static boolean toggleFog() {
-        return fogEnabled = !fogEnabled;
+        //return fogEnabled = !fogEnabled;
+        return fogEnabled =false;
     }
 
     @Nullable

@@ -440,8 +440,10 @@ public class LevelRenderer implements ResourceManagerReloadListener, AutoCloseab
         Vector4f vector4f = FogRenderer.computeFogColor(
             p_109604_, f, this.minecraft.level, this.minecraft.options.getEffectiveRenderDistance(), p_109605_.getDarkenWorldAmount(f)
         );
-        FogParameters fogparameters = FogRenderer.setupFog(p_109604_, FogRenderer.FogMode.FOG_TERRAIN, vector4f, f1, flag1, f);
-        FogParameters fogparameters1 = FogRenderer.setupFog(p_109604_, FogRenderer.FogMode.FOG_SKY, vector4f, f1, flag1, f);
+        //FogParameters fogparameters = FogRenderer.setupFog(p_109604_, FogRenderer.FogMode.FOG_TERRAIN, vector4f, f1, flag1, f);
+        FogParameters fogparameters = FogParameters.NO_FOG;
+        //FogParameters fogparameters1 = FogRenderer.setupFog(p_109604_, FogRenderer.FogMode.FOG_SKY, vector4f, f1, flag1, f);
+        FogParameters fogparameters1 = FogParameters.NO_FOG;
         profilerfiller.popPush("cullEntities");
         boolean flag2 = this.collectVisibleEntities(p_109604_, frustum, this.visibleEntities);
         this.visibleEntityCount = this.visibleEntities.size();

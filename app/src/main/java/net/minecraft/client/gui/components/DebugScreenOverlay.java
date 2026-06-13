@@ -313,10 +313,19 @@ public class DebugScreenOverlay {
             list.add(
                 String.format(
                     Locale.ROOT,
-                    "XYZ: %.3f / %.5f / %.3f",
+                    "XYZ: %.3f / %.3f / %.3f",
                     this.minecraft.getCameraEntity().getBigX().getBacking(),
                     this.minecraft.getCameraEntity().getY(),
                     this.minecraft.getCameraEntity().getBigZ().getBacking()
+                )
+            );
+            list.add(
+                String.format(
+                    Locale.ROOT,
+                    "double XYZ: %.3f /%.3f / %.3f",
+                    this.minecraft.getCameraEntity().getBigX().getBacking().doubleValue(),
+                    this.minecraft.getCameraEntity().getY(),
+                    this.minecraft.getCameraEntity().getBigZ().getBacking().doubleValue()
                 )
             );
             list.add(
