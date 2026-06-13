@@ -189,7 +189,8 @@ public class PerlinNoise {
     }
 
     public static double wrap(double p_75407_) {
-        return p_75407_ - (double)Mth.lfloor(p_75407_ / 3.3554432E7 + 0.5) * 3.3554432E7;
+        //return p_75407_ - (double)Mth.lfloor(p_75407_ / 3.3554432E7 + 0.5) * 3.3554432E7;
+        return p_75407_;
     }
 
     protected int firstOctave() {

@@ -28,7 +28,7 @@ public class Frustum {
         this.viewVector = p_194440_.viewVector;
     }
 
-    public Frustum offsetToFullyIncludeCameraCube(int p_194442_) {
+    public Frustum offsetToFullyIncludeCameraCube(int p_194442_) {/*
         me.alphamode.mcbig.math.BigDecimal d0 = this.camX.divide((double)p_194442_).floor().multiply((double)p_194442_);
         double d1 = Math.floor(this.camY / (double)p_194442_) * (double)p_194442_;
         me.alphamode.mcbig.math.BigDecimal d2 = this.camZ.divide((double)p_194442_).floor().multiply((double)p_194442_);
@@ -50,7 +50,7 @@ public class Frustum {
         ) {
             this.camX = this.camX.subtract((double)(this.viewVector.x() * 4.0F));
             this.camY = this.camY - (double)(this.viewVector.y() * 4.0F);
-        }
+        }*/
 
         return this;
     }
@@ -80,34 +80,37 @@ public class Frustum {
     }
 
     public int cubeInFrustum(BoundingBox p_366406_) {
-        return this.cubeInFrustum(
+        /*return this.cubeInFrustum(
             (double)p_366406_.minX().doubleValue(),
             (double)p_366406_.minY().doubleValue(),
             (double)p_366406_.minZ().doubleValue(),
             (double)(p_366406_.maxX().add().doubleValue()),
             (double)(p_366406_.maxY().add().doubleValue()),
             (double)(p_366406_.maxZ().add().doubleValue())
-        );
+        );*/
+        return -1;
     }
 
-    private int cubeInFrustum(double p_113007_, double p_113008_, double p_113009_, double p_113010_, double p_113011_, double p_113012_) {
+    private int cubeInFrustum(double p_113007_, double p_113008_, double p_113009_, double p_113010_, double p_113011_, double p_113012_) {/*
         float f = (float)(p_113007_ - this.camX.doubleValue());
         float f1 = (float)(p_113008_ - this.camY);
         float f2 = (float)(p_113009_ - this.camZ.doubleValue());
         float f3 = (float)(p_113010_ - this.camX.doubleValue());
         float f4 = (float)(p_113011_ - this.camY);
         float f5 = (float)(p_113012_ - this.camZ.doubleValue());
-        return this.intersection.intersectAab(f, f1, f2, f3, f4, f5);
+        return this.intersection.intersectAab(f, f1, f2, f3, f4, f5);*/
+        return -1;
     }
 
-    private int cubeInFrustum(me.alphamode.mcbig.math.BigDecimal p_113007_, double p_113008_, me.alphamode.mcbig.math.BigDecimal p_113009_, me.alphamode.mcbig.math.BigDecimal p_113010_, double p_113011_, me.alphamode.mcbig.math.BigDecimal p_113012_) {
+    private int cubeInFrustum(me.alphamode.mcbig.math.BigDecimal p_113007_, double p_113008_, me.alphamode.mcbig.math.BigDecimal p_113009_, me.alphamode.mcbig.math.BigDecimal p_113010_, double p_113011_, me.alphamode.mcbig.math.BigDecimal p_113012_) {/*
         float f = (float)(p_113007_.subtract(this.camX).floatValue());
         float f1 = (float)(p_113008_ - this.camY);
         float f2 = (float)(p_113009_.subtract(this.camZ).floatValue());
         float f3 = (float)(p_113010_.subtract(this.camX).floatValue());
         float f4 = (float)(p_113011_ - this.camY);
         float f5 = (float)(p_113012_.subtract(this.camZ).floatValue());
-        return this.intersection.intersectAab(f, f1, f2, f3, f4, f5);
+        return this.intersection.intersectAab(f, f1, f2, f3, f4, f5);*/
+        return -1;
     }
 
     public Vector4f[] getFrustumPoints() {
