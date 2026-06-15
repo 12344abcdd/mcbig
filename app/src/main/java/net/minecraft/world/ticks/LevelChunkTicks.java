@@ -71,8 +71,7 @@ public class LevelChunkTicks<T> implements SerializableTickContainer<T>, TickCon
 
     @Override
     public boolean hasScheduledTick(BlockPos p_193179_, T p_193180_) {
-        //return this.ticksPerPosition.contains(ScheduledTick.probe(p_193180_, p_193179_));
-        return false;
+        return this.ticksPerPosition.contains(ScheduledTick.probe(p_193180_, p_193179_));
     }
 
     public void removeIf(Predicate<ScheduledTick<T>> p_193184_) {

@@ -205,9 +205,8 @@ public class LevelTicks<T> implements LevelTickAccess<T> {
 
     @Override
     public boolean willTickThisTick(BlockPos p_193282_, T p_193283_) {
-        //this.calculateTickSetIfNeeded();
-        //return this.toRunThisTickSet.contains(ScheduledTick.probe(p_193283_, p_193282_));
-        return false;
+        this.calculateTickSetIfNeeded();
+        return this.toRunThisTickSet.contains(ScheduledTick.probe(p_193283_, p_193282_));
     }
 
     private void calculateTickSetIfNeeded() {
